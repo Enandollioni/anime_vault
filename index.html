@@ -17,6 +17,7 @@
   
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <div class="app-container">
@@ -51,6 +52,15 @@
         </div>
       </div>
 
+      <div class="view-switch-nav">
+        <button class="view-switch-btn active" id="btnSwitchCatalog" data-view="catalog">
+          <span class="btn-icon">🎬</span> Фильмотека
+        </button>
+        <button class="view-switch-btn" id="btnSwitchAnalytics" data-view="analytics">
+          <span class="btn-icon">📊</span> Аналитика вкуса
+        </button>
+      </div>
+
       <div class="header-actions">
         <a href="https://shikimori.io/Enandollioni" target="_blank" rel="noopener" class="btn btn-secondary">
           <span class="btn-icon">⚡</span> Shikimori
@@ -58,56 +68,147 @@
       </div>
     </header>
 
-    <!-- Toolbar: Search & Filters -->
-    <section class="toolbar">
-      <div class="search-box">
-        <span class="search-icon">🔍</span>
-        <input type="text" id="searchInput" placeholder="Поиск по названию (русское или ромадзи)..." autocomplete="off">
-        <button class="clear-btn" id="btnClearSearch" style="display:none;">✕</button>
-      </div>
-
-      <div class="tier-nav" id="tierNav">
-        <button class="tier-tab active" data-tier="all">Все тайтлы</button>
-        <button class="tier-tab tab-s-plus" data-tier="S+">Tier S+ <span class="tab-badge" id="badgeSPlus">10.xx</span></button>
-        <button class="tier-tab tab-s" data-tier="S">Tier S <span class="tab-badge">9.x</span></button>
-        <button class="tier-tab tab-a" data-tier="A">Tier A <span class="tab-badge">8.x</span></button>
-        <button class="tier-tab tab-b" data-tier="B">Tier B <span class="tab-badge">7.x</span></button>
-        <button class="tier-tab tab-c" data-tier="C">Tier C <span class="tab-badge">5-6</span></button>
-        <button class="tier-tab tab-df" data-tier="D_F">Tier D/F <span class="tab-badge">1-4</span></button>
-        <button class="tier-tab tab-unrated" data-tier="unrated">В планах</button>
-      </div>
-
-      <div class="filter-toggles">
-        <label class="toggle-pill">
-          <input type="checkbox" id="toggleOnlyReviews">
-          <span class="toggle-label">✍ Только с мыслями</span>
-        </label>
-      </div>
-    </section>
-
-    <!-- Masterpiece Spotlight Shelf (10.xx) -->
-    <section class="spotlight-section" id="spotlightSection">
-      <div class="spotlight-header">
-        <div class="spotlight-header-left">
-          <span class="spotlight-badge">CRITERION VAULT • 10.XX</span>
-          <h2 class="spotlight-title">Пантеон шедевров</h2>
+    <!-- Catalog Container -->
+    <div id="catalogContainer">
+      <!-- Toolbar: Search & Filters -->
+      <section class="toolbar">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="searchInput" placeholder="Поиск по названию (русское или ромадзи)..." autocomplete="off">
+          <button class="clear-btn" id="btnClearSearch" style="display:none;">✕</button>
         </div>
-        <p class="spotlight-subtitle">Тайтлы, определившие вкус и оставившие неизгладимый след</p>
-      </div>
-      <div class="spotlight-scroll-container">
-        <div class="spotlight-track" id="spotlightTrack">
-          <!-- Populated by app.js -->
+
+        <div class="tier-nav" id="tierNav">
+          <button class="tier-tab active" data-tier="all">Все тайтлы</button>
+          <button class="tier-tab tab-s-plus" data-tier="S+">Tier S+ <span class="tab-badge" id="badgeSPlus">10.xx</span></button>
+          <button class="tier-tab tab-s" data-tier="S">Tier S <span class="tab-badge">9.x</span></button>
+          <button class="tier-tab tab-a" data-tier="A">Tier A <span class="tab-badge">8.x</span></button>
+          <button class="tier-tab tab-b" data-tier="B">Tier B <span class="tab-badge">7.x</span></button>
+          <button class="tier-tab tab-c" data-tier="C">Tier C <span class="tab-badge">5-6</span></button>
+          <button class="tier-tab tab-df" data-tier="D_F">Tier D/F <span class="tab-badge">1-4</span></button>
+          <button class="tier-tab tab-unrated" data-tier="unrated">В планах</button>
+        </div>
+
+        <div class="filter-toggles">
+          <label class="toggle-pill">
+            <input type="checkbox" id="toggleOnlyReviews">
+            <span class="toggle-label">✍ Только с мыслями</span>
+          </label>
+        </div>
+      </section>
+
+      <!-- Masterpiece Spotlight Shelf (10.xx) -->
+      <section class="spotlight-section" id="spotlightSection">
+        <div class="spotlight-header">
+          <div class="spotlight-header-left">
+            <span class="spotlight-badge">CRITERION VAULT • 10.XX</span>
+            <h2 class="spotlight-title">Пантеон шедевров</h2>
+          </div>
+          <p class="spotlight-subtitle">Тайтлы, определившие вкус и оставившие неизгладимый след</p>
+        </div>
+        <div class="spotlight-scroll-container">
+          <div class="spotlight-track" id="spotlightTrack">
+            <!-- Populated by app.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Tier Matrix Content -->
+      <main class="vault-content" id="vaultContent">
+        <div class="loading-state" id="loadingState">
+          <div class="spinner"></div>
+          <p>Загрузка архива аниме...</p>
+        </div>
+      </main>
+    </div>
+
+    <!-- Analytics & Taste Profile View -->
+    <div id="analyticsContainer" class="analytics-container" style="display:none;">
+      <!-- Hero Watch Time Card -->
+      <div class="analytics-hero-card">
+        <div class="hero-left">
+          <div class="hero-icon-badge">⏱️</div>
+          <div class="hero-main-stat">
+            <span class="hero-label">ПОТРАЧЕНО НА ПРОСМОТР</span>
+            <div class="hero-value-wrap">
+              <span class="hero-value-number" id="statWatchHours">-</span>
+              <span class="hero-value-unit">часов</span>
+              <span class="hero-approx-badge">≈ <span id="statWatchDays">-</span> дней</span>
+            </div>
+            <p class="hero-desc">Непрерывный чистый хронометраж без учета перемотки опенингов и эндингов</p>
+          </div>
+        </div>
+        <div class="hero-right-metrics">
+          <div class="hero-submetric">
+            <span class="submetric-label">Всего эпизодов</span>
+            <span class="submetric-val" id="statTotalEpisodes">-</span>
+          </div>
+          <div class="hero-submetric">
+            <span class="submetric-label">Средний хронометраж</span>
+            <span class="submetric-val" id="statAvgDuration">~24 мин</span>
+          </div>
+          <div class="hero-submetric">
+            <span class="submetric-label">Оцифровано</span>
+            <span class="submetric-val highlight-green">100% Shikimori</span>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- Main Tier Matrix Content -->
-    <main class="vault-content" id="vaultContent">
-      <div class="loading-state" id="loadingState">
-        <div class="spinner"></div>
-        <p>Загрузка архива аниме...</p>
+      <!-- Dual Column Layout: Years Grid vs Top-15 Genres Donut -->
+      <div class="analytics-grid-2col">
+        <!-- Left: What did I watch? Year Grid -->
+        <div class="analytics-panel years-panel">
+          <div class="panel-header">
+            <div>
+              <h3 class="panel-title">Что же я смотрел?</h3>
+              <p class="panel-subtitle">Хронология по годам выхода • Нажмите на год, чтобы узнать детали</p>
+            </div>
+            <button class="btn-text-link" id="btnResetYearFilter" style="display:none;">Сбросить фильтр</button>
+          </div>
+          <div class="year-grid" id="yearTimelineGrid">
+            <!-- Dynamically populated by app.js -->
+          </div>
+        </div>
+
+        <!-- Right: Donut Chart with [Жанры] / [Тиры] Switcher -->
+        <div class="analytics-panel donut-panel">
+          <div class="panel-header">
+            <div>
+              <h3 class="panel-title" id="donutPanelTitle">Топ-15 Жанров</h3>
+              <p class="panel-subtitle" id="donutPanelSubtitle">Распределение по жанрам аниме</p>
+            </div>
+            <div class="chart-tab-pills">
+              <button class="chart-tab-btn active" id="btnChartModeGenres">Жанры</button>
+              <button class="chart-tab-btn" id="btnChartModeTiers">Тиры</button>
+            </div>
+          </div>
+          
+          <div class="donut-chart-layout">
+            <div class="chart-canvas-wrap">
+              <canvas id="donutChartCanvas"></canvas>
+            </div>
+            <div class="custom-chart-legend" id="customChartLegend">
+              <!-- Dynamically populated by app.js -->
+            </div>
+          </div>
+        </div>
       </div>
-    </main>
+
+      <!-- Taste Profile: Average Score by Genre -->
+      <div class="analytics-panel taste-profile-panel">
+        <div class="panel-header">
+          <div>
+            <h3 class="panel-title">Вкусовой профиль • Средний балл по жанрам</h3>
+            <p class="panel-subtitle">Где автор наиболее щедр на высокие оценки (≥ 5 тайтлов в жанре)</p>
+          </div>
+          <div class="taste-filter-hint">Ранжирование по среднему баллу</div>
+        </div>
+        
+        <div class="taste-leaderboard-grid" id="tasteLeaderboardGrid">
+          <!-- Dynamically populated by app.js -->
+        </div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer class="app-footer">
