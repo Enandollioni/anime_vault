@@ -11,7 +11,7 @@
   let selectedYear = null;
   let chartInstance = null;
 
-  // DOM Elements - Catalog
+  // DOM Elements
   const catalogContainer = document.getElementById('catalogContainer');
   const analyticsContainer = document.getElementById('analyticsContainer');
   const btnSwitchCatalog = document.getElementById('btnSwitchCatalog');
@@ -121,29 +121,20 @@
     'dropped': 'Брошено'
   };
 
-  function formatScore(score) {
-    if (score === null || score === undefined || score === 0) return '—';
-    return Number(score).toFixed(2);
-  }
-
+  // Helper: Format Score Badge
   function getScoreBadgeClass(score) {
-    if (score >= 10.0) return 'score-s-plus';
-    if (score >= 9.0) return 'score-s';
-    if (score >= 8.0) return 'score-a';
-    if (score >= 7.0) return 'score-b';
-    if (score >= 5.0) return 'score-c';
-    if (score > 0) return 'score-df';
-    return 'score-unrated';
+    if (score >= 10.0) return 'badge-s-plus';
+    if (score >= 9.0) return 'badge-s';
+    if (score >= 8.0) return 'badge-a';
+    if (score >= 7.0) return 'badge-b';
+    if (score >= 5.0) return 'badge-c';
+    if (score > 0) return 'badge-df';
+    return 'badge-unrated';
   }
 
-  function getTierKey(score) {
-    if (score >= 10.0) return 'S+';
-    if (score >= 9.0) return 'S';
-    if (score >= 8.0) return 'A';
-    if (score >= 7.0) return 'B';
-    if (score >= 5.0) return 'C';
-    if (score > 0) return 'D_F';
-    return 'unrated';
+  function formatScore(score) {
+    if (!score || score <= 0) return '—';
+    return Number.isInteger(score) ? score.toString() : score.toFixed(2);
   }
 
   function escapeHtml(str) {
@@ -156,36 +147,36 @@
       .replace(/'/g, '&#39;');
   }
 
-  function getPlaceholderPoster(title) {
-    const initial = title ? title.trim().charAt(0).toUpperCase() : 'A';
-    const cleanTitle = escapeHtml(title ? (title.length > 24 ? title.substring(0, 22) + '…' : title) : 'Anime');
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="225" height="320" viewBox="0 0 225 320"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#141923"/><stop offset="50%" stop-color="#0f172a"/><stop offset="100%" stop-color="#090d16"/></linearGradient><linearGradient id="glow" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25"/><stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.05"/></linearGradient><radialGradient id="ring" cx="50%" cy="38%" r="45%"><stop offset="0%" stop-color="#60a5fa" stop-opacity="0.2"/><stop offset="100%" stop-color="#60a5fa" stop-opacity="0"/></radialGradient></defs><rect width="225" height="320" fill="url(#bg)"/><rect width="225" height="320" fill="url(#glow)"/><circle cx="112" cy="115" r="70" fill="url(#ring)"/><g transform="translate(94, 55)" fill="none" stroke="#475569" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="16"/><circle cx="18" cy="18" r="5"/><circle cx="12" cy="12" r="2" fill="#475569"/><circle cx="24" cy="12" r="2" fill="#475569"/><circle cx="18" cy="24" r="2" fill="#475569"/></g><text x="112" y="165" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="44" font-weight="800" fill="#94a3b8" text-anchor="middle">${initial}</text><text x="112" y="270" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" font-weight="600" fill="#64748b" text-anchor="middle">${cleanTitle}</text><rect x="35" y="288" width="155" height="2" rx="1" fill="#1e293b"/></svg>`;
-    return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
-  }
-
-  // Update Header KPI Stats
+  // Update Header Stats
   function updateStats() {
-    const total = allAnime.length;
-    const tens = allAnime.filter(a => a.score >= 10.0).length;
-    const reviews = allAnime.filter(a => a.review && a.review.trim().length > 0).length;
-    const rated = allAnime.filter(a => a.score > 0);
-    const avg = rated.length > 0 ? (rated.reduce((acc, a) => acc + a.score, 0) / rated.length).toFixed(2) : '0.00';
+    if (statTotal) statTotal.textContent = allAnime.length;
+    
+    const tens = allAnime.filter(a => a.score >= 10.0);
+    if (statTens) statTens.textContent = tens.length;
+    if (badgeSPlus) badgeSPlus.textContent = `${tens.length}`;
 
-    if (statTotal) statTotal.textContent = total;
-    if (statTens) statTens.textContent = tens;
-    if (statAvg) statAvg.textContent = avg;
-    if (statReviews) statReviews.textContent = reviews;
-    if (badgeSPlus) badgeSPlus.textContent = `${tens}`;
+    const rated = allAnime.filter(a => a.score > 0);
+    if (rated.length > 0) {
+      const sum = rated.reduce((acc, a) => acc + a.score, 0);
+      if (statAvg) statAvg.textContent = (sum / rated.length).toFixed(2);
+    } else {
+      if (statAvg) statAvg.textContent = '—';
+    }
+
+    const withReviews = allAnime.filter(a => a.review && a.review.trim().length > 0);
+    if (statReviews) statReviews.textContent = withReviews.length;
   }
 
   // Render Masterpiece Spotlight Shelf
   function renderSpotlight() {
     if (!spotlightSection || !spotlightTrack) return;
-    const masterpieces = allAnime
-      .filter(a => a.score >= 10.0)
-      .sort((a, b) => b.score - a.score);
+    if (currentTierFilter !== 'all' || currentSearchQuery || onlyReviewsFilter || selectedYear) {
+      spotlightSection.style.display = 'none';
+      return;
+    }
 
-    if (masterpieces.length === 0 || currentTierFilter !== 'all') {
+    const tens = allAnime.filter(a => a.score >= 10.0);
+    if (tens.length === 0) {
       spotlightSection.style.display = 'none';
       return;
     }
@@ -193,50 +184,52 @@
     spotlightSection.style.display = 'block';
     spotlightTrack.innerHTML = '';
 
-    masterpieces.forEach(item => {
+    tens.forEach(item => {
       const card = document.createElement('div');
       card.className = 'spotlight-card';
-      const posterSrc = item.poster_url || getPlaceholderPoster(item.title);
-
-      let snippetHtml = '';
-      if (item.review && item.review.trim()) {
-        const cleanSnippet = item.review.replace(/[*#>`]/g, '').trim();
-        const snippetText = cleanSnippet.length > 105 ? cleanSnippet.substring(0, 105) + '…' : cleanSnippet;
-        snippetHtml = `<p class="spotlight-review-snippet">«${escapeHtml(snippetText)}»</p>`;
+      const posterSrc = item.poster_url || 'https://shikimori.one/assets/globals/missing_original.jpg';
+      const scoreText = item.score > 0 ? (Number.isInteger(item.score) ? item.score : item.score.toFixed(2)) : '10.0';
+      
+      let quoteSnippet = '';
+      if (item.review && item.review.trim().length > 0) {
+        const clean = item.review.replace(/[#*`>_-]/g, '').trim();
+        quoteSnippet = clean.slice(0, 110) + (clean.length > 110 ? '...' : '');
       }
 
       card.innerHTML = `
-        <div class="spotlight-poster-wrap">
-          <img class="spotlight-poster" src="${posterSrc}" alt="${escapeHtml(item.title)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${getPlaceholderPoster(item.title)}'">
-          <div class="spotlight-score-tag">${formatScore(item.score)}</div>
+        <div class="spotlight-poster-box">
+          <img class="spotlight-poster" src="${posterSrc}" alt="${escapeHtml(item.title)}" referrerpolicy="no-referrer" loading="lazy">
+          <div class="spotlight-score-tag">★ ${scoreText}</div>
         </div>
-        <div class="spotlight-info">
-          <h4 class="spotlight-anime-title">${escapeHtml(item.title)}</h4>
-          <span class="spotlight-orig-title">${escapeHtml(item.title_orig || '')}</span>
-          ${snippetHtml}
+        <div class="spotlight-details">
+          <span class="spotlight-badge-small">THE MASTERPIECE</span>
+          <h3 class="spotlight-item-title">${escapeHtml(item.title)}</h3>
+          ${item.title_orig ? `<p class="spotlight-item-orig">${escapeHtml(item.title_orig)}</p>` : ''}
+          ${quoteSnippet ? `<p class="spotlight-quote">«${escapeHtml(quoteSnippet)}»</p>` : ''}
         </div>
       `;
-
       card.addEventListener('click', () => openModal(item));
       spotlightTrack.appendChild(card);
     });
   }
 
   // Render Main Catalog Grid
-  function renderCatalog() {
-    if (!vaultContent) return;
+  function render() {
     renderSpotlight();
+    const q = currentSearchQuery.toLowerCase().trim();
 
-    const query = currentSearchQuery.toLowerCase().trim();
-    const filtered = allAnime.filter(item => {
-      if (query) {
-        const tRu = (item.title || '').toLowerCase();
-        const tEn = (item.title_orig || '').toLowerCase();
-        if (!tRu.includes(query) && !tEn.includes(query)) return false;
+    // Filter items
+    let filtered = allAnime.filter(item => {
+      if (q) {
+        const t1 = (item.title || '').toLowerCase();
+        const t2 = (item.title_orig || '').toLowerCase();
+        if (!t1.includes(q) && !t2.includes(q)) return false;
       }
+
       if (onlyReviewsFilter) {
         if (!item.review || item.review.trim().length === 0) return false;
       }
+
       if (selectedYear) {
         if (selectedYear === 'retro') {
           if (!item.year || item.year >= 2010) return false;
@@ -244,10 +237,7 @@
           if (item.year !== selectedYear) return false;
         }
       }
-      if (currentTierFilter !== 'all') {
-        const tierObj = TIER_CONFIG.find(t => t.key === currentTierFilter);
-        if (tierObj && !tierObj.filter(item)) return false;
-      }
+
       return true;
     });
 
@@ -256,77 +246,76 @@
     if (filtered.length === 0) {
       vaultContent.innerHTML = `
         <div class="empty-state">
-          <div class="empty-icon">📂</div>
-          <h3 class="empty-title">Ничего не найдено</h3>
-          <p class="empty-desc">Попробуйте изменить поисковый запрос или сбросить активные фильтры.</p>
+          <p>Ничего не найдено по текущим фильтрам</p>
         </div>
       `;
       return;
     }
 
-    if (currentTierFilter === 'all' && !query && !selectedYear) {
-      TIER_CONFIG.forEach(tier => {
-        const tierItems = filtered.filter(tier.filter);
-        if (tierItems.length === 0) return;
-        renderTierRow(tier, tierItems);
-      });
-    } else {
-      const activeTierObj = TIER_CONFIG.find(t => t.key === currentTierFilter) || {
-        title: selectedYear ? `Выпуск ${selectedYear} года` : 'Результаты поиска',
-        scoreRange: `${filtered.length} тайтлов`,
-        colorVar: 'var(--tier-a)'
-      };
-      renderTierRow(activeTierObj, filtered);
-    }
-  }
+    TIER_CONFIG.forEach(tier => {
+      if (currentTierFilter !== 'all' && currentTierFilter !== tier.key) {
+        return;
+      }
 
-  function renderTierRow(tier, items) {
-    const section = document.createElement('section');
-    section.className = 'tier-section';
-    section.style.setProperty('--tier-accent', tier.colorVar);
+      const tierItems = filtered.filter(tier.filter);
+      if (tierItems.length === 0) return;
 
-    const header = document.createElement('div');
-    header.className = 'tier-header';
-    header.innerHTML = `
-      <div class="tier-title-group">
-        <h3 class="tier-name">${tier.title}</h3>
-        <span class="tier-range">${tier.scoreRange}</span>
-      </div>
-      <div class="tier-count">${items.length}</div>
-    `;
-    section.appendChild(header);
+      const section = document.createElement('section');
+      section.className = 'tier-section';
+      section.style.setProperty('--tier-color', tier.colorVar);
 
-    const grid = document.createElement('div');
-    grid.className = 'anime-grid';
-
-    items.forEach(item => {
-      const card = document.createElement('div');
-      card.className = 'anime-card';
-      const posterSrc = item.poster_url || getPlaceholderPoster(item.title);
-      const hasReview = item.review && item.review.trim().length > 0;
-      const scoreBadgeClass = getScoreBadgeClass(item.score);
-
-      card.innerHTML = `
-        <div class="card-poster-wrap">
-          <img class="card-poster" src="${posterSrc}" alt="${escapeHtml(item.title)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${getPlaceholderPoster(item.title)}'">
-          <div class="card-score ${scoreBadgeClass}">${formatScore(item.score)}</div>
-          ${hasReview ? '<div class="card-review-indicator" title="Есть рецензия автора">✍</div>' : ''}
+      const header = document.createElement('div');
+      header.className = 'tier-header';
+      header.innerHTML = `
+        <div class="tier-header-left">
+          <h2 class="tier-title">${tier.title}</h2>
+          <span class="tier-score-range">${tier.scoreRange}</span>
         </div>
-        <div class="card-info">
-          <h4 class="card-title" title="${escapeHtml(item.title)}">${escapeHtml(item.title)}</h4>
-          <span class="card-orig-title">${escapeHtml(item.title_orig || '')}</span>
-        </div>
+        <div class="tier-count-pill">${tierItems.length}</div>
       `;
+      section.appendChild(header);
 
-      card.addEventListener('click', () => openModal(item));
-      grid.appendChild(card);
+      const grid = document.createElement('div');
+      grid.className = 'anime-grid';
+
+      tierItems.forEach(item => {
+        const card = document.createElement('article');
+        const isMasterpiece = item.score >= 10.0;
+        card.className = `anime-card ${isMasterpiece ? 'card-masterpiece' : ''}`;
+        card.setAttribute('data-id', item.id);
+
+        const hasReview = item.review && item.review.trim().length > 0;
+        const posterSrc = item.poster_url || 'https://shikimori.one/assets/globals/missing_original.jpg';
+        const badgeClass = getScoreBadgeClass(item.score);
+        const scoreText = formatScore(item.score);
+
+        card.innerHTML = `
+          <div class="poster-wrapper">
+            <img class="card-poster" src="${posterSrc}" alt="${escapeHtml(item.title)}" referrerpolicy="no-referrer" loading="lazy">
+            <div class="card-score-badge ${badgeClass}">${scoreText}</div>
+            ${hasReview ? '<div class="card-review-badge" title="Есть рецензия">✍</div>' : ''}
+            <div class="card-overlay">
+              <div class="card-overlay-content">
+                <h3 class="card-title" title="${escapeHtml(item.title)}">${escapeHtml(item.title)}</h3>
+                ${item.title_orig ? `<p class="card-orig-title">${escapeHtml(item.title_orig)}</p>` : ''}
+                <div class="card-meta-row">
+                  ${hasReview ? '<span class="card-review-indicator">Есть мысли</span>' : ''}
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+
+        card.addEventListener('click', () => openModal(item));
+        grid.appendChild(card);
+      });
+
+      section.appendChild(grid);
+      vaultContent.appendChild(section);
     });
-
-    section.appendChild(grid);
-    vaultContent.appendChild(section);
   }
 
-  // Analytics View Logic
+  // --- Analytics & Taste Profile ---
   function renderAnalytics() {
     if (!allAnime || allAnime.length === 0) return;
 
@@ -389,7 +378,7 @@
         selectedYear = yr;
         if (btnResetYearFilter) btnResetYearFilter.style.display = 'inline-block';
         switchView('catalog');
-        renderCatalog();
+        render();
       });
       yearTimelineGrid.appendChild(card);
     });
@@ -408,7 +397,7 @@
       selectedYear = 'retro';
       if (btnResetYearFilter) btnResetYearFilter.style.display = 'inline-block';
       switchView('catalog');
-      renderCatalog();
+      render();
     });
     yearTimelineGrid.appendChild(retroCard);
   }
@@ -416,7 +405,7 @@
   function renderDonutChart(mode = 'genres') {
     if (!donutChartCanvas) return;
     if (typeof Chart === 'undefined') {
-      console.warn('Chart.js is not loaded');
+      console.warn('Chart.js not loaded');
       return;
     }
 
@@ -566,7 +555,7 @@
               searchInput.value = lbl;
               if (btnClearSearch) btnClearSearch.style.display = 'block';
             }
-            renderCatalog();
+            render();
           });
         }
         customChartLegend.appendChild(item);
@@ -652,7 +641,7 @@
           searchInput.value = item.genre;
           if (btnClearSearch) btnClearSearch.style.display = 'block';
         }
-        renderCatalog();
+        render();
       });
 
       tasteLeaderboardGrid.appendChild(card);
@@ -675,21 +664,28 @@
     }
   }
 
-  // Reader Modal
+  // Open Modal Reader
   function openModal(item) {
-    modalPoster.src = item.poster_url || getPlaceholderPoster(item.title);
+    modalPoster.src = item.poster_url || 'https://shikimori.one/assets/globals/missing_original.jpg';
     modalScoreBadge.textContent = formatScore(item.score);
     modalScoreBadge.className = `reader-score-badge ${getScoreBadgeClass(item.score)}`;
 
     modalTitle.textContent = item.title;
     modalOrigTitle.textContent = item.title_orig || '';
 
-    const tierKey = getTierKey(item.score);
-    modalTierTag.textContent = `Tier ${tierKey}`;
-    modalStatusTag.textContent = STATUS_MAP[item.status] || item.status || 'Просмотрено';
+    // Tier tag
+    modalTierTag.textContent = item.score >= 10.0 ? 'Tier S+' : (item.tier ? `Tier ${item.tier.toUpperCase()}` : 'В планах');
+    
+    // Status tag
+    const stRu = STATUS_MAP[item.status] || item.status;
+    modalStatusTag.textContent = stRu;
 
+    // Links
     if (item.url_shikimori) {
       modalShikimoriLink.href = item.url_shikimori;
+      modalShikimoriLink.style.display = 'flex';
+    } else if (item.shiki_id) {
+      modalShikimoriLink.href = `https://shikimori.one/animes/${item.shiki_id}`;
       modalShikimoriLink.style.display = 'flex';
     } else {
       modalShikimoriLink.style.display = 'none';
@@ -702,6 +698,7 @@
       modalAnimegoLink.style.display = 'none';
     }
 
+    // Render Review
     if (item.review && item.review.trim().length > 0) {
       if (window.marked && typeof window.marked.parse === 'function') {
         modalReviewContent.innerHTML = window.marked.parse(item.review);
@@ -730,7 +727,7 @@
     searchInput.addEventListener('input', (e) => {
       currentSearchQuery = e.target.value;
       if (btnClearSearch) btnClearSearch.style.display = currentSearchQuery ? 'block' : 'none';
-      renderCatalog();
+      render();
     });
   }
 
@@ -739,7 +736,7 @@
       searchInput.value = '';
       currentSearchQuery = '';
       btnClearSearch.style.display = 'none';
-      renderCatalog();
+      render();
     });
   }
 
@@ -750,14 +747,14 @@
       document.querySelectorAll('.tier-tab').forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
       currentTierFilter = tab.dataset.tier;
-      renderCatalog();
+      render();
     });
   }
 
   if (toggleOnlyReviews) {
     toggleOnlyReviews.addEventListener('change', (e) => {
       onlyReviewsFilter = e.target.checked;
-      renderCatalog();
+      render();
     });
   }
 
@@ -793,7 +790,7 @@
       if (yearTimelineGrid) {
         yearTimelineGrid.querySelectorAll('.year-card').forEach(c => c.classList.remove('active'));
       }
-      renderCatalog();
+      render();
     });
   }
 
@@ -812,5 +809,5 @@
 
   // Init
   updateStats();
-  renderCatalog();
+  render();
 })();
