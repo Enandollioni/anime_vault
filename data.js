@@ -10,14 +10,7 @@ window.ANIME_VAULT_DATA = [
     "review": "**\"Сонни бой\" (Sonny Boy)** - работа невероятной красоты, как будто бы каждый кадр рисовали гуашью. Интересный сюжет и, в целом, жанр научной фантастики зашёл очень даже хорошо в аниме, что было для меня неожиданно. Герои успевают засесть в душу, за 12 эпизодов автору удаётся часть из них неплохо так раскрыть. Мне данное аниме невероятно понравилось, хочется его ещё раз как-нибудь пересмотреть. Советую к просмотру в хорошем дубляже с вырезанным японским голосом, чтобы больше погрузится в атмосферу и послушать саунд, он тут на высоте.",
     "url_animego": "https://animego.me/anime/sonni-boy-1786",
     "url_shikimori": "https://shikimori.io/animes/48849",
-    "shiki_id": 48849,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2021,
-    "genres": [
-      "Детектив",
-      "Супер сила"
-    ]
+    "shiki_id": 48849
   },
   {
     "id": 2,
@@ -30,16 +23,7 @@ window.ANIME_VAULT_DATA = [
     "review": "**\"Провожающая в последний путь Фрирен\" (Sousou no Frieren)** - одно из самых необычных и живописных аниме среди тех, что я успел посмотреть. Очень понравился стиль повествования, атмосфера тайтла, ненапряжённые смол толки между основными героями и взаимодействие с второстепенными персонажами. В этой картине автор преподносит интересную историю в невероятно красочных пейзажах, завлекает зрителя шикарной атмосферой, разбавляет тяжёлые моменты бытовым юмором, показывает взросление главного героя, переосмысление его идей и идеалов. Определённо стоит посмотреть, в хорошей озвучке, чтобы не потерять всю атмосферу этого тайтла.",
     "url_animego": "https://animego.me/anime/provozhayuschaya-v-posledniy-put-friren-2430",
     "url_shikimori": "https://shikimori.io/animes/52991",
-    "shiki_id": 52991,
-    "episodes": 28,
-    "duration": 24,
-    "year": 2023,
-    "genres": [
-      "Приключения",
-      "Драма",
-      "Фэнтези",
-      "Сёнен"
-    ]
+    "shiki_id": 52991
   },
   {
     "id": 3,
@@ -52,18 +36,7 @@ window.ANIME_VAULT_DATA = [
     "review": "**\"Аполлон: Дети на холме\" (Kids on the Slope)** - трогательная и атмосферная история о взрослении, музыке и о том, насколько могут быть хрупки отношения между людьми. Аниме сочетает красоту повседневности с ностальгической грустью, исследуя, как прошлое формирует нас. Сюжет хоть и нетороплив, но наполнен искренними эмоциями, а визуальный стиль и саундтреки создают неповторимую лиричность. Автор мастерски использует музыку как второй язык повествования: джазовые композиции не просто сопровождают сцену, а становятся её эмоциональным стержнем. Пианино, саксофон и тихие мелодии подчёркивают одиночество героев, их мечты и потери, превращая каждый кадр в живую, дышащую картину. Очень тёплое аниме для всех тех, кто ценит глубину и неповторимость. Я невероятно люблю это произведение, после нескольких просмотров подметил для себя что-то новое, сюжет не подкачал. Музыка цепляла до глубины души, некоторые саундтреки навсегда увековечились в моём плейлисте.",
     "url_animego": "https://animego.me/anime/apollon-deti-na-holme-1939",
     "url_shikimori": "https://shikimori.io/animes/12531",
-    "shiki_id": 12531,
-    "episodes": 12,
-    "duration": 22,
-    "year": 2012,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Исторический",
-      "Музыка",
-      "Школа",
-      "Дзёсей"
-    ]
+    "shiki_id": 12531
   },
   {
     "id": 5,
@@ -76,16 +49,7 @@ window.ANIME_VAULT_DATA = [
     "review": "**Бек (Beck: Mongolian Chop Squad)** - Невероятно душевная история, в которой автор показывает нам взросление и дружбу через призму музыки. Аниме чудесно передаёт атмосферу андеграундной рок-сцены, а саундтрек здесь не просто фон, а полноценный герой повествования.\n\n### Музыка как основа атмосферы\n\nАвтор сделал невероятное: каждая композиция в BECK звучит так, будто ты стоишь в толпе на живом концерте. Гитары ревут, бас дрожит, а вокал передаёт эмоции так, что мурашки бегут по коже. Даже моменты тишины или неуверенной игры главного героя поданы настолько реалистично, что веришь каждому звуку. Если ты хоть немного любишь рок или истории про преодоление себя - **BECK** обязателен к просмотру. Да, анимация иногда проседает, но музыка и искренность персонажей с лихвой это компенсируют.",
     "url_animego": "https://animego.me/anime/bek-764",
     "url_shikimori": "https://shikimori.io/animes/57",
-    "shiki_id": 57,
-    "episodes": 26,
-    "duration": 24,
-    "year": 2004,
-    "genres": [
-      "Комедия",
-      "Драма",
-      "Музыка",
-      "Сёнен"
-    ]
+    "shiki_id": 57
   },
   {
     "id": 6,
@@ -98,15 +62,7 @@ window.ANIME_VAULT_DATA = [
     "review": "\"Розовая пора моей школьной жизни сплошной обман\" (Oregairu) — это аниме, которое сначала кажется простым, но потом врезается в сердце. Диалоги, персонажи и их развитие — на высшем уровне. Музыка лишь усиливает впечатление, делая каждый эмоциональный момент ещё более пронзительным. Лично я пересмотрел это аниме за всю жизнь 3 раза, вполне возможно, что когда-то наступит и 4 раз. Стоит сказать, что тайтл отличается от остальных какой-то особой искренностью, хоть в нём и показывают базовый любовный треугольник в котором одна из сторон остаётся в проигрыше. Это не просто ромком, а умная, ироничная и глубокая история о подростковом одиночестве, поиске себя и попытках понять других.",
     "url_animego": "https://animego.me/anime/kak-i-ozhidalos-moya-shkolnaya-romanticheskaya-zhizn-ne-udalas-2-1029",
     "url_shikimori": "https://shikimori.io/animes/23847",
-    "shiki_id": 23847,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2015,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 23847
   },
   {
     "id": 7,
@@ -119,16 +75,7 @@ window.ANIME_VAULT_DATA = [
     "review": "Не упомянуть в списке лучших аниме Нану (NANA) - ошибка. Nana - это не просто история о музыке и взрослении, а эмоциональная сага о дружбе, любви и болезненных жизненных выборах. Две девушки с одинаковым именем, но совершенно разными судьбами — Нана Осаки (бунтарка-рокерша) и Нана Комацу («Хачи» — наивная романтичка) — случайно становятся соседками, и их жизни переплетаются навсегда.\n\nВзаимоотношения, которые режут по живому\nАвтор (Ай Ядзава) мастерски показывает, как герои притягиваются и отталкиваются, любят и ранят друг друга. Их дружба — не идеальная картинка, а честная, с ревностью, недопониманием и жертвами. Романтические линии (особенно токсичные отношения Наны Осаки и Рэна) написаны так, что невозможно остаться равнодушным — ты злишься, переживаешь, но понимаешь, почему герои не могут просто «взять и разойтись».\n\nМой субъективный вердикт\nNana — одно из тех аниме, после которого мир кажется другим. Оно красивое, горькое и безумно атмосферное — с шикарным музыкальным сопровождением, стильной рисовкой и диалогами, которые звучат как монологи из твоей головы. Это не просто «сёдзё» — это жизнь.",
     "url_animego": "https://animego.me/anime/nana-308",
     "url_shikimori": "https://shikimori.io/animes/877",
-    "shiki_id": 877,
-    "episodes": 47,
-    "duration": 22,
-    "year": 2006,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Музыка",
-      "Сёдзё"
-    ]
+    "shiki_id": 877
   },
   {
     "id": 8,
@@ -141,14 +88,7 @@ window.ANIME_VAULT_DATA = [
     "review": "\"Вайолет Эвергарден\" (Violet Evergarden) - это визуальная поэма о войне, потере и исцелении через слова. История бывшей солдатки Вайолет, которая, лишившись рук и смысла жизни, становится «автозапоминающей куклой» (письмовводительницей), чтобы понять последние слова своего командира: «Я люблю тебя». \n\nМой субъективный вердикт\nЭто аниме — шедевр, где кадр стоит тысячи слов, а музыка доводит эмоции до мурашек. Вайолет меняется незаметно, но кардинально — от «орудия» до хрупкой, но сильной женщины. 10/10 за красоту, глубину и сцены, после которых невозможно сдержать слёзы.\n\nP.S. Смотреть  стоит в максимальном качестве, очень красивая и проработанная картинка.",
     "url_animego": "https://animego.me/anime/vayolet-evergarden-vechnost-i-prizrak-pera-1257",
     "url_shikimori": "https://shikimori.io/animes/39741",
-    "shiki_id": 39741,
-    "episodes": 1,
-    "duration": 91,
-    "year": 2019,
-    "genres": [
-      "Драма",
-      "Фэнтези"
-    ]
+    "shiki_id": 39741
   },
   {
     "id": 9,
@@ -161,16 +101,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/letnee-vremya-2022",
     "url_shikimori": "https://shikimori.io/animes/47194",
-    "shiki_id": 47194,
-    "episodes": 25,
-    "duration": 23,
-    "year": 2022,
-    "genres": [
-      "Детектив",
-      "Сверхъестественное",
-      "Триллер",
-      "Сёнен"
-    ]
+    "shiki_id": 47194
   },
   {
     "id": 10,
@@ -183,14 +114,7 @@ window.ANIME_VAULT_DATA = [
     "review": "\"Вайолет Эвергарден\" (Violet Evergarden) - это визуальная поэма о войне, потере и исцелении через слова. История бывшей солдатки Вайолет, которая, лишившись рук и смысла жизни, становится «автозапоминающей куклой» (письмовводительницей), чтобы понять последние слова своего командира: «Я люблю тебя». \n\nМой субъективный вердикт\nЭто аниме — шедевр, где кадр стоит тысячи слов, а музыка доводит эмоции до мурашек. Вайолет меняется незаметно, но кардинально — от «орудия» до хрупкой, но сильной женщины. 10/10 за красоту, глубину и сцены, после которых невозможно сдержать слёзы.\n\nP.S. Смотреть  стоит в максимальном качестве, очень красивая и проработанная картинка.",
     "url_animego": "https://animego.me/anime/vayolet-evergarden-film-1778",
     "url_shikimori": "https://shikimori.io/animes/37987",
-    "shiki_id": 37987,
-    "episodes": 1,
-    "duration": 140,
-    "year": 2020,
-    "genres": [
-      "Драма",
-      "Фэнтези"
-    ]
+    "shiki_id": 37987
   },
   {
     "id": 11,
@@ -203,17 +127,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/korzinka-fruktov-939",
     "url_shikimori": "https://shikimori.io/animes/38680",
-    "shiki_id": 38680,
-    "episodes": 25,
-    "duration": 23,
-    "year": 2019,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Сверхъестественное",
-      "Школа",
-      "Сёдзё"
-    ]
+    "shiki_id": 38680
   },
   {
     "id": 12,
@@ -226,14 +140,7 @@ window.ANIME_VAULT_DATA = [
     "review": "\"Вайолет Эвергарден\" (Violet Evergarden) - это визуальная поэма о войне, потере и исцелении через слова. История бывшей солдатки Вайолет, которая, лишившись рук и смысла жизни, становится «автозапоминающей куклой» (письмовводительницей), чтобы понять последние слова своего командира: «Я люблю тебя». \n\nМой субъективный вердикт\nЭто аниме — шедевр, где кадр стоит тысячи слов, а музыка доводит эмоции до мурашек. Вайолет меняется незаметно, но кардинально — от «орудия» до хрупкой, но сильной женщины. 10/10 за красоту, глубину и сцены, после которых невозможно сдержать слёзы.\n\nP.S. Смотреть  стоит в максимальном качестве, очень красивая и проработанная картинка.",
     "url_animego": "https://animego.me/anime/violet-evergarden-1v-185",
     "url_shikimori": "https://shikimori.io/animes/33352",
-    "shiki_id": 33352,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2018,
-    "genres": [
-      "Драма",
-      "Фэнтези"
-    ]
+    "shiki_id": 33352
   },
   {
     "id": 13,
@@ -246,14 +153,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/forma-golosa-267",
     "url_shikimori": "https://shikimori.io/animes/28851",
-    "shiki_id": 28851,
-    "episodes": 1,
-    "duration": 130,
-    "year": 2016,
-    "genres": [
-      "Драма",
-      "Сёнен"
-    ]
+    "shiki_id": 28851
   },
   {
     "id": 14,
@@ -266,14 +166,7 @@ window.ANIME_VAULT_DATA = [
     "review": "\"Вайолет Эвергарден\" (Violet Evergarden) - это визуальная поэма о войне, потере и исцелении через слова. История бывшей солдатки Вайолет, которая, лишившись рук и смысла жизни, становится «автозапоминающей куклой» (письмовводительницей), чтобы понять последние слова своего командира: «Я люблю тебя». \n\nМой субъективный вердикт\nЭто аниме — шедевр, где кадр стоит тысячи слов, а музыка доводит эмоции до мурашек. Вайолет меняется незаметно, но кардинально — от «орудия» до хрупкой, но сильной женщины. 10/10 за красоту, глубину и сцены, после которых невозможно сдержать слёзы.\n\nP.S. Смотреть  стоит в максимальном качестве, очень красивая и проработанная картинка.",
     "url_animego": "https://animego.me/anime/vayolet-evergarden-den-kogda-ty-poymesh-chto-ya-lyublyu-tebya-obyazatelno-nastupit-1256",
     "url_shikimori": "https://shikimori.io/animes/37095",
-    "shiki_id": 37095,
-    "episodes": 1,
-    "duration": 34,
-    "year": 2018,
-    "genres": [
-      "Драма",
-      "Фэнтези"
-    ]
+    "shiki_id": 37095
   },
   {
     "id": 71,
@@ -286,16 +179,7 @@ window.ANIME_VAULT_DATA = [
     "review": "Второй сезон окончательно выбивает почву из-под ног и доказывает, почему эта история заслуживает своей десятки. Если первый сезон брал пьянящим эскапизмом и эстетикой ночи в неоновых красках, то второй сезон срывает всю романтическую шелуху, показывая нам её настоящую цену.\n\nДля меня это произведение оказалось куда глубже и многограннее, чем выглядело на первый взгляд: все инфантильные моменты теперь отдают прямой неприкрытой грустью, а драматические линии, не до конца осмысленные при первом просмотре, на этот раз бьют в разы сильнее. Главным эмоциональным ударом стал монолог детектива Анко в финальной серии о том, что почти к тридцати годам за душой ничего не осталось, жизнь спущена в никуда, а самая сложная вещь на свете - *это просто жить обычную жизнь*. Я провалился в это чувство моментально: знакомый экзистенциальный страх остаться никем, не успеть состояться и потерять себя за ширмой навязчивой идеи.\n\nМузыкально тайтл сработал безупречно: попросту нескипаемый опенинг от **Creepy Nuts** держит бешеный драйв, а появление знакомого эндинга из первого сезона в концовке последней серии заставляет непроизвольно улыбнуться. Редкий случай, когда пересмотр дарит ещё больше чувств и заставляет искренне полюбить тайтл вновь. Спасибо **Yofukashi No Uta**, это был невероятный опыт.",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/58390",
-    "shiki_id": 58390,
-    "episodes": 12,
-    "duration": 22,
-    "year": 2025,
-    "genres": [
-      "Сёнен",
-      "Романтика",
-      "Сверхъестественное",
-      "Вампиры"
-    ]
+    "shiki_id": 58390
   },
   {
     "id": 15,
@@ -308,15 +192,7 @@ window.ANIME_VAULT_DATA = [
     "review": "**\"За гранью\" (Kyōkai no Kanata)** - это волшебная смесь мистики, экшена и драмы, в фирменном стиле Kyoto Animation. История Акихито - полукровки-\"пожирателя духов\" и Мирай - неуклюжей девушки с кровавыми клинками, балансирует между остроумными бытовыми сценками и мрачной фантастикой.\n\n###Отношения, которые пронзают\n\nСвязь героев строится на контрастах: Мирай невероятно неудачлива, но смертельно опасна, а Аки кажется циником, но на деле готов жертвовать собой. Их диалоги - это смех сквозь боль, а совместные битвы с \"йому\" (демонами) лишь подчёркивают глубину привязанности. Особенно трогательна дружба Мирай с Мицуки (которая скрывает свою заботу за сарказмом) и трагическая связь Аки с его прошлым.\n\n###Мой субъективный вердикт\n\nАниме покоряет визуальной красотой (бой на фоне заката - шедевр), запоминающимися персонажами и идеальным балансом юмора и грусти. Финал оставляет лёгкое послевкусие меланхолии, но это того стоит. 10/10.",
     "url_animego": "https://animego.me/anime/kyoukai-no-kanata-1002",
     "url_shikimori": "https://shikimori.io/animes/18153",
-    "shiki_id": 18153,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2013,
-    "genres": [
-      "Экшен",
-      "Фэнтези",
-      "Школа"
-    ]
+    "shiki_id": 18153
   },
   {
     "id": 79,
@@ -329,14 +205,7 @@ window.ANIME_VAULT_DATA = [
     "review": "**\"Сад изящных слов\" (Kotonoha no Niwa)** - тот случай, когда хорошего мало. 46 минут - чересчур сжатый метр для подобной истории, но само аниме прекрасно, как глоток свежего воздуха: по рисовке, сюжету и неповторимой дождевой атмосфере.\n\n### Музыка\n\n**Музыка ** - прям отвал башки. Моментами на пианино звучало очень смелое сочетание аккордов, сразу можно отличить хорошую, живую игру от обычной. Партии фортепиано идеально ложатся на шум ливня и зелень сада, музыка прямо таки дышит вместе с самой историей.\n\n### Мой субъективный вердикт\n\nОстался в полном восторге. Пожалуй, не зря оценил аниме на 10+, визуальная и аудиальная поэма. Единственная претензия пожалуй - это хронометраж, хотелось остаться в этой беседке под дождём хотя бы немного на подольше.",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/16782",
-    "shiki_id": 16782,
-    "episodes": 1,
-    "duration": 46,
-    "year": 2013,
-    "genres": [
-      "Драма",
-      "Романтика"
-    ]
+    "shiki_id": 16782
   },
   {
     "id": 16,
@@ -349,14 +218,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/remeyk-nashey-zhizni-rekap-1854",
     "url_shikimori": "https://shikimori.io/animes/49550",
-    "shiki_id": 49550,
-    "episodes": 1,
-    "duration": 23,
-    "year": 2021,
-    "genres": [
-      "Драма",
-      "Романтика"
-    ]
+    "shiki_id": 49550
   },
   {
     "id": 17,
@@ -369,17 +231,7 @@ window.ANIME_VAULT_DATA = [
     "review": "Твоя апрельская ложь (Shigatsu wa Kimi no Uso) - визуальная симфония о любви, потере и исцелении через музыку. История бывшего вундеркинда-пианиста Косэя, который, погружённый в траур по ушедшей матери, встречает жизнерадостную скрипачку Каори, она в свою очередь, переворачивает его мир с ног на голову.\n\nМой субъективный вердикт\nАниме завораживает анимацией, которая превращает музыку в цветовые взрывы, и сюжетом, где каждая нота — это эмоция. Финал ошеломляет и остаётся в сердце годами. 10/10, потому что это не просто история — это концерт для души, после которого хочется жить, любить и слушать Шопена.",
     "url_animego": "https://animego.me/anime/tvoya-aprelskaya-lozh-v1-793",
     "url_shikimori": "https://shikimori.io/animes/23273",
-    "shiki_id": 23273,
-    "episodes": 22,
-    "duration": 22,
-    "year": 2014,
-    "genres": [
-      "Сёнен",
-      "Драма",
-      "Романтика",
-      "Музыка",
-      "Школа"
-    ]
+    "shiki_id": 23273
   },
   {
     "id": 18,
@@ -392,14 +244,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/remeyk-nashey-zhizni-1800",
     "url_shikimori": "https://shikimori.io/animes/40904",
-    "shiki_id": 40904,
-    "episodes": 12,
-    "duration": 25,
-    "year": 2021,
-    "genres": [
-      "Драма",
-      "Романтика"
-    ]
+    "shiki_id": 40904
   },
   {
     "id": 20,
@@ -412,16 +257,7 @@ window.ANIME_VAULT_DATA = [
     "review": "Редкий тайтл, идеально улавливающий саму суть ночного эскапизма. Ночь здесь - не просто красивая декорация, а пространство, куда сбегаешь от духоты социальных ожиданий, дневной фальши и социального шума, который требует от тебя соответствовать чужим меркам.\n\nПустые улицы, фиолетовый неон, холодный свет круглосуточных магазинов и просто сногшибательный саундтрек от **Creepy Nuts** создают гипнотическую, осязаемую атмосферу. Отношения Ко и Назуны подкупают полным отсутствием штампов ромкома: это честное сближение двух одиночеств, пытающихся на ощупь понять, что такое искренность, свобода и привязанность. **Песнь ночных сов (Yofukashi No Uta)** - прямой манифест бессонницы, открывающий дорогу в куда более сложную драму.",
     "url_animego": "https://animego.me/anime/pesn-nochnyh-sov-v2-2080",
     "url_shikimori": "https://shikimori.io/animes/50346",
-    "shiki_id": 50346,
-    "episodes": 13,
-    "duration": 22,
-    "year": 2022,
-    "genres": [
-      "Сёнен",
-      "Романтика",
-      "Сверхъестественное",
-      "Вампиры"
-    ]
+    "shiki_id": 50346
   },
   {
     "id": 54,
@@ -434,16 +270,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/44074",
-    "shiki_id": 44074,
-    "episodes": 11,
-    "duration": 23,
-    "year": 2021,
-    "genres": [
-      "Драма",
-      "Детектив",
-      "Сверхъестественное",
-      "Триллер"
-    ]
+    "shiki_id": 44074
   },
   {
     "id": 21,
@@ -456,17 +283,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/parazit-uchenie-o-zhizni-1432",
     "url_shikimori": "https://shikimori.io/animes/22535",
-    "shiki_id": 22535,
-    "episodes": 24,
-    "duration": 23,
-    "year": 2014,
-    "genres": [
-      "Экшен",
-      "Ужасы",
-      "Фантастика",
-      "Психологическое",
-      "Сэйнэн"
-    ]
+    "shiki_id": 22535
   },
   {
     "id": 24,
@@ -479,15 +296,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/povtornaya-zhizn-515",
     "url_shikimori": "https://shikimori.io/animes/30015",
-    "shiki_id": 30015,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2016,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 30015
   },
   {
     "id": 61,
@@ -500,15 +309,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/1530",
-    "shiki_id": 1530,
-    "episodes": 24,
-    "duration": 24,
-    "year": 2006,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Сверхъестественное"
-    ]
+    "shiki_id": 1530
   },
   {
     "id": 25,
@@ -521,15 +322,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/kerol-i-tyusdey-947",
     "url_shikimori": "https://shikimori.io/animes/37435",
-    "shiki_id": 37435,
-    "episodes": 24,
-    "duration": 22,
-    "year": 2019,
-    "genres": [
-      "Драма",
-      "Фантастика",
-      "Музыка"
-    ]
+    "shiki_id": 37435
   },
   {
     "id": 66,
@@ -542,16 +335,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/513",
-    "shiki_id": 513,
-    "episodes": 1,
-    "duration": 124,
-    "year": 1986,
-    "genres": [
-      "Приключения",
-      "Фэнтези",
-      "Романтика",
-      "Фантастика"
-    ]
+    "shiki_id": 513
   },
   {
     "id": 23,
@@ -564,16 +348,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/mastera-mecha-onlayn-v1-309",
     "url_shikimori": "https://shikimori.io/animes/11757",
-    "shiki_id": 11757,
-    "episodes": 25,
-    "duration": 23,
-    "year": 2012,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези",
-      "Романтика"
-    ]
+    "shiki_id": 11757
   },
   {
     "id": 26,
@@ -586,15 +361,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/povelitel-v1-101",
     "url_shikimori": "https://shikimori.io/animes/29803",
-    "shiki_id": 29803,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2015,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 29803
   },
   {
     "id": 27,
@@ -607,16 +374,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/krutoy-uchitel-onidzuka-556",
     "url_shikimori": "https://shikimori.io/animes/245",
-    "shiki_id": 245,
-    "episodes": 43,
-    "duration": 25,
-    "year": 1999,
-    "genres": [
-      "Комедия",
-      "Школа",
-      "Работа",
-      "Сёнен"
-    ]
+    "shiki_id": 245
   },
   {
     "id": 22,
@@ -629,17 +387,7 @@ window.ANIME_VAULT_DATA = [
     "review": "Пожалуй тот тайтл, который не нуждается в пересмотре. Забрался так высоко во многом из-за того, что в своё время оказал реально большое влияние на меня. Запал в душу. При пересмотре уже сейчас, став старше, понимаю, что аниме на самом деле не было настолько невероятным и в сюжете конечно же хватало своих дыр и непоняток. \n**Город в котором меня нет** - это тот город, в котором стоит побывать единожды, когда ты ещё мал и не опытен или же воспринимаешь этот мир так, словно всё в нём существует на уровне чувств.",
     "url_animego": "https://animego.me/anime/gorod-v-kotorom-menya-net-281",
     "url_shikimori": "https://shikimori.io/animes/31043",
-    "shiki_id": 31043,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2016,
-    "genres": [
-      "Детектив",
-      "Сверхъестественное",
-      "Триллер",
-      "Психологическое",
-      "Сэйнэн"
-    ]
+    "shiki_id": 31043
   },
   {
     "id": 28,
@@ -652,16 +400,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/smertelnyy-bilyard-1571",
     "url_shikimori": "https://shikimori.io/animes/14353",
-    "shiki_id": 14353,
-    "episodes": 1,
-    "duration": 25,
-    "year": 2013,
-    "genres": [
-      "Драма",
-      "Сверхъестественное",
-      "Триллер",
-      "Психологическое"
-    ]
+    "shiki_id": 14353
   },
   {
     "id": 30,
@@ -674,16 +413,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/priyatno-poznakomitsya-bog-2-ova-355",
     "url_shikimori": "https://shikimori.io/animes/14713",
-    "shiki_id": 14713,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2012,
-    "genres": [
-      "Комедия",
-      "Фэнтези",
-      "Романтика",
-      "Сёдзё"
-    ]
+    "shiki_id": 14713
   },
   {
     "id": 31,
@@ -696,16 +426,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/re-zhizn-v-alternativnom-mire-s-nulya-109",
     "url_shikimori": "https://shikimori.io/animes/31240",
-    "shiki_id": 31240,
-    "episodes": 25,
-    "duration": 26,
-    "year": 2016,
-    "genres": [
-      "Драма",
-      "Фэнтези",
-      "Триллер",
-      "Психологическое"
-    ]
+    "shiki_id": 31240
   },
   {
     "id": 32,
@@ -718,15 +439,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/net-igry-net-zhizni-nachalo-173",
     "url_shikimori": "https://shikimori.io/animes/33674",
-    "shiki_id": 33674,
-    "episodes": 1,
-    "duration": 106,
-    "year": 2017,
-    "genres": [
-      "Драма",
-      "Фэнтези",
-      "Романтика"
-    ]
+    "shiki_id": 33674
   },
   {
     "id": 33,
@@ -739,16 +452,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/ochen-priyatno-bog-352",
     "url_shikimori": "https://shikimori.io/animes/14713",
-    "shiki_id": 14713,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2012,
-    "genres": [
-      "Комедия",
-      "Фэнтези",
-      "Романтика",
-      "Сёдзё"
-    ]
+    "shiki_id": 14713
   },
   {
     "id": 19,
@@ -761,16 +465,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/ty-edinstvennaya-kto-lyubit-velikogo-menya-1235",
     "url_shikimori": "https://shikimori.io/animes/38483",
-    "shiki_id": 38483,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2019,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 38483
   },
   {
     "id": 35,
@@ -783,16 +478,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/ochen-priyatno-bog-budte-schastlivy-356",
     "url_shikimori": "https://shikimori.io/animes/33323",
-    "shiki_id": 33323,
-    "episodes": 1,
-    "duration": 12,
-    "year": 2016,
-    "genres": [
-      "Комедия",
-      "Фэнтези",
-      "Романтика",
-      "Сёдзё"
-    ]
+    "shiki_id": 33323
   },
   {
     "id": 36,
@@ -805,16 +491,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/ochen-priyatno-bog-ova-354",
     "url_shikimori": "https://shikimori.io/animes/18661",
-    "shiki_id": 18661,
-    "episodes": 2,
-    "duration": 14,
-    "year": 2013,
-    "genres": [
-      "Комедия",
-      "Фэнтези",
-      "Романтика",
-      "Сёдзё"
-    ]
+    "shiki_id": 18661
   },
   {
     "id": 37,
@@ -827,16 +504,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/podzemele-vkusnostey-2481",
     "url_shikimori": "https://shikimori.io/animes/52701",
-    "shiki_id": 52701,
-    "episodes": 24,
-    "duration": 25,
-    "year": 2024,
-    "genres": [
-      "Комедия",
-      "Фэнтези",
-      "Гурман",
-      "Сэйнэн"
-    ]
+    "shiki_id": 52701
   },
   {
     "id": 38,
@@ -849,17 +517,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/pritvornaya-lyubov-2503",
     "url_shikimori": "https://shikimori.io/animes/18897",
-    "shiki_id": 18897,
-    "episodes": 20,
-    "duration": 24,
-    "year": 2014,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 18897
   },
   {
     "id": 29,
@@ -872,15 +530,7 @@ window.ANIME_VAULT_DATA = [
     "review": "**Эхо террора** - тайтл, который не оправдал ожидания. Аниме пожалуй, для своего времени было по правде невероятным. Как же я рад, что посмотрел его как раз лет так в 14-15 первый раз. Потому что сейчас для меня это было совсем другое произведение. Некоторые тропы в произведении выглядят невероятно клишировано, непонятно зачем было вводить в сюжет новых героев, как это раскрывает повествование? Как по мне, **файв или же пятая**  - главный провал сюжета. До появления Пятой сериал был интеллектуальной дуэлью детектива Сибадзаки и Сфинксов. Это был реалистичный, приземленный политический триллер. Пятая оказалась тут вовсе не к месту, она ведёт себя как безумная злодейка из аниме, её мотивация - это извращенная, травматическая фиксация на Девятом.\nАниме безусловно культовое, но не без проблем.",
     "url_animego": "https://animego.me/anime/eho-terrora-1766",
     "url_shikimori": "https://shikimori.io/animes/23283",
-    "shiki_id": 23283,
-    "episodes": 11,
-    "duration": 22,
-    "year": 2014,
-    "genres": [
-      "Детектив",
-      "Триллер",
-      "Психологическое"
-    ]
+    "shiki_id": 23283
   },
   {
     "id": 4,
@@ -893,14 +543,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/neobyatnyy-okean-645",
     "url_shikimori": "https://shikimori.io/animes/37105",
-    "shiki_id": 37105,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2018,
-    "genres": [
-      "Комедия",
-      "Сэйнэн"
-    ]
+    "shiki_id": 37105
   },
   {
     "id": 39,
@@ -913,15 +556,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/sharlotta-713",
     "url_shikimori": "https://shikimori.io/animes/28999",
-    "shiki_id": 28999,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2015,
-    "genres": [
-      "Драма",
-      "Школа",
-      "Супер сила"
-    ]
+    "shiki_id": 28999
   },
   {
     "id": 68,
@@ -934,16 +569,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/55690",
-    "shiki_id": 55690,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2024,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Школа",
-      "Сёнен"
-    ]
+    "shiki_id": 55690
   },
   {
     "id": 40,
@@ -956,15 +582,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/ef-istoriya-vospominaniy-2252",
     "url_shikimori": "https://shikimori.io/animes/2924",
-    "shiki_id": 2924,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2007,
-    "genres": [
-      "Драма",
-      "Детектив",
-      "Романтика"
-    ]
+    "shiki_id": 2924
   },
   {
     "id": 42,
@@ -977,18 +595,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/kaifuku-jutsushi-no-yarinaoshi-v1-1695",
     "url_shikimori": "https://shikimori.io/animes/40750",
-    "shiki_id": 40750,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2021,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Драма",
-      "Фэнтези",
-      "Эротика",
-      "Гарем"
-    ]
+    "shiki_id": 40750
   },
   {
     "id": 43,
@@ -1001,15 +608,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/povtornaya-zhizn-515",
     "url_shikimori": "https://shikimori.io/animes/30015",
-    "shiki_id": 30015,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2016,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 30015
   },
   {
     "id": 44,
@@ -1022,15 +621,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/nezhnyy-ukus-2180",
     "url_shikimori": "https://shikimori.io/animes/11235",
-    "shiki_id": 11235,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2012,
-    "genres": [
-      "Романтика",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 11235
   },
   {
     "id": 46,
@@ -1043,15 +634,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/podnyatie-urovnya-v-odinochku-2-vosstante-iz-teni-v1-2723",
     "url_shikimori": "https://shikimori.io/animes/58567",
-    "shiki_id": 58567,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2025,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 58567
   },
   {
     "id": 47,
@@ -1064,13 +647,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/re-zhizn-v-alternativnom-mire-s-nulya-ova-886",
     "url_shikimori": "https://shikimori.io/animes/36286",
-    "shiki_id": 36286,
-    "episodes": 1,
-    "duration": 60,
-    "year": 2018,
-    "genres": [
-      "Фэнтези"
-    ]
+    "shiki_id": 36286
   },
   {
     "id": 48,
@@ -1083,16 +660,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/voshozhdenie-geroya-schita-v1-788",
     "url_shikimori": "https://shikimori.io/animes/35790",
-    "shiki_id": 35790,
-    "episodes": 25,
-    "duration": 24,
-    "year": 2019,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Драма",
-      "Фэнтези"
-    ]
+    "shiki_id": 35790
   },
   {
     "id": 49,
@@ -1105,15 +673,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/heka-2454",
     "url_shikimori": "https://shikimori.io/animes/12189",
-    "shiki_id": 12189,
-    "episodes": 22,
-    "duration": 25,
-    "year": 2012,
-    "genres": [
-      "Детектив",
-      "Повседневность",
-      "Школа"
-    ]
+    "shiki_id": 12189
   },
   {
     "id": 50,
@@ -1126,15 +686,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/ya-hochu-sest-tvoyu-podzheludochnuyu-771",
     "url_shikimori": "https://shikimori.io/animes/36098",
-    "shiki_id": 36098,
-    "episodes": 1,
-    "duration": 108,
-    "year": 2018,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 36098
   },
   {
     "id": 52,
@@ -1147,16 +699,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/etot-glupyy-svin-ne-ponimaet-mechtu-devochki-zayki-movie-711",
     "url_shikimori": "https://shikimori.io/animes/37450",
-    "shiki_id": 37450,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2018,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Сверхъестественное",
-      "Школа"
-    ]
+    "shiki_id": 37450
   },
   {
     "id": 55,
@@ -1169,16 +712,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/49413",
-    "shiki_id": 49413,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2023,
-    "genres": [
-      "Драма",
-      "Детектив",
-      "Сверхъестественное",
-      "Триллер"
-    ]
+    "shiki_id": 49413
   },
   {
     "id": 56,
@@ -1191,16 +725,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/49200",
-    "shiki_id": 49200,
-    "episodes": 1,
-    "duration": 22,
-    "year": 2021,
-    "genres": [
-      "Драма",
-      "Детектив",
-      "Сверхъестественное",
-      "Триллер"
-    ]
+    "shiki_id": 49200
   },
   {
     "id": 57,
@@ -1213,14 +738,7 @@ window.ANIME_VAULT_DATA = [
     "review": "\"Вайолет Эвергарден\" (Violet Evergarden) - это визуальная поэма о войне, потере и исцелении через слова. История бывшей солдатки Вайолет, которая, лишившись рук и смысла жизни, становится «автозапоминающей куклой» (письмовводительницей), чтобы понять последние слова своего командира: «Я люблю тебя». \n\nМой субъективный вердикт\nЭто аниме — шедевр, где кадр стоит тысячи слов, а музыка доводит эмоции до мурашек. Вайолет меняется незаметно, но кардинально — от «орудия» до хрупкой, но сильной женщины. 10/10 за красоту, глубину и сцены, после которых невозможно сдержать слёзы.\n\nP.S. Смотреть  стоит в максимальном качестве, очень красивая и проработанная картинка.",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/53672",
-    "shiki_id": 53672,
-    "episodes": 1,
-    "duration": 95,
-    "year": 2021,
-    "genres": [
-      "Драма",
-      "Фэнтези"
-    ]
+    "shiki_id": 53672
   },
   {
     "id": 58,
@@ -1233,17 +751,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/41457",
-    "shiki_id": 41457,
-    "episodes": 11,
-    "duration": 23,
-    "year": 2021,
-    "genres": [
-      "Экшен",
-      "Драма",
-      "Фантастика",
-      "Меха",
-      "Военное"
-    ]
+    "shiki_id": 41457
   },
   {
     "id": 59,
@@ -1256,17 +764,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/48569",
-    "shiki_id": 48569,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2021,
-    "genres": [
-      "Экшен",
-      "Драма",
-      "Фантастика",
-      "Меха",
-      "Военное"
-    ]
+    "shiki_id": 48569
   },
   {
     "id": 60,
@@ -1279,15 +777,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/144",
-    "shiki_id": 144,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2002,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Сверхъестественное"
-    ]
+    "shiki_id": 144
   },
   {
     "id": 62,
@@ -1300,16 +790,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/59983",
-    "shiki_id": 59983,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2026,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези",
-      "Сёнен"
-    ]
+    "shiki_id": 59983
   },
   {
     "id": 64,
@@ -1322,14 +803,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/578",
-    "shiki_id": 578,
-    "episodes": 1,
-    "duration": 88,
-    "year": 1988,
-    "genres": [
-      "Драма",
-      "Исторический"
-    ]
+    "shiki_id": 578
   },
   {
     "id": 65,
@@ -1342,14 +816,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/572",
-    "shiki_id": 572,
-    "episodes": 1,
-    "duration": 117,
-    "year": 1984,
-    "genres": [
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 572
   },
   {
     "id": 69,
@@ -1362,16 +829,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/25681",
-    "shiki_id": 25681,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2015,
-    "genres": [
-      "Комедия",
-      "Фэнтези",
-      "Романтика",
-      "Сёдзё"
-    ]
+    "shiki_id": 25681
   },
   {
     "id": 70,
@@ -1384,16 +842,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/30709",
-    "shiki_id": 30709,
-    "episodes": 4,
-    "duration": 30,
-    "year": 2015,
-    "genres": [
-      "Комедия",
-      "Фэнтези",
-      "Романтика",
-      "Сёдзё"
-    ]
+    "shiki_id": 30709
   },
   {
     "id": 72,
@@ -1406,15 +855,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/164",
-    "shiki_id": 164,
-    "episodes": 1,
-    "duration": 133,
-    "year": 1997,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 164
   },
   {
     "id": 73,
@@ -1427,16 +868,7 @@ window.ANIME_VAULT_DATA = [
     "review": "\"Провожающая в последний путь Фрирен\" (Sousou no Frieren) - одно из самых необычных и живописных аниме среди тех, что я успел посмотреть. Очень понравился стиль повествования, атмосфера тайтла, ненапряжённые смол толки между основными героями и взаимодействие с второстепенными персонажами. В этой картине автор преподносит интересную историю в невероятно красочных пейзажах, завлекает зрителя шикарной атмосферой, разбавляет тяжёлые моменты смехуёчками, показывает взросление главного героя, переосмысление его идей и идеалов. Определённо стоит посмотреть, опять же в хорошей озвучке, чтобы не потерять всю атмосферу этого тайтла.",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/59978",
-    "shiki_id": 59978,
-    "episodes": 10,
-    "duration": 24,
-    "year": 2026,
-    "genres": [
-      "Приключения",
-      "Драма",
-      "Фэнтези",
-      "Сёнен"
-    ]
+    "shiki_id": 59978
   },
   {
     "id": 74,
@@ -1449,16 +881,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/39535",
-    "shiki_id": 39535,
-    "episodes": 11,
-    "duration": 23,
-    "year": 2021,
-    "genres": [
-      "Приключения",
-      "Драма",
-      "Фэнтези",
-      "Этти"
-    ]
+    "shiki_id": 39535
   },
   {
     "id": 75,
@@ -1471,16 +894,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/51179",
-    "shiki_id": 51179,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2023,
-    "genres": [
-      "Приключения",
-      "Драма",
-      "Фэнтези",
-      "Этти"
-    ]
+    "shiki_id": 51179
   },
   {
     "id": 76,
@@ -1493,16 +907,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/55888",
-    "shiki_id": 55888,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2024,
-    "genres": [
-      "Приключения",
-      "Драма",
-      "Фэнтези",
-      "Этти"
-    ]
+    "shiki_id": 55888
   },
   {
     "id": 77,
@@ -1515,16 +920,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/45576",
-    "shiki_id": 45576,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2021,
-    "genres": [
-      "Приключения",
-      "Драма",
-      "Фэнтези",
-      "Этти"
-    ]
+    "shiki_id": 45576
   },
   {
     "id": 78,
@@ -1537,14 +933,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/40834",
-    "shiki_id": 40834,
-    "episodes": 23,
-    "duration": 22,
-    "year": 2021,
-    "genres": [
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 40834
   },
   {
     "id": 81,
@@ -1557,16 +946,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/431",
-    "shiki_id": 431,
-    "episodes": 1,
-    "duration": 119,
-    "year": 2004,
-    "genres": [
-      "Приключения",
-      "Драма",
-      "Фэнтези",
-      "Романтика"
-    ]
+    "shiki_id": 431
   },
   {
     "id": 34,
@@ -1579,16 +959,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/rubezh-shangri-la-lyubitel-igroshlaka-brosaet-vyzov-top-igre-2-2685",
     "url_shikimori": "https://shikimori.io/animes/58572",
-    "shiki_id": 58572,
-    "episodes": 25,
-    "duration": 23,
-    "year": 2024,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези",
-      "Сёнен"
-    ]
+    "shiki_id": 58572
   },
   {
     "id": 45,
@@ -1601,15 +972,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/nezhelanno-bessmertnyy-avantyurist-2475",
     "url_shikimori": "https://shikimori.io/animes/51648",
-    "shiki_id": 51648,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2024,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 51648
   },
   {
     "id": 67,
@@ -1622,15 +985,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/19815",
-    "shiki_id": 19815,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2014,
-    "genres": [
-      "Комедия",
-      "Фэнтези",
-      "Этти"
-    ]
+    "shiki_id": 19815
   },
   {
     "id": 80,
@@ -1643,15 +998,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/4224",
-    "shiki_id": 4224,
-    "episodes": 25,
-    "duration": 23,
-    "year": 2008,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 4224
   },
   {
     "id": 82,
@@ -1664,16 +1011,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/rezero-zhizn-s-nulya-v-alternativnom-mire-2-1569",
     "url_shikimori": "https://shikimori.io/animes/39587",
-    "shiki_id": 39587,
-    "episodes": 13,
-    "duration": 26,
-    "year": 2020,
-    "genres": [
-      "Драма",
-      "Фэнтези",
-      "Триллер",
-      "Психологическое"
-    ]
+    "shiki_id": 39587
   },
   {
     "id": 83,
@@ -1686,16 +1024,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/re-zhizn-v-alternativnom-mire-s-nulya-2-chast-2-1665",
     "url_shikimori": "https://shikimori.io/animes/42203",
-    "shiki_id": 42203,
-    "episodes": 12,
-    "duration": 29,
-    "year": 2021,
-    "genres": [
-      "Драма",
-      "Фэнтези",
-      "Триллер",
-      "Психологическое"
-    ]
+    "shiki_id": 42203
   },
   {
     "id": 84,
@@ -1708,14 +1037,7 @@ window.ANIME_VAULT_DATA = [
     "review": ".",
     "url_animego": "https://animego.me/anime/vsem-vozmozhnym-tebe-kotoryh-ya-lyubil-2311",
     "url_shikimori": "https://shikimori.io/animes/49834",
-    "shiki_id": 49834,
-    "episodes": 1,
-    "duration": 102,
-    "year": 2022,
-    "genres": [
-      "Романтика",
-      "Фантастика"
-    ]
+    "shiki_id": 49834
   },
   {
     "id": 85,
@@ -1728,16 +1050,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/gospozha-kaguya-v-lyubvi-kak-na-voyne-821",
     "url_shikimori": "https://shikimori.io/animes/37999",
-    "shiki_id": 37999,
-    "episodes": 12,
-    "duration": 25,
-    "year": 2019,
-    "genres": [
-      "Комедия",
-      "Психологическое",
-      "Школа",
-      "Сэйнэн"
-    ]
+    "shiki_id": 37999
   },
   {
     "id": 86,
@@ -1750,17 +1063,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/gospozha-kaguya-v-lyubvi-kak-na-voyne-pervyy-poceluy-nikogda-ne-zakanchivaetsya-2283",
     "url_shikimori": "https://shikimori.io/animes/52198",
-    "shiki_id": 52198,
-    "episodes": 1,
-    "duration": 96,
-    "year": 2022,
-    "genres": [
-      "Комедия",
-      "Драма",
-      "Романтика",
-      "Школа",
-      "Сэйнэн"
-    ]
+    "shiki_id": 52198
   },
   {
     "id": 87,
@@ -1773,16 +1076,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/gospozha-kaguya-v-lyubvi-kak-na-voyne-3-1981",
     "url_shikimori": "https://shikimori.io/animes/43608",
-    "shiki_id": 43608,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2022,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Школа",
-      "Сэйнэн"
-    ]
+    "shiki_id": 43608
   },
   {
     "id": 88,
@@ -1795,16 +1089,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/gospozha-kaguya-v-lyubvi-kak-na-voyne-ova-1791",
     "url_shikimori": "https://shikimori.io/animes/43609",
-    "shiki_id": 43609,
-    "episodes": 1,
-    "duration": 24,
-    "year": 2021,
-    "genres": [
-      "Сэйнэн",
-      "Комедия",
-      "Этти",
-      "Школа"
-    ]
+    "shiki_id": 43609
   },
   {
     "id": 90,
@@ -1817,14 +1102,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/edinstvennomu-mne-kto-tebya-lyubil-2310",
     "url_shikimori": "https://shikimori.io/animes/49835",
-    "shiki_id": 49835,
-    "episodes": 1,
-    "duration": 98,
-    "year": 2022,
-    "genres": [
-      "Романтика",
-      "Фантастика"
-    ]
+    "shiki_id": 49835
   },
   {
     "id": 91,
@@ -1837,16 +1115,7 @@ window.ANIME_VAULT_DATA = [
     "review": "\"За гранью\" (Kyōkai no Kanata) - это волшебная смесь мистики, экшена и драмы, в фирменном стиле Kyoto Animation. История Юкито — полукровки-«пожирателя духов» и Мирай — неуклюжей девушки с кровавыми клинками, балансирует между остроумными бытовыми сценками и мрачной фантастикой.\n\nОтношения, которые пронзают\nСвязь героев строится на контрастах: Мирай невероятно неудачлива, но смертельно опасна, а Юкито кажется циником, но на деле готов жертвовать собой. Их диалоги — это смех сквозь боль, а совместные битвы с «йому» (демонами) лишь подчёркивают глубину привязанности. Особенно трогательна дружба Мирай с Аканэ (которая скрывает свою заботу за сарказмом) и трагическая связь Юкито с его прошлым.\n\nМой субъективный вердикт\nАниме покоряет визуальной красотой (бой на фоне заката — шедевр), запоминающимися персонажами и идеальным балансом юмора и грусти. Финал оставляет лёгкое послевкусие меланхолии, но это того стоит. 10/10.",
     "url_animego": "https://animego.me/anime/za-granyu-ya-budu-ryadom-buduschee-1005",
     "url_shikimori": "https://shikimori.io/animes/28675",
-    "shiki_id": 28675,
-    "episodes": 1,
-    "duration": 90,
-    "year": 2015,
-    "genres": [
-      "Экшен",
-      "Фэнтези",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 28675
   },
   {
     "id": 92,
@@ -1859,15 +1128,7 @@ window.ANIME_VAULT_DATA = [
     "review": "\"За гранью\" (Kyōkai no Kanata) - это волшебная смесь мистики, экшена и драмы, в фирменном стиле Kyoto Animation. История Юкито — полукровки-«пожирателя духов» и Мирай — неуклюжей девушки с кровавыми клинками, балансирует между остроумными бытовыми сценками и мрачной фантастикой.\n\nОтношения, которые пронзают\nСвязь героев строится на контрастах: Мирай невероятно неудачлива, но смертельно опасна, а Юкито кажется циником, но на деле готов жертвовать собой. Их диалоги — это смех сквозь боль, а совместные битвы с «йому» (демонами) лишь подчёркивают глубину привязанности. Особенно трогательна дружба Мирай с Аканэ (которая скрывает свою заботу за сарказмом) и трагическая связь Юкито с его прошлым.\n\nМой субъективный вердикт\nАниме покоряет визуальной красотой (бой на фоне заката — шедевр), запоминающимися персонажами и идеальным балансом юмора и грусти. Финал оставляет лёгкое послевкусие меланхолии, но это того стоит. 10/10.",
     "url_animego": "https://animego.me/anime/za-granyu-ya-budu-ryadom-proshloe-1006",
     "url_shikimori": "https://shikimori.io/animes/25015",
-    "shiki_id": 25015,
-    "episodes": 1,
-    "duration": 82,
-    "year": 2015,
-    "genres": [
-      "Экшен",
-      "Фэнтези",
-      "Школа"
-    ]
+    "shiki_id": 25015
   },
   {
     "id": 93,
@@ -1880,15 +1141,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/zvezdnoe-ditya-v2-2307",
     "url_shikimori": "https://shikimori.io/animes/52034",
-    "shiki_id": 52034,
-    "episodes": 11,
-    "duration": 30,
-    "year": 2023,
-    "genres": [
-      "Драма",
-      "Сверхъестественное",
-      "Сэйнэн"
-    ]
+    "shiki_id": 52034
   },
   {
     "id": 94,
@@ -1901,16 +1154,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/inaya-2060",
     "url_shikimori": "https://shikimori.io/animes/11111",
-    "shiki_id": 11111,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2012,
-    "genres": [
-      "Ужасы",
-      "Детектив",
-      "Сверхъестественное",
-      "Школа"
-    ]
+    "shiki_id": 11111
   },
   {
     "id": 95,
@@ -1923,15 +1167,7 @@ window.ANIME_VAULT_DATA = [
     "review": "**\"Розовая пора моей школьной жизни сплошной обман\" (Oregairu)** — это аниме, которое сначала кажется простым, но потом врезается в сердце. Диалоги, персонажи и их развитие — на высшем уровне. Музыка лишь усиливает впечатление, делая каждый эмоциональный момент ещё более пронзительным. Лично я пересмотрел это аниме за всю жизнь 3 раза, вполне возможно, что когда-то наступит и 4 раз. Стоит сказать, что тайтл отличается от остальных какой-то особой искренностью, хоть в нём и показывают базовый любовный треугольник в котором одна из сторон остаётся в проигрыше. Это не просто ромком, а умная, ироничная и глубокая история о подростковом одиночестве, поиске себя и попытках понять других.",
     "url_animego": "https://animego.me/anime/kak-i-ozhidalos-moya-shkolnaya-romanticheskaya-zhizn-ne-udalas-1027",
     "url_shikimori": "https://shikimori.io/animes/14813",
-    "shiki_id": 14813,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2013,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 14813
   },
   {
     "id": 96,
@@ -1944,15 +1180,7 @@ window.ANIME_VAULT_DATA = [
     "review": "\"Розовая пора моей школьной жизни сплошной обман\" (Oregairu) — это аниме, которое сначала кажется простым, но потом врезается в сердце. Диалоги, персонажи и их развитие — на высшем уровне. Музыка лишь усиливает впечатление, делая каждый эмоциональный момент ещё более пронзительным. Лично я пересмотрел это аниме за всю жизнь 3 раза, вполне возможно, что когда-то наступит и 4 раз. Стоит сказать, что тайтл отличается от остальных какой-то особой искренностью, хоть в нём и показывают базовый любовный треугольник в котором одна из сторон остаётся в проигрыше. Это не просто ромком, а умная, ироничная и глубокая история о подростковом одиночестве, поиске себя и попытках понять других.",
     "url_animego": "https://animego.me/anime/kak-i-ozhidalos-moya-shkolnaya-romanticheskaya-zhizn-ne-udalas-2-ova-1030",
     "url_shikimori": "https://shikimori.io/animes/33161",
-    "shiki_id": 33161,
-    "episodes": 1,
-    "duration": 23,
-    "year": 2016,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 33161
   },
   {
     "id": 97,
@@ -1965,15 +1193,7 @@ window.ANIME_VAULT_DATA = [
     "review": "\"Розовая пора моей школьной жизни сплошной обман\" (Oregairu) — это аниме, которое сначала кажется простым, но потом врезается в сердце. Диалоги, персонажи и их развитие — на высшем уровне. Музыка лишь усиливает впечатление, делая каждый эмоциональный момент ещё более пронзительным. Лично я пересмотрел это аниме за всю жизнь 3 раза, вполне возможно, что когда-то наступит и 4 раз. Стоит сказать, что тайтл отличается от остальных какой-то особой искренностью, хоть в нём и показывают базовый любовный треугольник в котором одна из сторон остаётся в проигрыше. Это не просто ромком, а умная, ироничная и глубокая история о подростковом одиночестве, поиске себя и попытках понять других.",
     "url_animego": "https://animego.me/anime/kak-i-ozhidalos-moya-shkolnaya-romanticheskaya-zhizn-ne-udalas-3-1591",
     "url_shikimori": "https://shikimori.io/animes/39547",
-    "shiki_id": 39547,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 39547
   },
   {
     "id": 98,
@@ -1986,15 +1206,7 @@ window.ANIME_VAULT_DATA = [
     "review": "\"Розовая пора моей школьной жизни сплошной обман\" (Oregairu) — это аниме, которое сначала кажется простым, но потом врезается в сердце. Диалоги, персонажи и их развитие — на высшем уровне. Музыка лишь усиливает впечатление, делая каждый эмоциональный момент ещё более пронзительным. Лично я пересмотрел это аниме за всю жизнь 3 раза, вполне возможно, что когда-то наступит и 4 раз. Стоит сказать, что тайтл отличается от остальных какой-то особой искренностью, хоть в нём и показывают базовый любовный треугольник в котором одна из сторон остаётся в проигрыше. Это не просто ромком, а умная, ироничная и глубокая история о подростковом одиночестве, поиске себя и попытках понять других.",
     "url_animego": "https://animego.me/anime/kak-i-ozhidalos-moya-shkolnaya-romanticheskaya-zhizn-ne-udalas-3-ova-2313",
     "url_shikimori": "https://shikimori.io/animes/46431",
-    "shiki_id": 46431,
-    "episodes": 1,
-    "duration": 23,
-    "year": 2023,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 46431
   },
   {
     "id": 99,
@@ -2007,17 +1219,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/korzinka-fruktov-950",
     "url_shikimori": "https://shikimori.io/animes/120",
-    "shiki_id": 120,
-    "episodes": 26,
-    "duration": 24,
-    "year": 2001,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Сверхъестественное",
-      "Школа",
-      "Сёдзё"
-    ]
+    "shiki_id": 120
   },
   {
     "id": 100,
@@ -2030,17 +1232,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/korzinka-fruktov-2-1522",
     "url_shikimori": "https://shikimori.io/animes/40417",
-    "shiki_id": 40417,
-    "episodes": 25,
-    "duration": 23,
-    "year": 2020,
-    "genres": [
-      "Сёдзё",
-      "Драма",
-      "Романтика",
-      "Сверхъестественное",
-      "Школа"
-    ]
+    "shiki_id": 40417
   },
   {
     "id": 101,
@@ -2053,15 +1245,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/keyon-2512",
     "url_shikimori": "https://shikimori.io/animes/7791",
-    "shiki_id": 7791,
-    "episodes": 26,
-    "duration": 24,
-    "year": 2010,
-    "genres": [
-      "Комедия",
-      "Музыка",
-      "Школа"
-    ]
+    "shiki_id": 7791
   },
   {
     "id": 102,
@@ -2074,15 +1258,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/keyon-layv-haus-2513",
     "url_shikimori": "https://shikimori.io/animes/6862",
-    "shiki_id": 6862,
-    "episodes": 1,
-    "duration": 23,
-    "year": 2010,
-    "genres": [
-      "Комедия",
-      "Музыка",
-      "Школа"
-    ]
+    "shiki_id": 6862
   },
   {
     "id": 103,
@@ -2095,15 +1271,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/keyon-2514",
     "url_shikimori": "https://shikimori.io/animes/7791",
-    "shiki_id": 7791,
-    "episodes": 26,
-    "duration": 24,
-    "year": 2010,
-    "genres": [
-      "Комедия",
-      "Музыка",
-      "Школа"
-    ]
+    "shiki_id": 7791
   },
   {
     "id": 105,
@@ -2116,15 +1284,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/mastera-mecha-onlayn-alisizaciya-voyna-v-podmire-930",
     "url_shikimori": "https://shikimori.io/animes/39597",
-    "shiki_id": 39597,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2019,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 39597
   },
   {
     "id": 106,
@@ -2137,17 +1297,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/mest-masamune-r-2337",
     "url_shikimori": "https://shikimori.io/animes/51498",
-    "shiki_id": 51498,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2023,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Гарем",
-      "Школа",
-      "Сёнен"
-    ]
+    "shiki_id": 51498
   },
   {
     "id": 107,
@@ -2160,16 +1310,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/mech-i-zhezl-vistorii-2624",
     "url_shikimori": "https://shikimori.io/animes/58059",
-    "shiki_id": 58059,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2024,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези",
-      "Сёнен"
-    ]
+    "shiki_id": 58059
   },
   {
     "id": 108,
@@ -2182,13 +1323,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/slova-puzyryatsya-podobno-gazirovke-1853",
     "url_shikimori": "https://shikimori.io/animes/40755",
-    "shiki_id": 40755,
-    "episodes": 36,
-    "duration": 24,
-    "year": 2019,
-    "genres": [
-      "Комедия"
-    ]
+    "shiki_id": 40755
   },
   {
     "id": 109,
@@ -2201,14 +1336,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/nenasytnyy-berserk-2410",
     "url_shikimori": "https://shikimori.io/animes/53439",
-    "shiki_id": 53439,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2023,
-    "genres": [
-      "Экшен",
-      "Фэнтези"
-    ]
+    "shiki_id": 53439
   },
   {
     "id": 110,
@@ -2221,17 +1349,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/neputevyy-uchenik-v-shkole-magii-v1-1374",
     "url_shikimori": "https://shikimori.io/animes/20785",
-    "shiki_id": 20785,
-    "episodes": 26,
-    "duration": 23,
-    "year": 2014,
-    "genres": [
-      "Экшен",
-      "Фэнтези",
-      "Романтика",
-      "Фантастика",
-      "Школа"
-    ]
+    "shiki_id": 20785
   },
   {
     "id": 111,
@@ -2244,17 +1362,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/neputevyy-uchenik-v-shkole-magii-gost-1607",
     "url_shikimori": "https://shikimori.io/animes/40497",
-    "shiki_id": 40497,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Фэнтези",
-      "Романтика",
-      "Фантастика",
-      "Школа"
-    ]
+    "shiki_id": 40497
   },
   {
     "id": 112,
@@ -2267,14 +1375,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/o-moem-pererozhdenii-v-mech-2130",
     "url_shikimori": "https://shikimori.io/animes/49891",
-    "shiki_id": 49891,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2022,
-    "genres": [
-      "Экшен",
-      "Фэнтези"
-    ]
+    "shiki_id": 49891
   },
   {
     "id": 113,
@@ -2287,14 +1388,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/pererozhdenie-v-aristokrata-so-sposobnostyu-analiza-2545",
     "url_shikimori": "https://shikimori.io/animes/55265",
-    "shiki_id": 55265,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2024,
-    "genres": [
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 55265
   },
   {
     "id": 114,
@@ -2307,15 +1401,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/overlord-2-100",
     "url_shikimori": "https://shikimori.io/animes/35073",
-    "shiki_id": 35073,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2018,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 35073
   },
   {
     "id": 115,
@@ -2328,15 +1414,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/povelitel-3-542",
     "url_shikimori": "https://shikimori.io/animes/37675",
-    "shiki_id": 37675,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2018,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 37675
   },
   {
     "id": 116,
@@ -2349,15 +1427,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/povelitel-tmy-na-podrabotke-v2-1381",
     "url_shikimori": "https://shikimori.io/animes/15809",
-    "shiki_id": 15809,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2013,
-    "genres": [
-      "Комедия",
-      "Фэнтези",
-      "Работа"
-    ]
+    "shiki_id": 15809
   },
   {
     "id": 117,
@@ -2370,15 +1440,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/podnyatie-urovnya-v-odinochku-s1-2477",
     "url_shikimori": "https://shikimori.io/animes/52299",
-    "shiki_id": 52299,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2024,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 52299
   },
   {
     "id": 118,
@@ -2391,16 +1453,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/poschadi-menya-velikiy-gospodin-1924",
     "url_shikimori": "https://shikimori.io/animes/44406",
-    "shiki_id": 44406,
-    "episodes": 12,
-    "duration": 25,
-    "year": 2021,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Комедия",
-      "Фэнтези"
-    ]
+    "shiki_id": 44406
   },
   {
     "id": 119,
@@ -2413,17 +1466,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/pritvornaya-lyubov-2-2504",
     "url_shikimori": "https://shikimori.io/animes/27787",
-    "shiki_id": 27787,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2015,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 27787
   },
   {
     "id": 120,
@@ -2436,17 +1479,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/rassvet-yony-2028",
     "url_shikimori": "https://shikimori.io/animes/25013",
-    "shiki_id": 25013,
-    "episodes": 24,
-    "duration": 24,
-    "year": 2014,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези",
-      "Романтика",
-      "Сёдзё"
-    ]
+    "shiki_id": 25013
   },
   {
     "id": 121,
@@ -2459,16 +1492,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/rubezh-shangri-la-lyubitel-igroshlaka-brosaet-vyzov-top-igre-2398",
     "url_shikimori": "https://shikimori.io/animes/52347",
-    "shiki_id": 52347,
-    "episodes": 25,
-    "duration": 25,
-    "year": 2023,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези",
-      "Сёнен"
-    ]
+    "shiki_id": 52347
   },
   {
     "id": 122,
@@ -2481,17 +1505,7 @@ window.ANIME_VAULT_DATA = [
     "review": "Твоя апрельская ложь (Shigatsu wa Kimi no Uso) - визуальная симфония о любви, потере и исцелении через музыку. История бывшего вундеркинда-пианиста Косэя, который, погружённый в траур по ушедшей матери, встречает жизнерадостную скрипачку Каори, она в свою очередь, переворачивает его мир с ног на голову.\n\nМой субъективный вердикт\nАниме завораживает анимацией, которая превращает музыку в цветовые взрывы, и сюжетом, где каждая нота — это эмоция. Финал ошеломляет и остаётся в сердце годами. 10/10, потому что это не просто история — это концерт для души, после которого хочется жить, любить и слушать Шопена.",
     "url_animego": "https://animego.me/anime/tvoya-aprelskaya-lozh-ova-794",
     "url_shikimori": "https://shikimori.io/animes/23273",
-    "shiki_id": 23273,
-    "episodes": 22,
-    "duration": 22,
-    "year": 2014,
-    "genres": [
-      "Сёнен",
-      "Драма",
-      "Романтика",
-      "Музыка",
-      "Школа"
-    ]
+    "shiki_id": 23273
   },
   {
     "id": 123,
@@ -2504,14 +1518,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/tyazhkiy-trud-v-podzemele-1809",
     "url_shikimori": "https://shikimori.io/animes/42340",
-    "shiki_id": 42340,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2021,
-    "genres": [
-      "Комедия",
-      "Фэнтези"
-    ]
+    "shiki_id": 42340
   },
   {
     "id": 124,
@@ -2524,17 +1531,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/u-menya-malo-druzey-2098",
     "url_shikimori": "https://shikimori.io/animes/10719",
-    "shiki_id": 10719,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2011,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Этти",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 10719
   },
   {
     "id": 125,
@@ -2547,15 +1544,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/unesi-menya-na-lunu-2-2263",
     "url_shikimori": "https://shikimori.io/animes/50307",
-    "shiki_id": 50307,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2023,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика"
-    ]
+    "shiki_id": 50307
   },
   {
     "id": 126,
@@ -2568,15 +1557,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/unesi-menya-na-lunu-uniforma-2189",
     "url_shikimori": "https://shikimori.io/animes/51533",
-    "shiki_id": 51533,
-    "episodes": 1,
-    "duration": 22,
-    "year": 2022,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Сёнен"
-    ]
+    "shiki_id": 51533
   },
   {
     "id": 127,
@@ -2589,14 +1570,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/uchenik-chudovischa-754",
     "url_shikimori": "https://shikimori.io/animes/28805",
-    "shiki_id": 28805,
-    "episodes": 1,
-    "duration": 119,
-    "year": 2015,
-    "genres": [
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 28805
   },
   {
     "id": 128,
@@ -2609,19 +1583,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/furi-kuri-688",
     "url_shikimori": "https://shikimori.io/animes/227",
-    "shiki_id": 227,
-    "episodes": 6,
-    "duration": 25,
-    "year": 2000,
-    "genres": [
-      "Экшен",
-      "Безумие",
-      "Комедия",
-      "Фантастика",
-      "Меха",
-      "Пародия",
-      "Психологическое"
-    ]
+    "shiki_id": 227
   },
   {
     "id": 129,
@@ -2634,15 +1596,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/horimiya-1686",
     "url_shikimori": "https://shikimori.io/animes/42897",
-    "shiki_id": 42897,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2021,
-    "genres": [
-      "Сёнен",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 42897
   },
   {
     "id": 130,
@@ -2655,15 +1609,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/horimiya-kusochek-2353",
     "url_shikimori": "https://shikimori.io/animes/54856",
-    "shiki_id": 54856,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2023,
-    "genres": [
-      "Школа",
-      "Романтика",
-      "Сёнен"
-    ]
+    "shiki_id": 54856
   },
   {
     "id": 131,
@@ -2676,16 +1622,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/chudachestva-lyubvi-ne-pomeha-polozhis-na-menya-590",
     "url_shikimori": "https://shikimori.io/animes/35608",
-    "shiki_id": 35608,
-    "episodes": 1,
-    "duration": 93,
-    "year": 2018,
-    "genres": [
-      "Комедия",
-      "Драма",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 35608
   },
   {
     "id": 132,
@@ -2698,16 +1635,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/seishun-buta-yarou-wa-bunny-girl-senpai-no-yume-wo-minai-710",
     "url_shikimori": "https://shikimori.io/animes/37450",
-    "shiki_id": 37450,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2018,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Сверхъестественное",
-      "Школа"
-    ]
+    "shiki_id": 37450
   },
   {
     "id": 133,
@@ -2720,14 +1648,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/ya-pobrilsya-zatem-privel-domoy-starsheklassnicu-1744",
     "url_shikimori": "https://shikimori.io/animes/40938",
-    "shiki_id": 40938,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2021,
-    "genres": [
-      "Драма",
-      "Романтика"
-    ]
+    "shiki_id": 40938
   },
   {
     "id": 134,
@@ -2740,16 +1661,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/takt-opus-destini-1897",
     "url_shikimori": "https://shikimori.io/animes/48556",
-    "shiki_id": 48556,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2021,
-    "genres": [
-      "Экшен",
-      "Фэнтези",
-      "Фантастика",
-      "Музыка"
-    ]
+    "shiki_id": 48556
   },
   {
     "id": 135,
@@ -2762,16 +1674,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/54857",
-    "shiki_id": 54857,
-    "episodes": 16,
-    "duration": 28,
-    "year": 2024,
-    "genres": [
-      "Драма",
-      "Фэнтези",
-      "Триллер",
-      "Психологическое"
-    ]
+    "shiki_id": 54857
   },
   {
     "id": 136,
@@ -2784,14 +1687,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/56752",
-    "shiki_id": 56752,
-    "episodes": 6,
-    "duration": 32,
-    "year": 2024,
-    "genres": [
-      "Драма",
-      "Сверхъестественное"
-    ]
+    "shiki_id": 56752
   },
   {
     "id": 137,
@@ -2804,14 +1700,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/41433",
-    "shiki_id": 41433,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Фантастика"
-    ]
+    "shiki_id": 41433
   },
   {
     "id": 138,
@@ -2824,16 +1713,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/512",
-    "shiki_id": 512,
-    "episodes": 1,
-    "duration": 103,
-    "year": 1989,
-    "genres": [
-      "Приключения",
-      "Комедия",
-      "Драма",
-      "Фэнтези"
-    ]
+    "shiki_id": 512
   },
   {
     "id": 139,
@@ -2846,16 +1726,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/61903",
-    "shiki_id": 61903,
-    "episodes": 1,
-    "duration": 52,
-    "year": 2025,
-    "genres": [
-      "Комедия",
-      "Психологическое",
-      "Школа",
-      "Сэйнэн"
-    ]
+    "shiki_id": 61903
   },
   {
     "id": 140,
@@ -2868,15 +1739,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/46471",
-    "shiki_id": 46471,
-    "episodes": 12,
-    "duration": 25,
-    "year": 2021,
-    "genres": [
-      "Комедия",
-      "Детектив",
-      "Романтика"
-    ]
+    "shiki_id": 46471
   },
   {
     "id": 141,
@@ -2889,15 +1752,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/38826",
-    "shiki_id": 38826,
-    "episodes": 1,
-    "duration": 112,
-    "year": 2019,
-    "genres": [
-      "Драма",
-      "Фэнтези",
-      "Романтика"
-    ]
+    "shiki_id": 38826
   },
   {
     "id": 142,
@@ -2910,16 +1765,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/1210",
-    "shiki_id": 1210,
-    "episodes": 24,
-    "duration": 23,
-    "year": 2006,
-    "genres": [
-      "Комедия",
-      "Драма",
-      "Романтика",
-      "Психологическое"
-    ]
+    "shiki_id": 1210
   },
   {
     "id": 143,
@@ -2932,16 +1778,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/56538",
-    "shiki_id": 56538,
-    "episodes": 5,
-    "duration": 66,
-    "year": 2024,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Школа",
-      "Сёдзё"
-    ]
+    "shiki_id": 56538
   },
   {
     "id": 144,
@@ -2954,14 +1791,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/40787",
-    "shiki_id": 40787,
-    "episodes": 1,
-    "duration": 98,
-    "year": 2020,
-    "genres": [
-      "Драма",
-      "Романтика"
-    ]
+    "shiki_id": 40787
   },
   {
     "id": 145,
@@ -2974,14 +1804,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/38759",
-    "shiki_id": 38759,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2019,
-    "genres": [
-      "Повседневность",
-      "Сверхъестественное"
-    ]
+    "shiki_id": 38759
   },
   {
     "id": 146,
@@ -2994,14 +1817,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/17895",
-    "shiki_id": 17895,
-    "episodes": 24,
-    "duration": 24,
-    "year": 2013,
-    "genres": [
-      "Драма",
-      "Романтика"
-    ]
+    "shiki_id": 17895
   },
   {
     "id": 147,
@@ -3014,17 +1830,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/268",
-    "shiki_id": 268,
-    "episodes": 6,
-    "duration": 28,
-    "year": 1995,
-    "genres": [
-      "Приключения",
-      "Комедия",
-      "Этти",
-      "Работа",
-      "Сэйнэн"
-    ]
+    "shiki_id": 268
   },
   {
     "id": 148,
@@ -3037,15 +1843,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/42310",
-    "shiki_id": 42310,
-    "episodes": 10,
-    "duration": 25,
-    "year": 2022,
-    "genres": [
-      "Экшен",
-      "Фантастика",
-      "Психологическое"
-    ]
+    "shiki_id": 42310
   },
   {
     "id": 149,
@@ -3058,15 +1856,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/13759",
-    "shiki_id": 13759,
-    "episodes": 24,
-    "duration": 23,
-    "year": 2012,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 13759
   },
   {
     "id": 150,
@@ -3079,13 +1869,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/56038",
-    "shiki_id": 56038,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2025,
-    "genres": [
-      "Фантастика"
-    ]
+    "shiki_id": 56038
   },
   {
     "id": 151,
@@ -3098,16 +1882,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/40748",
-    "shiki_id": 40748,
-    "episodes": 24,
-    "duration": 23,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Фэнтези",
-      "Школа",
-      "Сёнен"
-    ]
+    "shiki_id": 40748
   },
   {
     "id": 152,
@@ -3120,16 +1895,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/48561",
-    "shiki_id": 48561,
-    "episodes": 1,
-    "duration": 104,
-    "year": 2021,
-    "genres": [
-      "Экшен",
-      "Фэнтези",
-      "Школа",
-      "Сёнен"
-    ]
+    "shiki_id": 48561
   },
   {
     "id": 153,
@@ -3142,15 +1908,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/41341",
-    "shiki_id": 41341,
-    "episodes": 1,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 41341
   },
   {
     "id": 154,
@@ -3163,16 +1921,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/37510",
-    "shiki_id": 37510,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2019,
-    "genres": [
-      "Экшен",
-      "Комедия",
-      "Сверхъестественное",
-      "Супер сила"
-    ]
+    "shiki_id": 37510
   },
   {
     "id": 155,
@@ -3185,16 +1934,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/50172",
-    "shiki_id": 50172,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2022,
-    "genres": [
-      "Экшен",
-      "Комедия",
-      "Сверхъестественное",
-      "Супер сила"
-    ]
+    "shiki_id": 50172
   },
   {
     "id": 156,
@@ -3207,15 +1947,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/9117",
-    "shiki_id": 9117,
-    "episodes": 6,
-    "duration": 5,
-    "year": 2011,
-    "genres": [
-      "Романтика",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 9117
   },
   {
     "id": 157,
@@ -3228,15 +1960,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/11235",
-    "shiki_id": 11235,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2012,
-    "genres": [
-      "Романтика",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 11235
   },
   {
     "id": 158,
@@ -3249,17 +1973,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/37430",
-    "shiki_id": 37430,
-    "episodes": 24,
-    "duration": 23,
-    "year": 2018,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Комедия",
-      "Фэнтези",
-      "Сёнен"
-    ]
+    "shiki_id": 37430
   },
   {
     "id": 159,
@@ -3272,18 +1986,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/37779",
-    "shiki_id": 37779,
-    "episodes": 12,
-    "duration": 22,
-    "year": 2019,
-    "genres": [
-      "Фэнтези",
-      "Детектив",
-      "Фантастика",
-      "Триллер",
-      "Психологическое",
-      "Сёнен"
-    ]
+    "shiki_id": 37779
   },
   {
     "id": 160,
@@ -3296,14 +1999,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/55357",
-    "shiki_id": 55357,
-    "episodes": 2,
-    "duration": 82,
-    "year": 2024,
-    "genres": [
-      "Комедия",
-      "Музыка"
-    ]
+    "shiki_id": 55357
   },
   {
     "id": 161,
@@ -3316,16 +2012,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/52578",
-    "shiki_id": 52578,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2023,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Школа",
-      "Сёнен"
-    ]
+    "shiki_id": 52578
   },
   {
     "id": 162,
@@ -3338,16 +2025,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/49818",
-    "shiki_id": 49818,
-    "episodes": 13,
-    "duration": 35,
-    "year": 2025,
-    "genres": [
-      "Экшен",
-      "Детектив",
-      "Сверхъестественное",
-      "Триллер"
-    ]
+    "shiki_id": 49818
   },
   {
     "id": 163,
@@ -3360,14 +2038,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/11843",
-    "shiki_id": 11843,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2012,
-    "genres": [
-      "Комедия",
-      "Школа"
-    ]
+    "shiki_id": 11843
   },
   {
     "id": 164,
@@ -3380,17 +2051,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/527",
-    "shiki_id": 527,
-    "episodes": 276,
-    "duration": 24,
-    "year": 1997,
-    "genres": [
-      "Детское",
-      "Экшен",
-      "Приключения",
-      "Комедия",
-      "Фэнтези"
-    ]
+    "shiki_id": 527
   },
   {
     "id": 165,
@@ -3403,19 +2064,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/43",
-    "shiki_id": 43,
-    "episodes": 1,
-    "duration": 82,
-    "year": 1995,
-    "genres": [
-      "Экшен",
-      "Детектив",
-      "Фантастика",
-      "Триллер",
-      "Меха",
-      "Психологическое",
-      "Сэйнэн"
-    ]
+    "shiki_id": 43
   },
   {
     "id": 166,
@@ -3428,18 +2077,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/467",
-    "shiki_id": 467,
-    "episodes": 26,
-    "duration": 24,
-    "year": 2002,
-    "genres": [
-      "Сэйнэн",
-      "Экшен",
-      "Фантастика",
-      "Меха",
-      "Военное",
-      "Полиция"
-    ]
+    "shiki_id": 467
   },
   {
     "id": 167,
@@ -3452,16 +2090,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/11887",
-    "shiki_id": 11887,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2012,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Сверхъестественное",
-      "Школа"
-    ]
+    "shiki_id": 11887
   },
   {
     "id": 168,
@@ -3474,15 +2103,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/28725",
-    "shiki_id": 28725,
-    "episodes": 1,
-    "duration": 119,
-    "year": 2015,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 28725
   },
   {
     "id": 169,
@@ -3495,16 +2116,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/28223",
-    "shiki_id": 28223,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2015,
-    "genres": [
-      "Драма",
-      "Сверхъестественное",
-      "Триллер",
-      "Психологическое"
-    ]
+    "shiki_id": 28223
   },
   {
     "id": 170,
@@ -3517,14 +2129,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/50594",
-    "shiki_id": 50594,
-    "episodes": 1,
-    "duration": 121,
-    "year": 2022,
-    "genres": [
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 50594
   },
   {
     "id": 171,
@@ -3537,16 +2142,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/32949",
-    "shiki_id": 32949,
-    "episodes": 12,
-    "duration": 22,
-    "year": 2017,
-    "genres": [
-      "Сэйнэн",
-      "Драма",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 32949
   },
   {
     "id": 172,
@@ -3559,14 +2155,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/38349",
-    "shiki_id": 38349,
-    "episodes": 3,
-    "duration": 23,
-    "year": 2019,
-    "genres": [
-      "Романтика",
-      "Работа"
-    ]
+    "shiki_id": 38349
   },
   {
     "id": 173,
@@ -3579,14 +2168,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/32281",
-    "shiki_id": 32281,
-    "episodes": 1,
-    "duration": 106,
-    "year": 2016,
-    "genres": [
-      "Драма",
-      "Сверхъестественное"
-    ]
+    "shiki_id": 32281
   },
   {
     "id": 174,
@@ -3599,16 +2181,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/42249",
-    "shiki_id": 42249,
-    "episodes": 24,
-    "duration": 23,
-    "year": 2021,
-    "genres": [
-      "Экшен",
-      "Драма",
-      "Сверхъестественное",
-      "Сёнен"
-    ]
+    "shiki_id": 42249
   },
   {
     "id": 175,
@@ -3621,16 +2194,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/2034",
-    "shiki_id": 2034,
-    "episodes": 24,
-    "duration": 24,
-    "year": 2007,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Школа",
-      "Сёдзё"
-    ]
+    "shiki_id": 2034
   },
   {
     "id": 176,
@@ -3643,15 +2207,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/585",
-    "shiki_id": 585,
-    "episodes": 1,
-    "duration": 111,
-    "year": 1995,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Сёдзё"
-    ]
+    "shiki_id": 585
   },
   {
     "id": 177,
@@ -3664,16 +2220,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/53129",
-    "shiki_id": 53129,
-    "episodes": 1,
-    "duration": 73,
-    "year": 2023,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Сверхъестественное",
-      "Школа"
-    ]
+    "shiki_id": 53129
   },
   {
     "id": 178,
@@ -3686,16 +2233,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/4789",
-    "shiki_id": 4789,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2008,
-    "genres": [
-      "Драма",
-      "Детектив",
-      "Романтика",
-      "Сверхъестественное"
-    ]
+    "shiki_id": 4789
   },
   {
     "id": 179,
@@ -3708,16 +2246,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/11013",
-    "shiki_id": 11013,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2012,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика",
-      "Сверхъестественное"
-    ]
+    "shiki_id": 11013
   },
   {
     "id": 221,
@@ -3730,19 +2259,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/47",
-    "shiki_id": 47,
-    "episodes": 1,
-    "duration": 124,
-    "year": 1988,
-    "genres": [
-      "Сэйнэн",
-      "Экшен",
-      "Приключения",
-      "Ужасы",
-      "Фантастика",
-      "Сверхъестественное",
-      "Военное"
-    ]
+    "shiki_id": 47
   },
   {
     "id": 271,
@@ -3755,15 +2272,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/57555",
-    "shiki_id": 57555,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Фэнтези",
-      "Сёнен"
-    ]
+    "shiki_id": 57555
   },
   {
     "id": 399,
@@ -3776,13 +2285,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/7054",
-    "shiki_id": 7054,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 7054
   },
   {
     "id": 403,
@@ -3795,13 +2298,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/50739",
-    "shiki_id": 50739,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 50739
   },
   {
     "id": 429,
@@ -3814,13 +2311,7 @@ window.ANIME_VAULT_DATA = [
     "review": "**Пять сантиметров в секунду** - работа, которую при беглом взгляде легко счесть скомканной или излишне рваной. Но в этом как по мне и была её суть: Макото Синкай хочет показать не вылизанную кинематографичную драму, а физическую скорость жизни, которая проносится мимо отдельными бытовыми рывками.\n\nЭто аниме было просмотрено мною вкупе с другой работой того же автора - \"Сад изящных слов\", поэтому параллели будут неизбежны.\n\n### Инфантильность как зеркало возраста, а не порок\n\nСюжет наивен и по-своему инфантилен, герои - школьники, для которых первая любовь кажется единственной осью мира. В 13-16 лет у человека попросту нет внутренних инструментов, чтобы справиться с дистанцией и утратой. Трагедия Такаки не в том, что он любил, а в том, что он запер себя в этой памяти и романтизировал собственное застревание.\n\n### Прошлое против настоящего (Взгляд вверх против реальности)\n\nКлючевой контраст здесь раскрывается через девушку-сёрфершу **Канаэ** во второй новелле: она олицетворяет тёплое, живое настоящее, стоящее прямо перед ним. Но Такаки Тоно всё время смотрит вверх на небо, на взлетающую ракету космодрома, в пустоту собственных неотправленных SMS. Нельзя закрыть старую рану новым человеком, пока ты пятишься назад. Если жизнь идёт, а ты стоишь на месте или идёшь в обратном направлении - **ты не живёшь**.\n\nВ этом плане \"Сад изящных слов\" раскрывается неизмеримо взрослее: там Такао - человек действия. Он шьёт обувь своими руками, делает шаги навстречу, лицом к лицу встречает отказ, но не закапывает себя в тоску, а продолжает шагать вперёд к своей мечте. В свою очередь Такаки в \"5 см\" до самого финала остаётся пленником собственных воспоминаний, не решаясь сделать шаг вперёд.\n\n### Финал на переезде и вердикт\n\nСцена на железнодорожном переезде ставит единственно верную точку. Такаки оборачивается, но не видит Акари - морок прошлого наконец спадает. Проезжающий поезд увозит за собой иллюзии прошлого, оставляя долгожданное, пусть и горькое, освобождение: нужно перестать оглядываться назад и начать жить собственную жизнь.\n\n**Мой субъективный вердикт:** Поучительное и визуально невероятно чудесное полотно о взрослении и опасности застрять во вчерашнем дне.\nВполне заслуженные **9/10**.",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/1689",
-    "shiki_id": 1689,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 1689
   },
   {
     "id": 41,
@@ -3833,14 +2324,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/slabeyshaya-ukrotitelnica-v-puteshestvii-po-sboru-pitomcev-2472",
     "url_shikimori": "https://shikimori.io/animes/56352",
-    "shiki_id": 56352,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2024,
-    "genres": [
-      "Фэнтези",
-      "Романтика"
-    ]
+    "shiki_id": 56352
   },
   {
     "id": 51,
@@ -3853,15 +2337,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/unesi-menya-na-lunu-dni-starshey-shkoly-2370",
     "url_shikimori": "https://shikimori.io/animes/55651",
-    "shiki_id": 55651,
-    "episodes": 4,
-    "duration": 23,
-    "year": 2023,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Сёнен"
-    ]
+    "shiki_id": 55651
   },
   {
     "id": 63,
@@ -3874,16 +2350,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/32182",
-    "shiki_id": 32182,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2016,
-    "genres": [
-      "Экшен",
-      "Комедия",
-      "Сверхъестественное",
-      "Супер сила"
-    ]
+    "shiki_id": 32182
   },
   {
     "id": 89,
@@ -3896,16 +2363,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/domekano-820",
     "url_shikimori": "https://shikimori.io/animes/37982",
-    "shiki_id": 37982,
-    "episodes": 12,
-    "duration": 25,
-    "year": 2019,
-    "genres": [
-      "Сёнен",
-      "Драма",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 37982
   },
   {
     "id": 104,
@@ -3918,15 +2376,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/master-na-vse-ruki-sayto-v-drugom-mire-2195",
     "url_shikimori": "https://shikimori.io/animes/50854",
-    "shiki_id": 50854,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2023,
-    "genres": [
-      "Приключения",
-      "Комедия",
-      "Фэнтези"
-    ]
+    "shiki_id": 50854
   },
   {
     "id": 180,
@@ -3939,16 +2389,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/povsednevnaya-zhizn-bessmertnogo-korolya-2-1920",
     "url_shikimori": "https://shikimori.io/animes/44069",
-    "shiki_id": 44069,
-    "episodes": 12,
-    "duration": 19,
-    "year": 2021,
-    "genres": [
-      "Приключения",
-      "Комедия",
-      "Фэнтези",
-      "Школа"
-    ]
+    "shiki_id": 44069
   },
   {
     "id": 181,
@@ -3961,16 +2402,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/povsednevnaya-zhizn-bessmertnogo-korolya-3-2151",
     "url_shikimori": "https://shikimori.io/animes/50404",
-    "shiki_id": 50404,
-    "episodes": 12,
-    "duration": 18,
-    "year": 2022,
-    "genres": [
-      "Приключения",
-      "Комедия",
-      "Фэнтези",
-      "Школа"
-    ]
+    "shiki_id": 50404
   },
   {
     "id": 182,
@@ -3983,16 +2415,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/povsednevnaya-zhizn-bessmertnogo-korolya-4-2524",
     "url_shikimori": "https://shikimori.io/animes/53450",
-    "shiki_id": 53450,
-    "episodes": 12,
-    "duration": 18,
-    "year": 2023,
-    "genres": [
-      "Приключения",
-      "Комедия",
-      "Фэнтези",
-      "Школа"
-    ]
+    "shiki_id": 53450
   },
   {
     "id": 183,
@@ -4005,14 +2428,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/chudachestva-lyubvi-ne-pomeha-lite-591",
     "url_shikimori": "https://shikimori.io/animes/15687",
-    "shiki_id": 15687,
-    "episodes": 6,
-    "duration": 6,
-    "year": 2012,
-    "genres": [
-      "Комедия",
-      "Школа"
-    ]
+    "shiki_id": 15687
   },
   {
     "id": 184,
@@ -4025,16 +2441,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/rezero-zhizn-s-nulya-v-alternativnom-mire-zamorozhennye-uzy-1242",
     "url_shikimori": "https://shikimori.io/animes/38414",
-    "shiki_id": 38414,
-    "episodes": 1,
-    "duration": 76,
-    "year": 2019,
-    "genres": [
-      "Драма",
-      "Фэнтези",
-      "Триллер",
-      "Психологическое"
-    ]
+    "shiki_id": 38414
   },
   {
     "id": 185,
@@ -4047,16 +2454,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/vnuk-mudreca-945",
     "url_shikimori": "https://shikimori.io/animes/36407",
-    "shiki_id": 36407,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2019,
-    "genres": [
-      "Экшен",
-      "Комедия",
-      "Фэнтези",
-      "Романтика"
-    ]
+    "shiki_id": 36407
   },
   {
     "id": 186,
@@ -4069,16 +2467,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/gospozha-kaguya-v-lyubvi-kak-na-voyne-2-1527",
     "url_shikimori": "https://shikimori.io/animes/40591",
-    "shiki_id": 40591,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Комедия",
-      "Психологическое",
-      "Школа",
-      "Сэйнэн"
-    ]
+    "shiki_id": 40591
   },
   {
     "id": 187,
@@ -4091,15 +2480,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/dalekiy-paladin-1902",
     "url_shikimori": "https://shikimori.io/animes/48761",
-    "shiki_id": 48761,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2021,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 48761
   },
   {
     "id": 188,
@@ -4112,17 +2493,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/deyatelnost-boga-v-mire-bez-bogov-2292",
     "url_shikimori": "https://shikimori.io/animes/51693",
-    "shiki_id": 51693,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2023,
-    "genres": [
-      "Экшен",
-      "Комедия",
-      "Фэнтези",
-      "Пародия",
-      "Сэйнэн"
-    ]
+    "shiki_id": 51693
   },
   {
     "id": 189,
@@ -4135,16 +2506,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/dostuchatsya-do-tebya-2446",
     "url_shikimori": "https://shikimori.io/animes/6045",
-    "shiki_id": 6045,
-    "episodes": 25,
-    "duration": 22,
-    "year": 2009,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Школа",
-      "Сёдзё"
-    ]
+    "shiki_id": 6045
   },
   {
     "id": 190,
@@ -4157,16 +2519,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/dostuchatsya-do-tebya-2-2529",
     "url_shikimori": "https://shikimori.io/animes/9656",
-    "shiki_id": 9656,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2011,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Школа",
-      "Сёдзё"
-    ]
+    "shiki_id": 9656
   },
   {
     "id": 191,
@@ -4179,17 +2532,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/zaderzhi-etot-zvuk-937",
     "url_shikimori": "https://shikimori.io/animes/38080",
-    "shiki_id": 38080,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2019,
-    "genres": [
-      "Сёнен",
-      "Драма",
-      "Романтика",
-      "Музыка",
-      "Школа"
-    ]
+    "shiki_id": 38080
   },
   {
     "id": 192,
@@ -4202,17 +2545,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/zaderzhi-etot-zvuk-2-1248",
     "url_shikimori": "https://shikimori.io/animes/38080",
-    "shiki_id": 38080,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2019,
-    "genres": [
-      "Сёнен",
-      "Драма",
-      "Романтика",
-      "Музыка",
-      "Школа"
-    ]
+    "shiki_id": 38080
   },
   {
     "id": 193,
@@ -4225,15 +2558,7 @@ window.ANIME_VAULT_DATA = [
     "review": "\"Розовая пора моей школьной жизни сплошной обман\" (Oregairu) — это аниме, которое сначала кажется простым, но потом врезается в сердце. Диалоги, персонажи и их развитие — на высшем уровне. Музыка лишь усиливает впечатление, делая каждый эмоциональный момент ещё более пронзительным. Лично я пересмотрел это аниме за всю жизнь 3 раза, вполне возможно, что когда-то наступит и 4 раз. Стоит сказать, что тайтл отличается от остальных какой-то особой искренностью, хоть в нём и показывают базовый любовный треугольник в котором одна из сторон остаётся в проигрыше. Это не просто ромком, а умная, ироничная и глубокая история о подростковом одиночестве, поиске себя и попытках понять других.",
     "url_animego": "https://animego.me/anime/kak-i-ozhidalos-moya-shkolnaya-romanticheskaya-zhizn-ne-udalas-ova-1028",
     "url_shikimori": "https://shikimori.io/animes/18753",
-    "shiki_id": 18753,
-    "episodes": 1,
-    "duration": 23,
-    "year": 2013,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 18753
   },
   {
     "id": 194,
@@ -4246,14 +2571,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/keyon-v-kino-2515",
     "url_shikimori": "https://shikimori.io/animes/9617",
-    "shiki_id": 9617,
-    "episodes": 1,
-    "duration": 109,
-    "year": 2011,
-    "genres": [
-      "Комедия",
-      "Музыка"
-    ]
+    "shiki_id": 9617
   },
   {
     "id": 195,
@@ -4266,15 +2584,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/keyon-plan-2519",
     "url_shikimori": "https://shikimori.io/animes/9734",
-    "shiki_id": 9734,
-    "episodes": 1,
-    "duration": 23,
-    "year": 2011,
-    "genres": [
-      "Комедия",
-      "Музыка",
-      "Школа"
-    ]
+    "shiki_id": 9734
   },
   {
     "id": 196,
@@ -4287,16 +2597,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/lozhnye-vyvody-1424",
     "url_shikimori": "https://shikimori.io/animes/39017",
-    "shiki_id": 39017,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Детектив",
-      "Романтика",
-      "Сверхъестественное",
-      "Сёнен"
-    ]
+    "shiki_id": 39017
   },
   {
     "id": 197,
@@ -4309,17 +2610,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/luchshiy-v-mire-assasin-pererodilsya-v-drugom-mire-aristokratom-1901",
     "url_shikimori": "https://shikimori.io/animes/47790",
-    "shiki_id": 47790,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2021,
-    "genres": [
-      "Экшен",
-      "Драма",
-      "Фэнтези",
-      "Детектив",
-      "Романтика"
-    ]
+    "shiki_id": 47790
   },
   {
     "id": 199,
@@ -4332,17 +2623,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/mest-masamune-ova-1836",
     "url_shikimori": "https://shikimori.io/animes/37377",
-    "shiki_id": 37377,
-    "episodes": 1,
-    "duration": 23,
-    "year": 2018,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 37377
   },
   {
     "id": 200,
@@ -4355,14 +2636,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/moy-sosed-totoro1-307",
     "url_shikimori": "https://shikimori.io/animes/523",
-    "shiki_id": 523,
-    "episodes": 1,
-    "duration": 86,
-    "year": 1988,
-    "genres": [
-      "Приключения",
-      "Сверхъестественное"
-    ]
+    "shiki_id": 523
   },
   {
     "id": 201,
@@ -4375,16 +2649,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/chudovische-za-sosedney-partoy-2452",
     "url_shikimori": "https://shikimori.io/animes/14227",
-    "shiki_id": 14227,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2012,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Школа",
-      "Сёдзё"
-    ]
+    "shiki_id": 14227
   },
   {
     "id": 202,
@@ -4397,17 +2662,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/monstr-za-sosedney-partoy-ova-2453",
     "url_shikimori": "https://shikimori.io/animes/16035",
-    "shiki_id": 16035,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2013,
-    "genres": [
-      "Дзёсей",
-      "Экшен",
-      "Фэнтези",
-      "Детектив",
-      "Фантастика"
-    ]
+    "shiki_id": 16035
   },
   {
     "id": 203,
@@ -4420,16 +2675,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/ne-lyublyu-bol-poetomu-sobirayus-vlozhit-vse-v-zaschitu-1426",
     "url_shikimori": "https://shikimori.io/animes/38790",
-    "shiki_id": 38790,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Комедия",
-      "Фэнтези"
-    ]
+    "shiki_id": 38790
   },
   {
     "id": 204,
@@ -4442,15 +2688,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/nizkourovnevyy-personazh-tomodzaki-1681",
     "url_shikimori": "https://shikimori.io/animes/40530",
-    "shiki_id": 40530,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2021,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 40530
   },
   {
     "id": 205,
@@ -4463,14 +2701,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/odinokiy-roker-2146",
     "url_shikimori": "https://shikimori.io/animes/47917",
-    "shiki_id": 47917,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2022,
-    "genres": [
-      "Комедия",
-      "Музыка"
-    ]
+    "shiki_id": 47917
   },
   {
     "id": 206,
@@ -4483,16 +2714,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/yuusha-yamemasu-2001",
     "url_shikimori": "https://shikimori.io/animes/50175",
-    "shiki_id": 50175,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2022,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Комедия",
-      "Фэнтези"
-    ]
+    "shiki_id": 50175
   },
   {
     "id": 207,
@@ -4505,15 +2727,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/povelitel-4-2057",
     "url_shikimori": "https://shikimori.io/animes/48895",
-    "shiki_id": 48895,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2022,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 48895
   },
   {
     "id": 208,
@@ -4526,16 +2740,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/povsednevnaya-zhizn-bessmertnogo-korolya-1484",
     "url_shikimori": "https://shikimori.io/animes/41094",
-    "shiki_id": 41094,
-    "episodes": 15,
-    "duration": 19,
-    "year": 2020,
-    "genres": [
-      "Приключения",
-      "Комедия",
-      "Фэнтези",
-      "Школа"
-    ]
+    "shiki_id": 41094
   },
   {
     "id": 209,
@@ -4548,17 +2753,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/pritvornaya-lyubov-2-ova-2506",
     "url_shikimori": "https://shikimori.io/animes/32553",
-    "shiki_id": 32553,
-    "episodes": 2,
-    "duration": 13,
-    "year": 2016,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика",
-      "Гарем",
-      "Пародия"
-    ]
+    "shiki_id": 32553
   },
   {
     "id": 210,
@@ -4571,16 +2766,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/skazhi-ya-lyublyu-tebya-2384",
     "url_shikimori": "https://shikimori.io/animes/14289",
-    "shiki_id": 14289,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2012,
-    "genres": [
-      "Сёдзё",
-      "Драма",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 14289
   },
   {
     "id": 211,
@@ -4593,15 +2779,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/skazhi-ya-lyublyu-tebya-ova-2385",
     "url_shikimori": "https://shikimori.io/animes/16868",
-    "shiki_id": 16868,
-    "episodes": 1,
-    "duration": 22,
-    "year": 2013,
-    "genres": [
-      "Сёдзё",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 16868
   },
   {
     "id": 212,
@@ -4614,17 +2792,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/ubey-ili-umri-2066",
     "url_shikimori": "https://shikimori.io/animes/18679",
-    "shiki_id": 18679,
-    "episodes": 24,
-    "duration": 24,
-    "year": 2013,
-    "genres": [
-      "Экшен",
-      "Комедия",
-      "Этти",
-      "Школа",
-      "Супер сила"
-    ]
+    "shiki_id": 18679
   },
   {
     "id": 213,
@@ -4637,15 +2805,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/ubiystvennaya-lyubov-1945",
     "url_shikimori": "https://shikimori.io/animes/44516",
-    "shiki_id": 44516,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2022,
-    "genres": [
-      "Дзёсей",
-      "Экшен",
-      "Романтика"
-    ]
+    "shiki_id": 44516
   },
   {
     "id": 214,
@@ -4658,15 +2818,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/chelovek-benzopila-2119",
     "url_shikimori": "https://shikimori.io/animes/44511",
-    "shiki_id": 44511,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2022,
-    "genres": [
-      "Экшен",
-      "Фэнтези",
-      "Сёнен"
-    ]
+    "shiki_id": 44511
   },
   {
     "id": 215,
@@ -4679,16 +2831,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/etot-zamechatelnyy-mir-2-402",
     "url_shikimori": "https://shikimori.io/animes/32937",
-    "shiki_id": 32937,
-    "episodes": 10,
-    "duration": 23,
-    "year": 2017,
-    "genres": [
-      "Приключения",
-      "Комедия",
-      "Фэнтези",
-      "Пародия"
-    ]
+    "shiki_id": 32937
   },
   {
     "id": 216,
@@ -4701,16 +2844,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/etot-zamechatelnyy-mir-bagrovaya-legenda-1500",
     "url_shikimori": "https://shikimori.io/animes/38040",
-    "shiki_id": 38040,
-    "episodes": 1,
-    "duration": 90,
-    "year": 2019,
-    "genres": [
-      "Приключения",
-      "Комедия",
-      "Фэнтези",
-      "Пародия"
-    ]
+    "shiki_id": 38040
   },
   {
     "id": 217,
@@ -4723,16 +2857,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/ya-stoyu-na-millionah-trupov-1625",
     "url_shikimori": "https://shikimori.io/animes/41380",
-    "shiki_id": 41380,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Драма",
-      "Фэнтези",
-      "Сёнен"
-    ]
+    "shiki_id": 41380
   },
   {
     "id": 218,
@@ -4745,16 +2870,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/ya-stoyu-na-millionah-trupov-2-1818",
     "url_shikimori": "https://shikimori.io/animes/44881",
-    "shiki_id": 44881,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2021,
-    "genres": [
-      "Экшен",
-      "Драма",
-      "Фэнтези",
-      "Сёнен"
-    ]
+    "shiki_id": 44881
   },
   {
     "id": 219,
@@ -4767,13 +2883,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/33926",
-    "shiki_id": 33926,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2017,
-    "genres": [
-      "Экшен"
-    ]
+    "shiki_id": 33926
   },
   {
     "id": 220,
@@ -4786,13 +2896,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/37932",
-    "shiki_id": 37932,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Экшен"
-    ]
+    "shiki_id": 37932
   },
   {
     "id": 222,
@@ -4805,15 +2909,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/59845",
-    "shiki_id": 59845,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2025,
-    "genres": [
-      "Романтика",
-      "Школа",
-      "Сёнен"
-    ]
+    "shiki_id": 59845
   },
   {
     "id": 223,
@@ -4826,15 +2922,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/58614",
-    "shiki_id": 58614,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2025,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 58614
   },
   {
     "id": 224,
@@ -4847,16 +2935,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/40357",
-    "shiki_id": 40357,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2023,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Драма",
-      "Фэнтези"
-    ]
+    "shiki_id": 40357
   },
   {
     "id": 225,
@@ -4869,15 +2948,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/58939",
-    "shiki_id": 58939,
-    "episodes": 11,
-    "duration": 23,
-    "year": 2025,
-    "genres": [
-      "Экшен",
-      "Комедия",
-      "Сёнен"
-    ]
+    "shiki_id": 58939
   },
   {
     "id": 226,
@@ -4890,16 +2961,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/51096",
-    "shiki_id": 51096,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2022,
-    "genres": [
-      "Драма",
-      "Триллер",
-      "Психологическое",
-      "Школа"
-    ]
+    "shiki_id": 51096
   },
   {
     "id": 227,
@@ -4912,16 +2974,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/37497",
-    "shiki_id": 37497,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2018,
-    "genres": [
-      "Драма",
-      "Фэнтези",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 37497
   },
   {
     "id": 228,
@@ -4934,17 +2987,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/23277",
-    "shiki_id": 23277,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2015,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Этти",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 23277
   },
   {
     "id": 229,
@@ -4957,17 +3000,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/36885",
-    "shiki_id": 36885,
-    "episodes": 1,
-    "duration": 114,
-    "year": 2019,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Этти",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 36885
   },
   {
     "id": 230,
@@ -4980,14 +3013,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/34494",
-    "shiki_id": 34494,
-    "episodes": 25,
-    "duration": 23,
-    "year": 2017,
-    "genres": [
-      "Повседневность",
-      "Работа"
-    ]
+    "shiki_id": 34494
   },
   {
     "id": 231,
@@ -5000,15 +3026,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/31798",
-    "shiki_id": 31798,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2016,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Фантастика"
-    ]
+    "shiki_id": 31798
   },
   {
     "id": 232,
@@ -5021,16 +3039,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/30654",
-    "shiki_id": 30654,
-    "episodes": 25,
-    "duration": 23,
-    "year": 2016,
-    "genres": [
-      "Сёнен",
-      "Экшен",
-      "Комедия",
-      "Школа"
-    ]
+    "shiki_id": 30654
   },
   {
     "id": 233,
@@ -5043,15 +3052,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/59205",
-    "shiki_id": 59205,
-    "episodes": 12,
-    "duration": 25,
-    "year": 2025,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 59205
   },
   {
     "id": 234,
@@ -5064,15 +3065,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/1",
-    "shiki_id": 1,
-    "episodes": 26,
-    "duration": 24,
-    "year": 1998,
-    "genres": [
-      "Экшен",
-      "Фантастика",
-      "Космос"
-    ]
+    "shiki_id": 1
   },
   {
     "id": 235,
@@ -5085,19 +3078,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/28979",
-    "shiki_id": 28979,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2015,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика",
-      "Фантастика",
-      "Этти",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 28979
   },
   {
     "id": 236,
@@ -5110,19 +3091,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/31380",
-    "shiki_id": 31380,
-    "episodes": 3,
-    "duration": 24,
-    "year": 2016,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика",
-      "Фантастика",
-      "Этти",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 31380
   },
   {
     "id": 237,
@@ -5135,13 +3104,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/60732",
-    "shiki_id": 60732,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2025,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 60732
   },
   {
     "id": 238,
@@ -5154,16 +3117,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/59654",
-    "shiki_id": 59654,
-    "episodes": 1,
-    "duration": 110,
-    "year": 2025,
-    "genres": [
-      "Экшен",
-      "Фэнтези",
-      "Школа",
-      "Сёнен"
-    ]
+    "shiki_id": 59654
   },
   {
     "id": 239,
@@ -5176,15 +3130,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/27891",
-    "shiki_id": 27891,
-    "episodes": 1,
-    "duration": 24,
-    "year": 2014,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 27891
   },
   {
     "id": 240,
@@ -5197,15 +3143,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/36474",
-    "shiki_id": 36474,
-    "episodes": 24,
-    "duration": 24,
-    "year": 2018,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 36474
   },
   {
     "id": 241,
@@ -5218,15 +3156,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/31765",
-    "shiki_id": 31765,
-    "episodes": 1,
-    "duration": 119,
-    "year": 2017,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 31765
   },
   {
     "id": 242,
@@ -5239,15 +3169,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/42916",
-    "shiki_id": 42916,
-    "episodes": 1,
-    "duration": 97,
-    "year": 2021,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 42916
   },
   {
     "id": 243,
@@ -5260,15 +3182,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/36936",
-    "shiki_id": 36936,
-    "episodes": 1,
-    "duration": 98,
-    "year": 2018,
-    "genres": [
-      "Приключения",
-      "Драма",
-      "Фэнтези"
-    ]
+    "shiki_id": 36936
   },
   {
     "id": 244,
@@ -5281,13 +3195,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/59459",
-    "shiki_id": 59459,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2025,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 59459
   },
   {
     "id": 245,
@@ -5300,17 +3208,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/529",
-    "shiki_id": 529,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2002,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Фантастика",
-      "Военное",
-      "Школа"
-    ]
+    "shiki_id": 529
   },
   {
     "id": 246,
@@ -5323,15 +3221,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/11433",
-    "shiki_id": 11433,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2012,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Фантастика"
-    ]
+    "shiki_id": 11433
   },
   {
     "id": 247,
@@ -5344,15 +3234,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/23447",
-    "shiki_id": 23447,
-    "episodes": 1,
-    "duration": 26,
-    "year": 2014,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Фантастика"
-    ]
+    "shiki_id": 23447
   },
   {
     "id": 248,
@@ -5365,17 +3247,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/1735",
-    "shiki_id": 1735,
-    "episodes": 500,
-    "duration": 23,
-    "year": 2007,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези",
-      "Боевые искусства",
-      "Сёнен"
-    ]
+    "shiki_id": 1735
   },
   {
     "id": 249,
@@ -5388,15 +3260,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/36220",
-    "shiki_id": 36220,
-    "episodes": 6,
-    "duration": 23,
-    "year": 2017,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 36220
   },
   {
     "id": 250,
@@ -5409,15 +3273,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/41103",
-    "shiki_id": 41103,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2021,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 41103
   },
   {
     "id": 251,
@@ -5430,13 +3286,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/12669",
-    "shiki_id": 12669,
-    "episodes": 6,
-    "duration": 3,
-    "year": 2012,
-    "genres": [
-      "Романтика"
-    ]
+    "shiki_id": 12669
   },
   {
     "id": 252,
@@ -5449,13 +3299,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/21995",
-    "shiki_id": 21995,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 21995
   },
   {
     "id": 253,
@@ -5468,13 +3312,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/24151",
-    "shiki_id": 24151,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 24151
   },
   {
     "id": 254,
@@ -5487,17 +3325,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/41487",
-    "shiki_id": 41487,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Комедия",
-      "Фэнтези",
-      "Сёнен"
-    ]
+    "shiki_id": 41487
   },
   {
     "id": 255,
@@ -5510,13 +3338,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/32729",
-    "shiki_id": 32729,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 32729
   },
   {
     "id": 256,
@@ -5529,14 +3351,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/12893",
-    "shiki_id": 12893,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Комедия",
-      "Школа"
-    ]
+    "shiki_id": 12893
   },
   {
     "id": 257,
@@ -5549,13 +3364,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/39569",
-    "shiki_id": 39569,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 39569
   },
   {
     "id": 258,
@@ -5568,13 +3377,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/20541",
-    "shiki_id": 20541,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 20541
   },
   {
     "id": 259,
@@ -5587,13 +3390,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/26243",
-    "shiki_id": 26243,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 26243
   },
   {
     "id": 260,
@@ -5606,13 +3403,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/34902",
-    "shiki_id": 34902,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 34902
   },
   {
     "id": 261,
@@ -5625,15 +3416,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/37956",
-    "shiki_id": 37956,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Сёдзё",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 37956
   },
   {
     "id": 262,
@@ -5646,13 +3429,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/58714",
-    "shiki_id": 58714,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 58714
   },
   {
     "id": 263,
@@ -5665,16 +3442,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/16001",
-    "shiki_id": 16001,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Сверхъестественное",
-      "Школа"
-    ]
+    "shiki_id": 16001
   },
   {
     "id": 264,
@@ -5687,13 +3455,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/41168",
-    "shiki_id": 41168,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 41168
   },
   {
     "id": 265,
@@ -5706,13 +3468,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/35968",
-    "shiki_id": 35968,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 35968
   },
   {
     "id": 266,
@@ -5725,16 +3481,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/50608",
-    "shiki_id": 50608,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Драма",
-      "Сверхъестественное",
-      "Сёнен"
-    ]
+    "shiki_id": 50608
   },
   {
     "id": 267,
@@ -5747,13 +3494,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/50593",
-    "shiki_id": 50593,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 50593
   },
   {
     "id": 269,
@@ -5766,15 +3507,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/47160",
-    "shiki_id": 47160,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 47160
   },
   {
     "id": 270,
@@ -5787,13 +3520,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/199",
-    "shiki_id": 199,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 199
   },
   {
     "id": 272,
@@ -5806,13 +3533,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/42590",
-    "shiki_id": 42590,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 42590
   },
   {
     "id": 273,
@@ -5825,16 +3546,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/14741",
-    "shiki_id": 14741,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Комедия",
-      "Драма",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 14741
   },
   {
     "id": 274,
@@ -5847,16 +3559,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/18671",
-    "shiki_id": 18671,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Комедия",
-      "Драма",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 18671
   },
   {
     "id": 275,
@@ -5869,16 +3572,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/16934",
-    "shiki_id": 16934,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Комедия",
-      "Драма",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 16934
   },
   {
     "id": 276,
@@ -5891,15 +3585,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/53065",
-    "shiki_id": 53065,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Романтика",
-      "Школа",
-      "Сэйнэн"
-    ]
+    "shiki_id": 53065
   },
   {
     "id": 277,
@@ -5912,13 +3598,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/54870",
-    "shiki_id": 54870,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 54870
   },
   {
     "id": 278,
@@ -5931,15 +3611,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/30736",
-    "shiki_id": 30736,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 30736
   },
   {
     "id": 431,
@@ -5952,13 +3624,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/33836",
-    "shiki_id": 33836,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 33836
   },
   {
     "id": 53,
@@ -5971,16 +3637,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/etot-zamechatelnyy-mir-s1-400",
     "url_shikimori": "https://shikimori.io/animes/30831",
-    "shiki_id": 30831,
-    "episodes": 10,
-    "duration": 23,
-    "year": 2016,
-    "genres": [
-      "Приключения",
-      "Комедия",
-      "Фэнтези",
-      "Пародия"
-    ]
+    "shiki_id": 30831
   },
   {
     "id": 198,
@@ -5993,15 +3650,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/magiya-vernuvshegosya-dolzhna-byt-osobennoy-2423",
     "url_shikimori": "https://shikimori.io/animes/54852",
-    "shiki_id": 54852,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2023,
-    "genres": [
-      "Экшен",
-      "Фэнтези",
-      "Школа"
-    ]
+    "shiki_id": 54852
   },
   {
     "id": 268,
@@ -6014,17 +3663,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/14967",
-    "shiki_id": 14967,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Этти",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 14967
   },
   {
     "id": 279,
@@ -6037,17 +3676,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/ubey-ili-umri-specvypuski-2471",
     "url_shikimori": "https://shikimori.io/animes/21659",
-    "shiki_id": 21659,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Комедия",
-      "Этти",
-      "Школа",
-      "Супер сила"
-    ]
+    "shiki_id": 21659
   },
   {
     "id": 280,
@@ -6060,13 +3689,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/bezdomnyy-bog-v1-357",
     "url_shikimori": "https://shikimori.io/animes/20507",
-    "shiki_id": 20507,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 20507
   },
   {
     "id": 281,
@@ -6079,13 +3702,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/v-les-gde-mercayut-svetlyachki-810",
     "url_shikimori": "https://shikimori.io/animes/10408",
-    "shiki_id": 10408,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 10408
   },
   {
     "id": 282,
@@ -6098,13 +3715,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/vetrolom-s1-2542",
     "url_shikimori": "https://shikimori.io/animes/54900",
-    "shiki_id": 54900,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 54900
   },
   {
     "id": 283,
@@ -6117,13 +3728,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/grabitel-1350",
     "url_shikimori": "https://shikimori.io/animes/37345",
-    "shiki_id": 37345,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 37345
   },
   {
     "id": 284,
@@ -6136,13 +3741,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/devushka-na-chas-1579",
     "url_shikimori": "https://shikimori.io/animes/40839",
-    "shiki_id": 40839,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 40839
   },
   {
     "id": 285,
@@ -6155,13 +3754,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/zhizn-pererozhdennogo-mudreca-v-drugom-mire-poluchenie-vtoroy-professii-i-stanovlenie-silneyshim-2069",
     "url_shikimori": "https://shikimori.io/animes/47163",
-    "shiki_id": 47163,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 47163
   },
   {
     "id": 286,
@@ -6174,13 +3767,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/kulinarnye-skitaniya-v-parallelnom-mire-2239",
     "url_shikimori": "https://shikimori.io/animes/53446",
-    "shiki_id": 53446,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 53446
   },
   {
     "id": 287,
@@ -6193,16 +3780,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/lozhnye-vyvody-2-2193",
     "url_shikimori": "https://shikimori.io/animes/44204",
-    "shiki_id": 44204,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Детектив",
-      "Романтика",
-      "Сверхъестественное",
-      "Сёнен"
-    ]
+    "shiki_id": 44204
   },
   {
     "id": 288,
@@ -6215,13 +3793,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/lunnoe-puteshestvie-privedet-k-novomu-miru-1814",
     "url_shikimori": "https://shikimori.io/animes/43523",
-    "shiki_id": 43523,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 43523
   },
   {
     "id": 289,
@@ -6234,13 +3806,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/lunnoe-puteshestvie-privedet-k-novomu-miru-2-2463",
     "url_shikimori": "https://shikimori.io/animes/49889",
-    "shiki_id": 49889,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 49889
   },
   {
     "id": 290,
@@ -6253,19 +3819,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/lyubovnye-nepriyatnosti-ova-1172",
     "url_shikimori": "https://shikimori.io/animes/5667",
-    "shiki_id": 5667,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика",
-      "Фантастика",
-      "Этти",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 5667
   },
   {
     "id": 291,
@@ -6278,19 +3832,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/lyubovnye-nepriyatnosti-tma-1174",
     "url_shikimori": "https://shikimori.io/animes/13663",
-    "shiki_id": 13663,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика",
-      "Фантастика",
-      "Этти",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 13663
   },
   {
     "id": 292,
@@ -6303,13 +3845,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/menya-vygnali-iz-gildii-geroev-potomu-chto-ya-byl-plohim-kompanonom-poetomu-ya-reshil-nespeshno-zhit-v-glushi-1863",
     "url_shikimori": "https://shikimori.io/animes/44037",
-    "shiki_id": 44037,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 44037
   },
   {
     "id": 293,
@@ -6322,13 +3858,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/menya-vygnali-iz-gildii-geroev-potomu-chto-ya-byl-plohim-kompanonom-poetomu-ya-reshil-nespeshno-zhit-v-glushi-2-2470",
     "url_shikimori": "https://shikimori.io/animes/53488",
-    "shiki_id": 53488,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 53488
   },
   {
     "id": 294,
@@ -6341,17 +3871,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/mest-masamune-1835",
     "url_shikimori": "https://shikimori.io/animes/33487",
-    "shiki_id": 33487,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 33487
   },
   {
     "id": 295,
@@ -6364,13 +3884,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/nepravilnyy-sposob-ispolzovaniya-iscelyayuschey-magii-2473",
     "url_shikimori": "https://shikimori.io/animes/49613",
-    "shiki_id": 49613,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 49613
   },
   {
     "id": 296,
@@ -6383,15 +3897,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/nepriznannyy-shkoloy-vladyka-demonov-2-2190",
     "url_shikimori": "https://shikimori.io/animes/48417",
-    "shiki_id": 48417,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Фэнтези",
-      "Школа"
-    ]
+    "shiki_id": 48417
   },
   {
     "id": 297,
@@ -6404,17 +3910,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/neputevyy-uchenik-v-shkole-magii-vzyvayuschaya-k-zvezdam-1375",
     "url_shikimori": "https://shikimori.io/animes/32900",
-    "shiki_id": 32900,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Фэнтези",
-      "Романтика",
-      "Фантастика",
-      "Школа"
-    ]
+    "shiki_id": 32900
   },
   {
     "id": 298,
@@ -6427,14 +3923,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/pererozhdenie-v-aristokrata-so-sposobnostyu-analiza-2-2671",
     "url_shikimori": "https://shikimori.io/animes/59131",
-    "shiki_id": 59131,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 59131
   },
   {
     "id": 299,
@@ -6447,13 +3936,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/privlekaya-poceluy-2052",
     "url_shikimori": "https://shikimori.io/animes/51417",
-    "shiki_id": 51417,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 51417
   },
   {
     "id": 300,
@@ -6466,13 +3949,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/prizvannyy-v-drugoy-mir-vo-vtoroy-raz-2286",
     "url_shikimori": "https://shikimori.io/animes/50220",
-    "shiki_id": 50220,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 50220
   },
   {
     "id": 301,
@@ -6485,17 +3962,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/pritvornaya-lyubov-ova-2505",
     "url_shikimori": "https://shikimori.io/animes/24227",
-    "shiki_id": 24227,
-    "episodes": 3,
-    "duration": 26,
-    "year": 2014,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 24227
   },
   {
     "id": 302,
@@ -6508,17 +3975,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/pyat-nevest-2-1680",
     "url_shikimori": "https://shikimori.io/animes/39783",
-    "shiki_id": 39783,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2021,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 39783
   },
   {
     "id": 303,
@@ -6531,15 +3988,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/silneyshiy-mudrec-nizshey-emblemy-1946",
     "url_shikimori": "https://shikimori.io/animes/47161",
-    "shiki_id": 47161,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2022,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 47161
   },
   {
     "id": 304,
@@ -6552,13 +4001,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/farmacevt-iz-parallelnogo-mira-2074",
     "url_shikimori": "https://shikimori.io/animes/49438",
-    "shiki_id": 49438,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2022,
-    "genres": [
-      "Фэнтези"
-    ]
+    "shiki_id": 49438
   },
   {
     "id": 305,
@@ -6571,18 +4014,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/furi-kuri-shugeyz-2441",
     "url_shikimori": "https://shikimori.io/animes/51305",
-    "shiki_id": 51305,
-    "episodes": 3,
-    "duration": 23,
-    "year": 2023,
-    "genres": [
-      "Экшен",
-      "Безумие",
-      "Комедия",
-      "Фантастика",
-      "Меха",
-      "Пародия"
-    ]
+    "shiki_id": 51305
   },
   {
     "id": 306,
@@ -6595,15 +4027,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/heka-to-chto-nuzhno-kazhdomu-2455",
     "url_shikimori": "https://shikimori.io/animes/13469",
-    "shiki_id": 13469,
-    "episodes": 1,
-    "duration": 25,
-    "year": 2012,
-    "genres": [
-      "Детектив",
-      "Повседневность",
-      "Школа"
-    ]
+    "shiki_id": 13469
   },
   {
     "id": 307,
@@ -6616,15 +4040,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/hori-i-miyamura-1742",
     "url_shikimori": "https://shikimori.io/animes/42897",
-    "shiki_id": 42897,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2021,
-    "genres": [
-      "Сёнен",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 42897
   },
   {
     "id": 308,
@@ -6637,14 +4053,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/chernyy-prizyvatel-2087",
     "url_shikimori": "https://shikimori.io/animes/51064",
-    "shiki_id": 51064,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2022,
-    "genres": [
-      "Экшен",
-      "Фэнтези"
-    ]
+    "shiki_id": 51064
   },
   {
     "id": 309,
@@ -6657,16 +4066,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/kono-subarashii-sekai-ni-shukufuku-wo-2-kono-subarashii-geijutsu-ni-shukufuku-wo-403",
     "url_shikimori": "https://shikimori.io/animes/30831",
-    "shiki_id": 30831,
-    "episodes": 10,
-    "duration": 23,
-    "year": 2016,
-    "genres": [
-      "Приключения",
-      "Комедия",
-      "Фэнтези",
-      "Пародия"
-    ]
+    "shiki_id": 30831
   },
   {
     "id": 310,
@@ -6679,15 +4079,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/ya-stal-samym-silnym-s-provalnym-navykom-nenormalnoe-sostoyanie-ya-razrushu-vse-2621",
     "url_shikimori": "https://shikimori.io/animes/57892",
-    "shiki_id": 57892,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2024,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 57892
   },
   {
     "id": 311,
@@ -6700,13 +4092,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/59130",
-    "shiki_id": 59130,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2025,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 59130
   },
   {
     "id": 312,
@@ -6719,16 +4105,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/2236",
-    "shiki_id": 2236,
-    "episodes": 1,
-    "duration": 98,
-    "year": 2006,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Фантастика",
-      "Школа"
-    ]
+    "shiki_id": 2236
   },
   {
     "id": 313,
@@ -6741,15 +4118,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/52367",
-    "shiki_id": 52367,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2024,
-    "genres": [
-      "Приключения",
-      "Комедия",
-      "Фэнтези"
-    ]
+    "shiki_id": 52367
   },
   {
     "id": 314,
@@ -6762,15 +4131,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/44807",
-    "shiki_id": 44807,
-    "episodes": 1,
-    "duration": 121,
-    "year": 2021,
-    "genres": [
-      "Драма",
-      "Фэнтези",
-      "Музыка"
-    ]
+    "shiki_id": 44807
   },
   {
     "id": 315,
@@ -6783,19 +4144,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/30",
-    "shiki_id": 30,
-    "episodes": 26,
-    "duration": 24,
-    "year": 1995,
-    "genres": [
-      "Экшен",
-      "Безумие",
-      "Драма",
-      "Фантастика",
-      "Триллер",
-      "Меха",
-      "Психологическое"
-    ]
+    "shiki_id": 30
   },
   {
     "id": 316,
@@ -6808,16 +4157,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/4654",
-    "shiki_id": 4654,
-    "episodes": 24,
-    "duration": 23,
-    "year": 2008,
-    "genres": [
-      "Экшен",
-      "Фэнтези",
-      "Фантастика",
-      "Супер сила"
-    ]
+    "shiki_id": 4654
   },
   {
     "id": 317,
@@ -6830,17 +4170,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/30727",
-    "shiki_id": 30727,
-    "episodes": 11,
-    "duration": 22,
-    "year": 2017,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Этти",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 30727
   },
   {
     "id": 318,
@@ -6853,17 +4183,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/35338",
-    "shiki_id": 35338,
-    "episodes": 1,
-    "duration": 22,
-    "year": 2017,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Этти",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 35338
   },
   {
     "id": 319,
@@ -6876,16 +4196,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/24833",
-    "shiki_id": 24833,
-    "episodes": 22,
-    "duration": 23,
-    "year": 2015,
-    "genres": [
-      "Сёнен",
-      "Экшен",
-      "Комедия",
-      "Школа"
-    ]
+    "shiki_id": 24833
   },
   {
     "id": 320,
@@ -6898,18 +4209,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/7088",
-    "shiki_id": 7088,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2010,
-    "genres": [
-      "Экшен",
-      "Комедия",
-      "Фэнтези",
-      "Этти",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 7088
   },
   {
     "id": 321,
@@ -6922,19 +4222,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/35000",
-    "shiki_id": 35000,
-    "episodes": 1,
-    "duration": 12,
-    "year": 2017,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика",
-      "Фантастика",
-      "Этти",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 35000
   },
   {
     "id": 322,
@@ -6947,19 +4235,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/31711",
-    "shiki_id": 31711,
-    "episodes": 2,
-    "duration": 23,
-    "year": 2016,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика",
-      "Фантастика",
-      "Этти",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 31711
   },
   {
     "id": 323,
@@ -6972,19 +4248,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/13851",
-    "shiki_id": 13851,
-    "episodes": 6,
-    "duration": 25,
-    "year": 2012,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика",
-      "Фантастика",
-      "Этти",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 13851
   },
   {
     "id": 324,
@@ -6997,16 +4261,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/51009",
-    "shiki_id": 51009,
-    "episodes": 23,
-    "duration": 23,
-    "year": 2023,
-    "genres": [
-      "Экшен",
-      "Фэнтези",
-      "Школа",
-      "Сёнен"
-    ]
+    "shiki_id": 51009
   },
   {
     "id": 325,
@@ -7019,14 +4274,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/55994",
-    "shiki_id": 55994,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2024,
-    "genres": [
-      "Экшен",
-      "Военное"
-    ]
+    "shiki_id": 55994
   },
   {
     "id": 326,
@@ -7039,17 +4287,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/44203",
-    "shiki_id": 44203,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2021,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези",
-      "Романтика",
-      "Гарем"
-    ]
+    "shiki_id": 44203
   },
   {
     "id": 327,
@@ -7062,17 +4300,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/50306",
-    "shiki_id": 50306,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2024,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези",
-      "Романтика",
-      "Гарем"
-    ]
+    "shiki_id": 50306
   },
   {
     "id": 328,
@@ -7085,13 +4313,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/53126",
-    "shiki_id": 53126,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2023,
-    "genres": [
-      "Романтика"
-    ]
+    "shiki_id": 53126
   },
   {
     "id": 329,
@@ -7104,17 +4326,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/38186",
-    "shiki_id": 38186,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2019,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 38186
   },
   {
     "id": 330,
@@ -7127,16 +4339,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/41514",
-    "shiki_id": 41514,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2023,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Комедия",
-      "Фэнтези"
-    ]
+    "shiki_id": 41514
   },
   {
     "id": 331,
@@ -7149,14 +4352,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/9989",
-    "shiki_id": 9989,
-    "episodes": 11,
-    "duration": 22,
-    "year": 2011,
-    "genres": [
-      "Драма",
-      "Сверхъестественное"
-    ]
+    "shiki_id": 9989
   },
   {
     "id": 332,
@@ -7169,13 +4365,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/8769",
-    "shiki_id": 8769,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2010,
-    "genres": [
-      "Комедия"
-    ]
+    "shiki_id": 8769
   },
   {
     "id": 333,
@@ -7188,17 +4378,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/39551",
-    "shiki_id": 39551,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2021,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Комедия",
-      "Фэнтези",
-      "Сёнен"
-    ]
+    "shiki_id": 39551
   },
   {
     "id": 334,
@@ -7211,15 +4391,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/35860",
-    "shiki_id": 35860,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2018,
-    "genres": [
-      "Комедия",
-      "Школа",
-      "Сёнен"
-    ]
+    "shiki_id": 35860
   },
   {
     "id": 335,
@@ -7232,15 +4404,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/38993",
-    "shiki_id": 38993,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2019,
-    "genres": [
-      "Комедия",
-      "Школа",
-      "Сёнен"
-    ]
+    "shiki_id": 38993
   },
   {
     "id": 336,
@@ -7253,16 +4417,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/14467",
-    "shiki_id": 14467,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2012,
-    "genres": [
-      "Экшен",
-      "Фэнтези",
-      "Детектив",
-      "Супер сила"
-    ]
+    "shiki_id": 14467
   },
   {
     "id": 337,
@@ -7275,16 +4430,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/31414",
-    "shiki_id": 31414,
-    "episodes": 24,
-    "duration": 13,
-    "year": 2016,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Школа",
-      "Сёдзё"
-    ]
+    "shiki_id": 31414
   },
   {
     "id": 338,
@@ -7297,15 +4443,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/36793",
-    "shiki_id": 36793,
-    "episodes": 12,
-    "duration": 22,
-    "year": 2018,
-    "genres": [
-      "Сёдзё",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 36793
   },
   {
     "id": 339,
@@ -7318,15 +4456,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/53879",
-    "shiki_id": 53879,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2023,
-    "genres": [
-      "Комедия",
-      "Детектив",
-      "Сёнен"
-    ]
+    "shiki_id": 53879
   },
   {
     "id": 340,
@@ -7339,17 +4469,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/38753",
-    "shiki_id": 38753,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2019,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Драма",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 38753
   },
   {
     "id": 341,
@@ -7362,15 +4482,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/41468",
-    "shiki_id": 41468,
-    "episodes": 3,
-    "duration": 21,
-    "year": 2020,
-    "genres": [
-      "Сёнен",
-      "Экшен",
-      "Фэнтези"
-    ]
+    "shiki_id": 41468
   },
   {
     "id": 342,
@@ -7383,13 +4495,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/59265",
-    "shiki_id": 59265,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2025,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 59265
   },
   {
     "id": 343,
@@ -7402,16 +4508,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/54918",
-    "shiki_id": 54918,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2023,
-    "genres": [
-      "Экшен",
-      "Драма",
-      "Сверхъестественное",
-      "Сёнен"
-    ]
+    "shiki_id": 54918
   },
   {
     "id": 344,
@@ -7424,15 +4521,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/11553",
-    "shiki_id": 11553,
-    "episodes": 1,
-    "duration": 26,
-    "year": 2011,
-    "genres": [
-      "Комедия",
-      "Гурман",
-      "Школа"
-    ]
+    "shiki_id": 11553
   },
   {
     "id": 345,
@@ -7445,15 +4534,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/37349",
-    "shiki_id": 37349,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2018,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 37349
   },
   {
     "id": 346,
@@ -7466,13 +4547,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/41226",
-    "shiki_id": 41226,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2020,
-    "genres": [
-      "Комедия"
-    ]
+    "shiki_id": 41226
   },
   {
     "id": 347,
@@ -7485,15 +4560,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/41389",
-    "shiki_id": 41389,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2020,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика"
-    ]
+    "shiki_id": 41389
   },
   {
     "id": 348,
@@ -7506,15 +4573,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/44931",
-    "shiki_id": 44931,
-    "episodes": 1,
-    "duration": 23,
-    "year": 2021,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика"
-    ]
+    "shiki_id": 44931
   },
   {
     "id": 349,
@@ -7527,19 +4586,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/30749",
-    "shiki_id": 30749,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2016,
-    "genres": [
-      "Экшен",
-      "Фэнтези",
-      "Романтика",
-      "Этти",
-      "Гарем",
-      "Меха",
-      "Школа"
-    ]
+    "shiki_id": 30749
   },
   {
     "id": 351,
@@ -7552,14 +4599,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/15879",
-    "shiki_id": 15879,
-    "episodes": 7,
-    "duration": 3,
-    "year": 2012,
-    "genres": [
-      "Экшен",
-      "Меха"
-    ]
+    "shiki_id": 15879
   },
   {
     "id": 352,
@@ -7572,13 +4612,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/59644",
-    "shiki_id": 59644,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2025,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 59644
   },
   {
     "id": 353,
@@ -7591,15 +4625,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/31553",
-    "shiki_id": 31553,
-    "episodes": 1,
-    "duration": 24,
-    "year": 2016,
-    "genres": [
-      "Драма",
-      "Школа",
-      "Супер сила"
-    ]
+    "shiki_id": 31553
   },
   {
     "id": 354,
@@ -7612,19 +4638,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/226",
-    "shiki_id": 226,
-    "episodes": 13,
-    "duration": 25,
-    "year": 2004,
-    "genres": [
-      "Сэйнэн",
-      "Экшен",
-      "Драма",
-      "Ужасы",
-      "Романтика",
-      "Сверхъестественное",
-      "Психологическое"
-    ]
+    "shiki_id": 226
   },
   {
     "id": 355,
@@ -7637,15 +4651,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/21843",
-    "shiki_id": 21843,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2014,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 21843
   },
   {
     "id": 412,
@@ -7658,13 +4664,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/37520",
-    "shiki_id": 37520,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 37520
   },
   {
     "id": 413,
@@ -7677,13 +4677,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/59047",
-    "shiki_id": 59047,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 59047
   },
   {
     "id": 424,
@@ -7696,16 +4690,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/609",
-    "shiki_id": 609,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Ужасы",
-      "Детектив",
-      "Сверхъестественное",
-      "Школа"
-    ]
+    "shiki_id": 609
   },
   {
     "id": 350,
@@ -7718,13 +4703,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/60146",
-    "shiki_id": 60146,
-    "episodes": 12,
-    "duration": 22,
-    "year": 2025,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 60146
   },
   {
     "id": 356,
@@ -7737,15 +4716,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/bezzabotnaya-zhizn-v-inom-mire-s-chiterskimi-sposobnostyami-so-vtorogo-urovnya-2574",
     "url_shikimori": "https://shikimori.io/animes/56923",
-    "shiki_id": 56923,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2024,
-    "genres": [
-      "Экшен",
-      "Фэнтези",
-      "Романтика"
-    ]
+    "shiki_id": 56923
   },
   {
     "id": 357,
@@ -7758,20 +4729,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/boevaya-akademiya-goroda-asterisk-1368",
     "url_shikimori": "https://shikimori.io/animes/30544",
-    "shiki_id": 30544,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2015,
-    "genres": [
-      "Экшен",
-      "Комедия",
-      "Фэнтези",
-      "Романтика",
-      "Фантастика",
-      "Этти",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 30544
   },
   {
     "id": 358,
@@ -7784,20 +4742,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/boevaya-akademiya-goroda-asterisk-2-1369",
     "url_shikimori": "https://shikimori.io/animes/31737",
-    "shiki_id": 31737,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2016,
-    "genres": [
-      "Экшен",
-      "Комедия",
-      "Фэнтези",
-      "Романтика",
-      "Фантастика",
-      "Этти",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 31737
   },
   {
     "id": 359,
@@ -7810,15 +4755,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/voshozhdenie-v-teni-2120",
     "url_shikimori": "https://shikimori.io/animes/48316",
-    "shiki_id": 48316,
-    "episodes": 20,
-    "duration": 23,
-    "year": 2022,
-    "genres": [
-      "Экшен",
-      "Комедия",
-      "Фэнтези"
-    ]
+    "shiki_id": 48316
   },
   {
     "id": 360,
@@ -7831,16 +4768,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/voshozhdenie-geroya-schita-2-1993",
     "url_shikimori": "https://shikimori.io/animes/40356",
-    "shiki_id": 40356,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2022,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Драма",
-      "Фэнтези"
-    ]
+    "shiki_id": 40356
   },
   {
     "id": 361,
@@ -7853,17 +4781,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/doktor-dlya-devushek-monstrov-1580",
     "url_shikimori": "https://shikimori.io/animes/40708",
-    "shiki_id": 40708,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Комедия",
-      "Фэнтези",
-      "Романтика",
-      "Этти",
-      "Гарем"
-    ]
+    "shiki_id": 40708
   },
   {
     "id": 362,
@@ -7876,18 +4794,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/esche-bolshe-lyubovnyh-nepriyatnostey-1173",
     "url_shikimori": "https://shikimori.io/animes/9181",
-    "shiki_id": 9181,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2010,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Фантастика",
-      "Этти",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 9181
   },
   {
     "id": 363,
@@ -7900,14 +4807,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/istoriya-o-parenke-iz-derevni-raspolozhennoy-pered-slozhneyshim-podzemelem-1668",
     "url_shikimori": "https://shikimori.io/animes/40594",
-    "shiki_id": 40594,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2021,
-    "genres": [
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 40594
   },
   {
     "id": 364,
@@ -7920,16 +4820,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/kombatanty-budut-vyslany-1720",
     "url_shikimori": "https://shikimori.io/animes/41456",
-    "shiki_id": 41456,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2021,
-    "genres": [
-      "Экшен",
-      "Комедия",
-      "Фэнтези",
-      "Фантастика"
-    ]
+    "shiki_id": 41456
   },
   {
     "id": 365,
@@ -7942,19 +4833,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/lyubovnye-nepriyatnosti-1171",
     "url_shikimori": "https://shikimori.io/animes/3455",
-    "shiki_id": 3455,
-    "episodes": 26,
-    "duration": 24,
-    "year": 2008,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика",
-      "Фантастика",
-      "Этти",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 3455
   },
   {
     "id": 366,
@@ -7967,15 +4846,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/maou-gakuin-no-futekigousha-shijou-saikyou-no-maou-no-shiso-tensei-shite-shison-tachi-no-gakkou-e-kayou-1584",
     "url_shikimori": "https://shikimori.io/animes/40496",
-    "shiki_id": 40496,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Фэнтези",
-      "Школа"
-    ]
+    "shiki_id": 40496
   },
   {
     "id": 367,
@@ -7988,16 +4859,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/obychnyy-muzhchina-srednih-let-i-ego-zhurnal-aktivnosti-v-vrmmo-2421",
     "url_shikimori": "https://shikimori.io/animes/54431",
-    "shiki_id": 54431,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2023,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Комедия",
-      "Фэнтези"
-    ]
+    "shiki_id": 54431
   },
   {
     "id": 368,
@@ -8010,15 +4872,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/povelitel-tmy-na-podrabotke-ss1-2-2371",
     "url_shikimori": "https://shikimori.io/animes/53200",
-    "shiki_id": 53200,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2023,
-    "genres": [
-      "Комедия",
-      "Фэнтези",
-      "Работа"
-    ]
+    "shiki_id": 53200
   },
   {
     "id": 369,
@@ -8031,16 +4885,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/poslednee-pole-brani-mezhdu-toboy-i-mnoy-ili-svyataya-voyna-sotvoreniya-mira-1619",
     "url_shikimori": "https://shikimori.io/animes/40595",
-    "shiki_id": 40595,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Фэнтези",
-      "Романтика",
-      "Военное"
-    ]
+    "shiki_id": 40595
   },
   {
     "id": 370,
@@ -8053,17 +4898,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/pyat-nevest-774",
     "url_shikimori": "https://shikimori.io/animes/38101",
-    "shiki_id": 38101,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2019,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 38101
   },
   {
     "id": 371,
@@ -8076,17 +4911,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/pyat-nevest-specvypusk-2456",
     "url_shikimori": "https://shikimori.io/animes/38101",
-    "shiki_id": 38101,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2019,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 38101
   },
   {
     "id": 372,
@@ -8099,17 +4924,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/pyat-nevest-film-2231",
     "url_shikimori": "https://shikimori.io/animes/48548",
-    "shiki_id": 48548,
-    "episodes": 1,
-    "duration": 136,
-    "year": 2022,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 48548
   },
   {
     "id": 373,
@@ -8122,16 +4937,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/chiterskiy-navyk-iz-drugogo-mira-sdelal-menya-nepobedimym-v-moem-2293",
     "url_shikimori": "https://shikimori.io/animes/52830",
-    "shiki_id": 52830,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2023,
-    "genres": [
-      "Приключения",
-      "Фэнтези",
-      "Школа",
-      "Экшен"
-    ]
+    "shiki_id": 52830
   },
   {
     "id": 374,
@@ -8144,15 +4950,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/eta-farforovaya-kukla-vlyubilas-1937",
     "url_shikimori": "https://shikimori.io/animes/48736",
-    "shiki_id": 48736,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2022,
-    "genres": [
-      "Романтика",
-      "Школа",
-      "Сэйнэн"
-    ]
+    "shiki_id": 48736
   },
   {
     "id": 375,
@@ -8165,19 +4963,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/yamada-i-sem-vedm-2380",
     "url_shikimori": "https://shikimori.io/animes/28677",
-    "shiki_id": 28677,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2015,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Детектив",
-      "Романтика",
-      "Сверхъестественное",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 28677
   },
   {
     "id": 376,
@@ -8190,16 +4976,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/40239",
-    "shiki_id": 40239,
-    "episodes": 1,
-    "duration": 23,
-    "year": 2019,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези",
-      "Гарем"
-    ]
+    "shiki_id": 40239
   },
   {
     "id": 377,
@@ -8212,15 +4989,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/35413",
-    "shiki_id": 35413,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2017,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Этти"
-    ]
+    "shiki_id": 35413
   },
   {
     "id": 378,
@@ -8233,16 +5002,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/12549",
-    "shiki_id": 12549,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2012,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Сверхъестественное",
-      "Этти"
-    ]
+    "shiki_id": 12549
   },
   {
     "id": 379,
@@ -8255,19 +5015,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/61026",
-    "shiki_id": 61026,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2025,
-    "genres": [
-      "Сэйнэн",
-      "Экшен",
-      "Приключения",
-      "Ужасы",
-      "Фантастика",
-      "Сверхъестественное",
-      "Военное"
-    ]
+    "shiki_id": 61026
   },
   {
     "id": 380,
@@ -8280,17 +5028,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/40004",
-    "shiki_id": 40004,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2019,
-    "genres": [
-      "Сёнен",
-      "Комедия",
-      "Романтика",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 40004
   },
   {
     "id": 381,
@@ -8303,14 +5041,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/beskonechnyy-dendrogram-1436",
     "url_shikimori": "https://shikimori.io/animes/38909",
-    "shiki_id": 38909,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Фэнтези"
-    ]
+    "shiki_id": 38909
   },
   {
     "id": 382,
@@ -8323,15 +5054,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/voshozhdenie-v-teni-2-2390",
     "url_shikimori": "https://shikimori.io/animes/54595",
-    "shiki_id": 54595,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2023,
-    "genres": [
-      "Экшен",
-      "Комедия",
-      "Фэнтези"
-    ]
+    "shiki_id": 54595
   },
   {
     "id": 383,
@@ -8344,17 +5067,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/milyy-vo-frankse-148",
     "url_shikimori": "https://shikimori.io/animes/35849",
-    "shiki_id": 35849,
-    "episodes": 24,
-    "duration": 24,
-    "year": 2018,
-    "genres": [
-      "Экшен",
-      "Драма",
-      "Романтика",
-      "Фантастика",
-      "Меха"
-    ]
+    "shiki_id": 35849
   },
   {
     "id": 384,
@@ -8367,18 +5080,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/lyubovnye-neudachi-2163",
     "url_shikimori": "https://shikimori.io/animes/51403",
-    "shiki_id": 51403,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2022,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Фантастика",
-      "Этти",
-      "Гарем",
-      "Школа"
-    ]
+    "shiki_id": 51403
   },
   {
     "id": 385,
@@ -8391,15 +5093,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/nizkourovnevyy-personazh-tomodzaki-vtoraya-stadiya-2464",
     "url_shikimori": "https://shikimori.io/animes/50803",
-    "shiki_id": 50803,
-    "episodes": 13,
-    "duration": 23,
-    "year": 2024,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 50803
   },
   {
     "id": 386,
@@ -8412,15 +5106,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/po-pravde-govorya-ya-2317",
     "url_shikimori": "https://shikimori.io/animes/29786",
-    "shiki_id": 29786,
-    "episodes": 12,
-    "duration": 23,
-    "year": 2015,
-    "genres": [
-      "Комедия",
-      "Этти",
-      "Школа"
-    ]
+    "shiki_id": 29786
   },
   {
     "id": 387,
@@ -8433,15 +5119,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/povelitel-tmy-na-podrabotke-2-v1-2065",
     "url_shikimori": "https://shikimori.io/animes/15809",
-    "shiki_id": 15809,
-    "episodes": 13,
-    "duration": 24,
-    "year": 2013,
-    "genres": [
-      "Комедия",
-      "Фэнтези",
-      "Работа"
-    ]
+    "shiki_id": 15809
   },
   {
     "id": 388,
@@ -8454,18 +5132,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/furi-kuri-2-687",
     "url_shikimori": "https://shikimori.io/animes/33010",
-    "shiki_id": 33010,
-    "episodes": 1,
-    "duration": 134,
-    "year": 2018,
-    "genres": [
-      "Экшен",
-      "Безумие",
-      "Комедия",
-      "Фантастика",
-      "Меха",
-      "Пародия"
-    ]
+    "shiki_id": 33010
   },
   {
     "id": 389,
@@ -8478,15 +5145,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/korzinka-fruktov-prelyudiya-2157",
     "url_shikimori": "https://shikimori.io/animes/49310",
-    "shiki_id": 49310,
-    "episodes": 1,
-    "duration": 88,
-    "year": 2022,
-    "genres": [
-      "Сёдзё",
-      "Драма",
-      "Романтика"
-    ]
+    "shiki_id": 49310
   },
   {
     "id": 390,
@@ -8499,18 +5158,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/furi-kuri-3-689",
     "url_shikimori": "https://shikimori.io/animes/35842",
-    "shiki_id": 35842,
-    "episodes": 1,
-    "duration": 134,
-    "year": 2018,
-    "genres": [
-      "Экшен",
-      "Безумие",
-      "Комедия",
-      "Фантастика",
-      "Меха",
-      "Пародия"
-    ]
+    "shiki_id": 35842
   },
   {
     "id": 391,
@@ -8523,13 +5171,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/ya-pariroval-vse-vremya-chtoby-stat-silneyshim-avantyuristom-2612",
     "url_shikimori": "https://shikimori.io/animes/57058",
-    "shiki_id": 57058,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 57058
   },
   {
     "id": 392,
@@ -8542,13 +5184,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/56854",
-    "shiki_id": 56854,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 56854
   },
   {
     "id": 393,
@@ -8561,13 +5197,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/58445",
-    "shiki_id": 58445,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 58445
   },
   {
     "id": 394,
@@ -8580,13 +5210,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/devushka-na-chas-2-2041",
     "url_shikimori": "https://shikimori.io/animes/42963",
-    "shiki_id": 42963,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 42963
   },
   {
     "id": 395,
@@ -8599,13 +5223,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/devushka-na-chas-3-2338",
     "url_shikimori": "https://shikimori.io/animes/53050",
-    "shiki_id": 53050,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 53050
   },
   {
     "id": 396,
@@ -8618,17 +5236,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "https://animego.me/anime/korzinka-fruktov-final-1746",
     "url_shikimori": "https://shikimori.io/animes/42938",
-    "shiki_id": 42938,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Сверхъестественное",
-      "Школа",
-      "Сёдзё"
-    ]
+    "shiki_id": 42938
   },
   {
     "id": 397,
@@ -8641,13 +5249,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/50709",
-    "shiki_id": 50709,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 50709
   },
   {
     "id": 398,
@@ -8660,16 +5262,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/57658",
-    "shiki_id": 57658,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Фэнтези",
-      "Школа",
-      "Сёнен"
-    ]
+    "shiki_id": 57658
   },
   {
     "id": 400,
@@ -8682,13 +5275,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/56009",
-    "shiki_id": 56009,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 56009
   },
   {
     "id": 401,
@@ -8701,16 +5288,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/61607",
-    "shiki_id": 61607,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Драма",
-      "Детектив",
-      "Сверхъестественное",
-      "Триллер"
-    ]
+    "shiki_id": 61607
   },
   {
     "id": 402,
@@ -8723,13 +5301,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/46569",
-    "shiki_id": 46569,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 46569
   },
   {
     "id": 404,
@@ -8742,13 +5314,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/53421",
-    "shiki_id": 53421,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 53421
   },
   {
     "id": 405,
@@ -8761,13 +5327,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/60969",
-    "shiki_id": 60969,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 60969
   },
   {
     "id": 406,
@@ -8780,16 +5340,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/60560",
-    "shiki_id": 60560,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Приключения",
-      "Комедия",
-      "Фэнтези",
-      "Школа"
-    ]
+    "shiki_id": 60560
   },
   {
     "id": 407,
@@ -8802,15 +5353,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/55791",
-    "shiki_id": 55791,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Драма",
-      "Сверхъестественное",
-      "Сэйнэн"
-    ]
+    "shiki_id": 55791
   },
   {
     "id": 408,
@@ -8823,16 +5366,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/62896",
-    "shiki_id": 62896,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Комедия",
-      "Романтика",
-      "Школа",
-      "Психологическое"
-    ]
+    "shiki_id": 62896
   },
   {
     "id": 409,
@@ -8845,16 +5379,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/59088",
-    "shiki_id": 59088,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Драма",
-      "Сверхъестественное",
-      "Сёнен"
-    ]
+    "shiki_id": 59088
   },
   {
     "id": 410,
@@ -8867,13 +5392,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/57433",
-    "shiki_id": 57433,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 57433
   },
   {
     "id": 411,
@@ -8886,13 +5405,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/53731",
-    "shiki_id": 53731,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 53731
   },
   {
     "id": 414,
@@ -8905,15 +5418,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/704",
-    "shiki_id": 704,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Драма",
-      "Романтика",
-      "Сверхъестественное"
-    ]
+    "shiki_id": 704
   },
   {
     "id": 415,
@@ -8926,13 +5431,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/34389",
-    "shiki_id": 34389,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 34389
   },
   {
     "id": 416,
@@ -8945,16 +5444,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/32863",
-    "shiki_id": 32863,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Сёнен",
-      "Экшен",
-      "Комедия",
-      "Школа"
-    ]
+    "shiki_id": 32863
   },
   {
     "id": 417,
@@ -8967,16 +5457,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/33513",
-    "shiki_id": 33513,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Сёнен",
-      "Экшен",
-      "Комедия",
-      "Школа"
-    ]
+    "shiki_id": 33513
   },
   {
     "id": 418,
@@ -8989,16 +5470,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/19759",
-    "shiki_id": 19759,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Сёнен",
-      "Экшен",
-      "Комедия",
-      "Школа"
-    ]
+    "shiki_id": 19759
   },
   {
     "id": 419,
@@ -9011,15 +5483,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/5",
-    "shiki_id": 5,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Фантастика",
-      "Космос"
-    ]
+    "shiki_id": 5
   },
   {
     "id": 420,
@@ -9032,13 +5496,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/10165",
-    "shiki_id": 10165,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 10165
   },
   {
     "id": 421,
@@ -9051,16 +5509,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/39651",
-    "shiki_id": 39651,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Комедия",
-      "Сверхъестественное",
-      "Супер сила"
-    ]
+    "shiki_id": 39651
   },
   {
     "id": 422,
@@ -9073,16 +5522,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/36616",
-    "shiki_id": 36616,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Комедия",
-      "Сверхъестественное",
-      "Супер сила"
-    ]
+    "shiki_id": 36616
   },
   {
     "id": 423,
@@ -9095,16 +5535,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/37504",
-    "shiki_id": 37504,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Комедия",
-      "Сверхъестественное",
-      "Супер сила"
-    ]
+    "shiki_id": 37504
   },
   {
     "id": 425,
@@ -9117,15 +5548,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/31138",
-    "shiki_id": 31138,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 31138
   },
   {
     "id": 426,
@@ -9138,15 +5561,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/36497",
-    "shiki_id": 36497,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 36497
   },
   {
     "id": 427,
@@ -9159,15 +5574,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/48896",
-    "shiki_id": 48896,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Экшен",
-      "Приключения",
-      "Фэнтези"
-    ]
+    "shiki_id": 48896
   },
   {
     "id": 428,
@@ -9180,13 +5587,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/61663",
-    "shiki_id": 61663,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 61663
   },
   {
     "id": 430,
@@ -9199,13 +5600,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/2890",
-    "shiki_id": 2890,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 2890
   },
   {
     "id": 432,
@@ -9218,16 +5613,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/19021",
-    "shiki_id": 19021,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Комедия",
-      "Драма",
-      "Романтика",
-      "Школа"
-    ]
+    "shiki_id": 19021
   },
   {
     "id": 433,
@@ -9240,13 +5626,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/283",
-    "shiki_id": 283,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 283
   },
   {
     "id": 434,
@@ -9259,13 +5639,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/53447",
-    "shiki_id": 53447,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 53447
   },
   {
     "id": 435,
@@ -9278,13 +5652,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/56063",
-    "shiki_id": 56063,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 56063
   },
   {
     "id": 436,
@@ -9297,13 +5665,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/6547",
-    "shiki_id": 6547,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 6547
   },
   {
     "id": 437,
@@ -9316,16 +5678,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/10067",
-    "shiki_id": 10067,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Ужасы",
-      "Детектив",
-      "Сверхъестественное",
-      "Школа"
-    ]
+    "shiki_id": 10067
   },
   {
     "id": 438,
@@ -9338,13 +5691,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/9062",
-    "shiki_id": 9062,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 9062
   },
   {
     "id": 439,
@@ -9357,13 +5704,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/1698",
-    "shiki_id": 1698,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 1698
   },
   {
     "id": 440,
@@ -9376,13 +5717,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/17265",
-    "shiki_id": 17265,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 17265
   },
   {
     "id": 441,
@@ -9395,13 +5730,7 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/59360",
-    "shiki_id": 59360,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 59360
   },
   {
     "id": 442,
@@ -9414,12 +5743,6 @@ window.ANIME_VAULT_DATA = [
     "review": "",
     "url_animego": "",
     "url_shikimori": "https://shikimori.io/animes/59267",
-    "shiki_id": 59267,
-    "episodes": 12,
-    "duration": 24,
-    "year": 2020,
-    "genres": [
-      "Повседневность"
-    ]
+    "shiki_id": 59267
   }
 ];
