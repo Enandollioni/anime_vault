@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime Vault — Личный тир-лист и архив | Enandollioni</title>
+  
+  <meta name="description" content="Личный тир-лист аниме, оценки и развернутые рецензии от Enandollioni. Кастомная шкала 10.xx, эстетика и впечатления.">
+  <meta property="og:title" content="Anime Vault — Личный тир-лист и архив | Enandollioni">
+  <meta property="og:description" content="Личный тир-лист аниме, оценки и развернутые рецензии от Enandollioni.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-left">
+        <div class="logo-group">
+          <div class="logo-icon">▲</div>
+          <div>
+            <h1 class="logo-title">ANIME VAULT</h1>
+            <p class="logo-subtitle">Personal Tier List & Aesthetic Archive • <a href="https://shikimori.io/Enandollioni" target="_blank" rel="noopener" class="author-link">Enandollioni</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-stats" id="headerStats">
+        <div class="stat-pill">
+          <span class="stat-label">Всего</span>
+          <span class="stat-value" id="statTotal">-</span>
+        </div>
+        <div class="stat-pill highlight-gold">
+          <span class="stat-label">Шедевры 10+</span>
+          <span class="stat-value" id="statTens">-</span>
+        </div>
+        <div class="stat-pill highlight-cyan">
+          <span class="stat-label">Средний балл</span>
+          <span class="stat-value" id="statAvg">-</span>
+        </div>
+        <div class="stat-pill highlight-purple">
+          <span class="stat-label">С рецензиями</span>
+          <span class="stat-value" id="statReviews">-</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <a href="https://shikimori.io/Enandollioni" target="_blank" rel="noopener" class="btn btn-secondary">
+          <span class="btn-icon">⚡</span> Shikimori
+        </a>
+      </div>
+    </header>
+
+    <!-- Toolbar: Search & Filters -->
+    <section class="toolbar">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Поиск по названию (русское или ромадзи)..." autocomplete="off">
+        <button class="clear-btn" id="btnClearSearch" style="display:none;">✕</button>
+      </div>
+
+      <div class="tier-nav" id="tierNav">
+        <button class="tier-tab active" data-tier="all">Все тайтлы</button>
+        <button class="tier-tab tab-s-plus" data-tier="S+">Tier S+ <span class="tab-badge" id="badgeSPlus">10.xx</span></button>
+        <button class="tier-tab tab-s" data-tier="S">Tier S <span class="tab-badge">9.x</span></button>
+        <button class="tier-tab tab-a" data-tier="A">Tier A <span class="tab-badge">8.x</span></button>
+        <button class="tier-tab tab-b" data-tier="B">Tier B <span class="tab-badge">7.x</span></button>
+        <button class="tier-tab tab-c" data-tier="C">Tier C <span class="tab-badge">5-6</span></button>
+        <button class="tier-tab tab-df" data-tier="D_F">Tier D/F <span class="tab-badge">1-4</span></button>
+        <button class="tier-tab tab-unrated" data-tier="unrated">В планах</button>
+      </div>
+
+      <div class="filter-toggles">
+        <label class="toggle-pill">
+          <input type="checkbox" id="toggleOnlyReviews">
+          <span class="toggle-label">✍ Только с мыслями</span>
+        </label>
+      </div>
+    </section>
+
+    <!-- Main Tier Matrix Content -->
+    <main class="vault-content" id="vaultContent">
+      <div class="loading-state" id="loadingState">
+        <div class="spinner"></div>
+        <p>Загрузка архива аниме...</p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div class="footer-info">
+        Кастомная шкала 10.00–10.99 • Куратор: <a href="https://shikimori.io/Enandollioni" target="_blank" rel="noopener">Enandollioni</a> • Собрано для комфортного чтения мыслей и оценок
+      </div>
+    </footer>
+  </div>
+
+  <!-- Modal: View Anime & Read Review -->
+  <div class="modal-overlay" id="viewModal">
+    <div class="modal-box modal-reader">
+      <button class="modal-close" id="btnCloseModal" title="Закрыть (Esc)">✕</button>
+      
+      <div class="reader-layout">
+        <!-- Sidebar: Poster & Quick Meta -->
+        <div class="reader-sidebar">
+          <div class="reader-poster-wrap">
+            <img id="modalPoster" src="" alt="Cover" class="reader-poster">
+            <div class="reader-score-badge" id="modalScoreBadge">-</div>
+          </div>
+          
+          <div class="reader-links">
+            <a id="modalShikimoriLink" href="#" target="_blank" rel="noopener" class="link-btn link-shikimori" style="display:none;">
+              <span>Открыть на Shikimori</span> ↗
+            </a>
+            <a id="modalAnimegoLink" href="#" target="_blank" rel="noopener" class="link-btn link-animego" style="display:none;">
+              <span>Смотреть на AnimeGo</span> ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Main: Header + Full Review -->
+        <div class="reader-body">
+          <div class="reader-header">
+            <div class="reader-tags">
+              <span class="meta-tag tier-tag" id="modalTierTag">-</span>
+              <span class="meta-tag status-tag" id="modalStatusTag">-</span>
+            </div>
+            <h2 class="reader-title" id="modalTitle">-</h2>
+            <p class="reader-orig-title" id="modalOrigTitle">-</p>
+          </div>
+
+          <div class="reader-divider"></div>
+
+          <!-- Review Content -->
+          <div class="reader-review-section">
+            <div class="reader-section-header">
+              <span class="section-icon">✍</span>
+              <span class="section-title">Мысли и вердикт автора</span>
+            </div>
+            
+            <div class="reader-review-content markdown-body" id="modalReviewContent">
+              <!-- Rendered review markdown or empty state -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Data file containing all items -->
+  <script src="data.js"></script>
+  <!-- Application script -->
+  <script src="app.js"></script>
+</body>
+</html>
