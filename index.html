@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
   <title>Anime Vault — Личный тир-лист и архив | Enandollioni</title>
   
   <meta name="description" content="Личный тир-лист аниме, оценки и развернутые рецензии от Enandollioni. Кастомная шкала 10.xx, эстетика и впечатления.">
@@ -12,7 +13,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -81,6 +82,22 @@
           <input type="checkbox" id="toggleOnlyReviews">
           <span class="toggle-label">✍ Только с мыслями</span>
         </label>
+      </div>
+    </section>
+
+    <!-- Masterpiece Spotlight Shelf (10.xx) -->
+    <section class="spotlight-section" id="spotlightSection">
+      <div class="spotlight-header">
+        <div class="spotlight-header-left">
+          <span class="spotlight-badge">CRITERION VAULT • 10.XX</span>
+          <h2 class="spotlight-title">Пантеон шедевров</h2>
+        </div>
+        <p class="spotlight-subtitle">Тайтлы, определившие вкус и оставившие неизгладимый след</p>
+      </div>
+      <div class="spotlight-scroll-container">
+        <div class="spotlight-track" id="spotlightTrack">
+          <!-- Populated by app.js -->
+        </div>
       </div>
     </section>
 

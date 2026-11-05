@@ -13,6 +13,8 @@
   const btnClearSearch = document.getElementById('btnClearSearch');
   const tierNav = document.getElementById('tierNav');
   const toggleOnlyReviews = document.getElementById('toggleOnlyReviews');
+  const spotlightSection = document.getElementById('spotlightSection');
+  const spotlightTrack = document.getElementById('spotlightTrack');
 
   // Stats Elements
   const statTotal = document.getElementById('statTotal');
@@ -131,8 +133,54 @@
     statReviews.textContent = withReviews.length;
   }
 
+  function renderSpotlight() {
+    if (!spotlightSection || !spotlightTrack) return;
+    if (currentTierFilter !== 'all' || currentSearchQuery || onlyReviewsFilter) {
+      spotlightSection.style.display = 'none';
+      return;
+    }
+
+    const tens = allAnime.filter(a => a.score >= 10.0);
+    if (tens.length === 0) {
+      spotlightSection.style.display = 'none';
+      return;
+    }
+
+    spotlightSection.style.display = 'block';
+    spotlightTrack.innerHTML = '';
+
+    tens.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'spotlight-card';
+      const posterSrc = item.poster_url || 'https://shikimori.one/assets/globals/missing_original.jpg';
+      const scoreText = item.score > 0 ? (Number.isInteger(item.score) ? item.score : item.score.toFixed(2)) : '10.0';
+      
+      let quoteSnippet = '';
+      if (item.review && item.review.trim().length > 0) {
+        const clean = item.review.replace(/[#*`>_-]/g, '').trim();
+        quoteSnippet = clean.slice(0, 110) + (clean.length > 110 ? '...' : '');
+      }
+
+      card.innerHTML = `
+        <div class="spotlight-poster-box">
+          <img class="spotlight-poster" src="${posterSrc}" alt="${item.title}" referrerpolicy="no-referrer" loading="lazy">
+          <div class="spotlight-score-tag">★ ${scoreText}</div>
+        </div>
+        <div class="spotlight-details">
+          <span class="spotlight-badge-small">THE MASTERPIECE</span>
+          <h3 class="spotlight-item-title">${item.title}</h3>
+          ${item.title_orig ? `<p class="spotlight-item-orig">${item.title_orig}</p>` : ''}
+          ${quoteSnippet ? `<p class="spotlight-quote">«${quoteSnippet}»</p>` : ''}
+        </div>
+      `;
+      card.addEventListener('click', () => openModal(item));
+      spotlightTrack.appendChild(card);
+    });
+  }
+
   // Render Grid
   function render() {
+    renderSpotlight();
     const q = currentSearchQuery.toLowerCase().trim();
 
     // Filter items
@@ -192,7 +240,8 @@
 
       tierItems.forEach(item => {
         const card = document.createElement('article');
-        card.className = 'anime-card';
+        const isMasterpiece = item.score >= 10.0;
+        card.className = `anime-card ${isMasterpiece ? 'card-masterpiece' : ''}`;
         card.setAttribute('data-id', item.id);
 
         const hasReview = item.review && item.review.trim().length > 0;
@@ -202,13 +251,18 @@
 
         card.innerHTML = `
           <div class="poster-wrapper">
-            <img class="card-poster" src="${posterSrc}" alt="${item.title}" loading="lazy">
+            <img class="card-poster" src="${posterSrc}" alt="${item.title}" referrerpolicy="no-referrer" loading="lazy">
             <div class="card-score-badge ${badgeClass}">${scoreText}</div>
-            ${hasReview ? '<div class="card-review-badge">✍ Рецензия</div>' : ''}
-          </div>
-          <div class="card-info">
-            <h3 class="card-title" title="${item.title}">${item.title}</h3>
-            ${item.title_orig ? `<p class="card-orig-title" title="${item.title_orig}">${item.title_orig}</p>` : ''}
+            ${hasReview ? '<div class="card-review-badge" title="Есть рецензия">✍</div>' : ''}
+            <div class="card-overlay">
+              <div class="card-overlay-content">
+                <h3 class="card-title" title="${item.title}">${item.title}</h3>
+                ${item.title_orig ? `<p class="card-orig-title">${item.title_orig}</p>` : ''}
+                <div class="card-meta-row">
+                  ${hasReview ? '<span class="card-review-indicator">Есть мысли</span>' : ''}
+                </div>
+              </div>
+            </div>
           </div>
         `;
 
