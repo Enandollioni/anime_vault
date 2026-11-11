@@ -40,6 +40,28 @@
   --radius-lg: 12px;
 }
 
+:focus-visible {
+  outline: 2px solid var(--tier-s-plus);
+  outline-offset: 2px;
+}
+
+button, a, input, select, textarea, [role="button"], [role="tab"] {
+  cursor: pointer;
+}
+input[type="text"] {
+  cursor: text;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -480,16 +502,26 @@ body {
 
 .spotlight-score-tag {
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: 6px;
+  right: 6px;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 11.5px;
   font-weight: 800;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(8, 9, 12, 0.92);
   border: 1px solid rgba(245, 158, 11, 0.5);
-  padding: 2px 5px;
+  padding: 3px 6px;
   border-radius: 4px;
   color: var(--tier-s-plus);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.spotlight-score-tag svg {
+  display: block;
+  flex-shrink: 0;
 }
 
 .spotlight-details {
@@ -630,8 +662,15 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  background: #090a0d;
+  background: linear-gradient(110deg, #0e1117 8%, #161b24 18%, #0e1117 33%);
+  background-size: 200% 100%;
+  animation: skeletonShimmer 1.8s infinite linear;
   overflow: hidden;
+}
+
+@keyframes skeletonShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
 .card-poster {
@@ -698,16 +737,23 @@ body {
   position: absolute;
   top: 8px;
   left: 8px;
-  background: rgba(8, 9, 12, 0.88);
+  background: rgba(8, 9, 12, 0.9);
   color: var(--tier-s-plus);
-  border: 1px solid rgba(245, 158, 11, 0.4);
+  border: 1px solid rgba(245, 158, 11, 0.45);
   font-size: 11px;
   font-weight: 700;
-  padding: 2px 6px;
+  padding: 3px 6px;
   border-radius: 4px;
   backdrop-filter: blur(8px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
   z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-review-badge svg {
+  display: block;
 }
 
 /* Card Overlay at bottom */
@@ -1008,6 +1054,18 @@ body {
   background: rgba(255, 255, 255, 0.05);
   color: var(--text-muted);
   border: 1px solid var(--border-color);
+}
+
+.meta-tag.year-tag {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.meta-tag.eps-tag {
+  background: rgba(168, 85, 247, 0.12);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.3);
 }
 
 .reader-title {
@@ -1688,4 +1746,118 @@ body {
   padding: 4px 10px;
   border-radius: 4px;
   border: 1px solid var(--border-color);
+}
+
+
+/* Quick Genre Chips (Browse Mode: Prydwen Gaming Standards) */
+.genre-chips-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 4px 2px 8px 2px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}
+
+.genre-chips-wrapper::-webkit-scrollbar {
+  height: 4px;
+}
+
+.genre-chips-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.genre-chips-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+.genre-chips-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+}
+
+.genre-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.genre-chip:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.genre-chip.active {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  border-color: #f59e0b;
+  font-weight: 600;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.2);
+}
+
+.genre-chip-count {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  opacity: 0.7;
+  padding: 1px 5px;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.genre-chip.active .genre-chip-count {
+  background: rgba(245, 158, 11, 0.25);
+  opacity: 0.95;
+}
+
+/* SVG Glyphs & Micro-interactions */
+.btn-svg {
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.launch-icon {
+  margin-left: 2px;
+  opacity: 0.7;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.btn:hover .launch-icon {
+  opacity: 1;
+  transform: translate(1px, -1px);
+}
+
+.search-icon svg {
+  display: block;
+}
+
+.clear-btn svg {
+  display: block;
+}
+
+.toggle-icon {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-dim);
+}
+
+.toggle-pill:hover .toggle-icon {
+  color: var(--text-main);
 }

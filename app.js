@@ -4,6 +4,7 @@
   // Global State
   const allAnime = window.ANIME_VAULT_DATA || [];
   let currentTierFilter = 'all';
+  let currentGenreFilter = 'all';
   let currentSearchQuery = '';
   let onlyReviewsFilter = false;
   let currentView = 'catalog'; // 'catalog' or 'analytics'
@@ -24,6 +25,7 @@
   const toggleOnlyReviews = document.getElementById('toggleOnlyReviews');
   const spotlightSection = document.getElementById('spotlightSection');
   const spotlightTrack = document.getElementById('spotlightTrack');
+  const genreChipsBar = document.getElementById('genreChipsBar');
 
   // Stats Elements
   const statTotal = document.getElementById('statTotal');
@@ -56,6 +58,8 @@
   const modalAnimegoLink = document.getElementById('modalAnimegoLink');
   const modalTierTag = document.getElementById('modalTierTag');
   const modalStatusTag = document.getElementById('modalStatusTag');
+  const modalYearTag = document.getElementById('modalYearTag');
+  const modalEpsTag = document.getElementById('modalEpsTag');
   const modalTitle = document.getElementById('modalTitle');
   const modalOrigTitle = document.getElementById('modalOrigTitle');
   const modalReviewContent = document.getElementById('modalReviewContent');
@@ -167,10 +171,66 @@
     if (statReviews) statReviews.textContent = withReviews.length;
   }
 
+  // Genre Chips Bar (Prydwen / Gaming Hub Browse Mode)
+  function renderGenreChips() {
+    if (!genreChipsBar) return;
+    genreChipsBar.innerHTML = '';
+
+    const genreCounts = {};
+    allAnime.forEach(item => {
+      const gList = Array.isArray(item.genres) ? item.genres : [];
+      gList.forEach(g => {
+        if (!g) return;
+        genreCounts[g] = (genreCounts[g] || 0) + 1;
+      });
+    });
+
+    const topGenres = Object.entries(genreCounts)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 15);
+
+    // All chip
+    const allChip = document.createElement('button');
+    allChip.className = `genre-chip ${currentGenreFilter === 'all' ? 'active' : ''}`;
+    allChip.innerHTML = `<span>Все</span> <span class="genre-chip-count">${allAnime.length}</span>`;
+    allChip.addEventListener('click', () => {
+      currentGenreFilter = 'all';
+      updateGenreChipsActive();
+      render();
+    });
+    genreChipsBar.appendChild(allChip);
+
+    topGenres.forEach(([genre, count]) => {
+      const chip = document.createElement('button');
+      chip.className = `genre-chip ${currentGenreFilter === genre ? 'active' : ''}`;
+      chip.setAttribute('data-genre', genre);
+      chip.innerHTML = `<span>${escapeHtml(genre)}</span> <span class="genre-chip-count">${count}</span>`;
+      chip.addEventListener('click', () => {
+        currentGenreFilter = (currentGenreFilter === genre) ? 'all' : genre;
+        updateGenreChipsActive();
+        render();
+      });
+      genreChipsBar.appendChild(chip);
+    });
+  }
+
+  function updateGenreChipsActive() {
+    if (!genreChipsBar) return;
+    const chips = genreChipsBar.querySelectorAll('.genre-chip');
+    chips.forEach(chip => {
+      const g = chip.getAttribute('data-genre');
+      if (!g) {
+        chip.classList.toggle('active', currentGenreFilter === 'all');
+      } else {
+        chip.classList.toggle('active', currentGenreFilter === g);
+      }
+    });
+  }
+
   // Render Masterpiece Spotlight Shelf
   function renderSpotlight() {
     if (!spotlightSection || !spotlightTrack) return;
-    if (currentTierFilter !== 'all' || currentSearchQuery || onlyReviewsFilter || selectedYear) {
+    if (currentTierFilter !== 'all' || currentSearchQuery || onlyReviewsFilter || selectedYear || currentGenreFilter !== 'all') {
       spotlightSection.style.display = 'none';
       return;
     }
@@ -199,7 +259,7 @@
       card.innerHTML = `
         <div class="spotlight-poster-box">
           <img class="spotlight-poster" src="${posterSrc}" alt="${escapeHtml(item.title)}" referrerpolicy="no-referrer" loading="lazy">
-          <div class="spotlight-score-tag">★ ${scoreText}</div>
+          <div class="spotlight-score-tag"><svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span>${scoreText}</span></div>
         </div>
         <div class="spotlight-details">
           <span class="spotlight-badge-small">THE MASTERPIECE</span>
@@ -228,6 +288,11 @@
 
       if (onlyReviewsFilter) {
         if (!item.review || item.review.trim().length === 0) return false;
+      }
+
+      if (currentGenreFilter !== 'all') {
+        const gList = Array.isArray(item.genres) ? item.genres : [];
+        if (!gList.includes(currentGenreFilter)) return false;
       }
 
       if (selectedYear) {
@@ -293,7 +358,7 @@
           <div class="poster-wrapper">
             <img class="card-poster" src="${posterSrc}" alt="${escapeHtml(item.title)}" referrerpolicy="no-referrer" loading="lazy">
             <div class="card-score-badge ${badgeClass}">${scoreText}</div>
-            ${hasReview ? '<div class="card-review-badge" title="Есть рецензия">✍</div>' : ''}
+            ${hasReview ? '<div class="card-review-badge" title="Есть рецензия"><svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>' : ''}
             <div class="card-overlay">
               <div class="card-overlay-content">
                 <h3 class="card-title" title="${escapeHtml(item.title)}">${escapeHtml(item.title)}</h3>
@@ -598,19 +663,19 @@
       if (item.avg >= 9.0) {
         badgeClass = 'score-badge-gold';
         barColor = 'linear-gradient(90deg, #f59e0b, #fbbf24)';
-        tagText = '👑 Любимый жанр';
+        tagText = 'Любимый жанр';
       } else if (item.avg >= 8.2) {
         badgeClass = 'score-badge-cyan';
         barColor = 'linear-gradient(90deg, #38bdf8, #60a5fa)';
-        tagText = '⭐ Высокий стандарт';
+        tagText = 'Высокий стандарт';
       } else if (item.avg >= 7.6) {
         badgeClass = 'score-badge-purple';
         barColor = 'linear-gradient(90deg, #a855f7, #c084fc)';
-        tagText = '☕ Комфорт';
+        tagText = 'Комфортная зона';
       } else {
         badgeClass = 'score-badge-slate';
         barColor = '#64748b';
-        tagText = '⚡ Скепсис';
+        tagText = 'Критический взгляд';
       }
 
       const barPct = Math.min(100, Math.max(10, Math.round((item.avg / 10.99) * 100)));
@@ -636,11 +701,11 @@
       card.title = `Открыть аниме жанра «${item.genre}» в фильмотеке`;
       card.addEventListener('click', () => {
         switchView('catalog');
-        currentSearchQuery = item.genre;
-        if (searchInput) {
-          searchInput.value = item.genre;
-          if (btnClearSearch) btnClearSearch.style.display = 'block';
-        }
+        currentGenreFilter = item.genre;
+        currentSearchQuery = '';
+        if (searchInput) searchInput.value = '';
+        if (btnClearSearch) btnClearSearch.style.display = 'none';
+        updateGenreChipsActive();
         render();
       });
 
@@ -679,6 +744,26 @@
     // Status tag
     const stRu = STATUS_MAP[item.status] || item.status;
     modalStatusTag.textContent = stRu;
+
+    // Year tag
+    if (modalYearTag) {
+      if (item.year) {
+        modalYearTag.textContent = `${item.year} г.`;
+        modalYearTag.style.display = 'inline-flex';
+      } else {
+        modalYearTag.style.display = 'none';
+      }
+    }
+
+    // Episodes tag
+    if (modalEpsTag) {
+      if (item.episodes) {
+        modalEpsTag.textContent = `${item.episodes} эп.`;
+        modalEpsTag.style.display = 'inline-flex';
+      } else {
+        modalEpsTag.style.display = 'none';
+      }
+    }
 
     // Links
     if (item.url_shikimori) {
@@ -809,5 +894,6 @@
 
   // Init
   updateStats();
+  renderGenreChips();
   render();
 })();
