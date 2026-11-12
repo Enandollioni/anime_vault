@@ -15,8 +15,8 @@ export default function Masthead({ stats }) {
               <h1 className="font-serif text-2xl md:text-3xl font-black tracking-tight text-white">
                 ANIME VAULT
               </h1>
-              <span className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-mono font-semibold uppercase tracking-widest text-gold bg-gold/10 border border-gold/30 rounded">
-                Criterion 5.0
+              <span className="hidden sm:inline-block px-2.5 py-0.5 text-[10px] font-mono font-semibold uppercase tracking-widest text-gold bg-gold/10 border border-gold/30 rounded-full">
+                Criterion 5.1
               </span>
             </div>
             <p className="text-xs font-mono tracking-widest text-slate-400 uppercase mt-0.5">

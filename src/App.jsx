@@ -264,7 +264,7 @@ export default function App() {
       {/* Footer */}
       <footer className="mt-20 pt-8 border-t border-white/[0.08] flex items-center justify-between text-xs font-mono text-slate-500 flex-wrap gap-4">
         <div>
-          THE CRITERION ARCHIVE • Версия 5.0 (React 19 + Tailwind + Framer Motion)
+          THE CRITERION ARCHIVE • Версия 5.1 (Apple TV+ & MUBI Luxury Media)
         </div>
         <div>
           Куратор коллекции: <span className="text-slate-300">Enandollioni</span>

@@ -27,29 +27,29 @@ export default function CurationBar({
   };
 
   return (
-    <section className="flex flex-col gap-3 py-4">
+    <section className="flex flex-col gap-3.5 py-3">
       {/* Search & Only Essays Bar */}
       <div className="flex items-center gap-3 flex-wrap">
         <div className="relative flex-1 min-w-[260px]">
-          <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+          <Search className="w-4 h-4 text-slate-500 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
           <input
             type="text"
             placeholder="Поиск по названию, оригиналу или режиссёру..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-surface border border-white/[0.08] focus:border-gold/60 focus:ring-1 focus:ring-gold/30 rounded-xl pl-10 pr-10 py-2.5 text-xs text-slate-100 placeholder:text-slate-500 transition-all outline-none"
+            className="w-full bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] focus:border-white/[0.25] focus:bg-white/[0.05] rounded-full pl-11 pr-10 py-3 text-xs text-slate-100 placeholder:text-slate-500 transition-all outline-none shadow-sm"
           />
           {searchQuery && (
             <button
               onClick={() => setSearchQuery('')}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white p-1"
+              className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white p-1"
             >
               <X className="w-3.5 h-3.5" />
             </button>
           )}
         </div>
 
-        <label className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-surface border border-white/[0.08] cursor-pointer hover:border-gold/40 transition-colors select-none">
+        <label className="flex items-center gap-2.5 px-4 py-3 rounded-full bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] hover:border-white/[0.2] cursor-pointer transition-all duration-200 select-none shadow-sm">
           <input
             type="checkbox"
             checked={onlyReviews}
@@ -57,7 +57,7 @@ export default function CurationBar({
             className="hidden"
           />
           <div
-            className={`w-4 h-4 rounded border flex items-center justify-center transition-colors ${
+            className={`w-4 h-4 rounded-full border flex items-center justify-center transition-colors ${
               onlyReviews ? 'bg-gold border-gold text-black' : 'border-slate-600 bg-black/40'
             }`}
           >
@@ -67,20 +67,22 @@ export default function CurationBar({
         </label>
       </div>
 
-      {/* Tier Pills Strip with Spring Blob */}
-      <div className="flex items-center gap-1.5 p-1 rounded-xl bg-surface border border-white/[0.06] overflow-x-auto py-1">
+      {/* Tier Floating Glass Pill Dock */}
+      <div className="flex items-center gap-1.5 p-1 rounded-full bg-white/[0.03] backdrop-blur-2xl border border-white/[0.06] overflow-x-auto py-1 shadow-sm">
         <button
           onClick={() => handleTierClick('all')}
-          className="relative px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium whitespace-nowrap text-slate-300 hover:text-white transition-colors"
+          className="relative px-4 py-1.5 rounded-full text-xs font-mono font-medium whitespace-nowrap text-slate-400 hover:text-white transition-colors cursor-pointer"
         >
           {currentTier === 'all' && (
             <motion.div
               layoutId="tierPillIndicator"
-              className="absolute inset-0 rounded-lg bg-white/[0.12] border border-white/[0.18]"
+              className="absolute inset-0 rounded-full bg-white/[0.12] border border-white/[0.18]"
               transition={{ type: 'spring', stiffness: 400, damping: 32 }}
             />
           )}
-          <span className="relative z-10">Все тайтлы</span>
+          <span className={`relative z-10 ${currentTier === 'all' ? 'text-white font-bold' : ''}`}>
+            Все тайтлы
+          </span>
         </button>
 
         {TIER_CONFIG.map((tier) => {
@@ -89,16 +91,16 @@ export default function CurationBar({
             <button
               key={tier.key}
               onClick={() => handleTierClick(tier.key)}
-              className="relative px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium whitespace-nowrap text-slate-300 hover:text-white transition-colors flex items-center gap-1.5"
+              className="relative px-4 py-1.5 rounded-full text-xs font-mono font-medium whitespace-nowrap text-slate-400 hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"
             >
               {isActive && (
                 <motion.div
                   layoutId="tierPillIndicator"
-                  className="absolute inset-0 rounded-lg bg-white/[0.12] border border-white/[0.18]"
+                  className="absolute inset-0 rounded-full bg-white/[0.12] border border-white/[0.18]"
                   transition={{ type: 'spring', stiffness: 400, damping: 32 }}
                 />
               )}
-              <span className={`relative z-10 ${isActive ? tier.badgeClass.split(' ')[0] : ''}`}>
+              <span className={`relative z-10 ${isActive ? 'text-white font-bold' : ''}`}>
                 {tier.label}
               </span>
             </button>
@@ -106,15 +108,15 @@ export default function CurationBar({
         })}
       </div>
 
-      {/* Horizontally Scrolling Genre Chips */}
+      {/* Horizontally Scrolling Genre Glass Chips */}
       <div className="overflow-x-auto py-1">
         <div className="flex items-center gap-2 w-max">
           <button
             onClick={() => handleGenreClick('all')}
-            className={`px-3 py-1.5 rounded-full text-xs font-mono flex items-center gap-1.5 transition-all duration-200 border ${
+            className={`px-3.5 py-1.5 rounded-full text-xs font-mono flex items-center gap-1.5 transition-all duration-200 cursor-pointer border ${
               currentGenre === 'all'
-                ? 'bg-gold text-black font-bold border-gold shadow-[0_0_12px_rgba(245,158,11,0.3)]'
-                : 'bg-surface text-slate-400 border-white/[0.06] hover:border-white/[0.2] hover:text-slate-200'
+                ? 'bg-gold text-black font-bold border-gold shadow-[0_0_15px_rgba(245,158,11,0.3)]'
+                : 'bg-white/[0.03] text-slate-400 border-white/[0.06] hover:border-white/[0.18] hover:text-slate-200'
             }`}
           >
             <span>Все</span>
@@ -133,10 +135,10 @@ export default function CurationBar({
               <button
                 key={genre}
                 onClick={() => handleGenreClick(genre)}
-                className={`px-3 py-1.5 rounded-full text-xs font-mono flex items-center gap-1.5 transition-all duration-200 border ${
+                className={`px-3.5 py-1.5 rounded-full text-xs font-mono flex items-center gap-1.5 transition-all duration-200 cursor-pointer border ${
                   isActive
-                    ? 'bg-purple-600 text-white font-bold border-purple-500 shadow-[0_0_12px_rgba(168,85,247,0.4)]'
-                    : 'bg-surface text-slate-400 border-white/[0.06] hover:border-white/[0.2] hover:text-slate-200'
+                    ? 'bg-purple-600 text-white font-bold border-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.4)]'
+                    : 'bg-white/[0.03] text-slate-400 border-white/[0.06] hover:border-white/[0.18] hover:text-slate-200'
                 }`}
               >
                 <span>{genre}</span>

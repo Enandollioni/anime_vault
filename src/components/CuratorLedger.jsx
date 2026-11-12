@@ -73,12 +73,12 @@ export default function CuratorLedger({
   ];
 
   return (
-    <div className="flex flex-col gap-6 py-6">
-      {/* 1. Watch Time Hero Banner */}
-      <section className="relative p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-surface via-[#141824] to-surface border border-white/[0.08] shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden">
-        <div className="flex items-center gap-5">
-          <div className="w-14 h-14 rounded-2xl bg-gold/10 border border-gold/40 flex items-center justify-center text-gold shadow-[0_0_20px_rgba(245,158,11,0.25)] shrink-0">
-            <Clock className="w-7 h-7" />
+    <div className="flex flex-col gap-8 py-6">
+      {/* 1. Watch Time Hero Glass Banner */}
+      <section className="relative p-6 sm:p-8 md:p-10 rounded-3xl bg-white/[0.02] backdrop-blur-2xl border border-white/[0.06] shadow-[0_20px_50px_rgba(0,0,0,0.6)] flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden">
+        <div className="flex items-center gap-6">
+          <div className="w-16 h-16 rounded-2xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold shadow-[0_0_30px_rgba(245,158,11,0.2)] shrink-0">
+            <Clock className="w-8 h-8" />
           </div>
           <div>
             <span className="text-[11px] font-mono font-bold tracking-widest text-gold uppercase">
@@ -87,32 +87,32 @@ export default function CuratorLedger({
             <div className="flex items-baseline gap-2 mt-1">
               <span className="font-mono text-4xl sm:text-5xl font-black text-white">2 345</span>
               <span className="font-mono text-lg text-slate-400">часов</span>
-              <span className="px-2 py-0.5 rounded text-xs font-mono font-semibold bg-sky-500/10 text-sky-400 border border-sky-500/30 ml-2">
+              <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-semibold bg-sky-500/10 text-sky-400 border border-sky-500/30 ml-2">
                 ≈ 97.7 суток нон-стоп
               </span>
             </div>
-            <p className="text-xs text-slate-400 mt-1">
+            <p className="text-xs text-slate-400 mt-1.5">
               Без учета перемотки опенингов, эндингов и повторных просмотров любимых шедевров
             </p>
           </div>
         </div>
 
-        <div className="flex items-center gap-6 border-t md:border-t-0 md:border-l border-white/[0.08] pt-4 md:pt-0 md:pl-8">
+        <div className="flex items-center gap-8 border-t md:border-t-0 md:border-l border-white/[0.08] pt-4 md:pt-0 md:pl-10">
           <div>
-            <div className="text-[11px] font-mono text-slate-400 uppercase">Суммарно эпизодов</div>
-            <div className="font-mono text-xl font-bold text-white">5 829</div>
+            <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Суммарно эпизодов</div>
+            <div className="font-mono text-2xl font-bold text-white mt-0.5">5 829</div>
           </div>
           <div>
-            <div className="text-[11px] font-mono text-slate-400 uppercase">Средний хронометраж</div>
-            <div className="font-mono text-xl font-bold text-gold">~24.1 мин</div>
+            <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Средний хронометраж</div>
+            <div className="font-mono text-2xl font-bold text-gold mt-0.5">~24.1 мин</div>
           </div>
         </div>
       </section>
 
-      {/* 2. Spread: Chronology & Donut Structure */}
+      {/* 2. Chronology & Donut Structure */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Chronology Years Grid */}
-        <section className="p-6 rounded-2xl bg-surface border border-white/[0.08] shadow-xl flex flex-col gap-4">
+        <section className="p-6 sm:p-8 rounded-3xl bg-white/[0.02] backdrop-blur-2xl border border-white/[0.06] shadow-xl flex flex-col gap-5">
           <div className="flex items-center justify-between">
             <div>
               <h3 className="font-serif text-xl font-bold text-white flex items-center gap-2">
@@ -126,14 +126,14 @@ export default function CuratorLedger({
             {selectedYear && (
               <button
                 onClick={() => setSelectedYear(null)}
-                className="text-xs font-mono text-gold hover:underline"
+                className="text-xs font-mono text-gold hover:underline cursor-pointer"
               >
                 Сбросить ({selectedYear})
               </button>
             )}
           </div>
 
-          <div className="grid grid-cols-4 sm:grid-cols-5 gap-2 max-h-80 overflow-y-auto pr-1">
+          <div className="grid grid-cols-4 sm:grid-cols-5 gap-2.5 max-h-80 overflow-y-auto pr-1">
             {years.map((yr) => {
               const count = yearCounts[yr];
               const isSelected = selectedYear === yr;
@@ -141,10 +141,10 @@ export default function CuratorLedger({
                 <button
                   key={yr}
                   onClick={() => setSelectedYear(isSelected ? null : yr)}
-                  className={`p-2.5 rounded-lg border text-center transition-all duration-200 ${
+                  className={`p-3 rounded-xl border text-center transition-all duration-200 cursor-pointer ${
                     isSelected
-                      ? 'bg-gold/20 border-gold text-white shadow-[0_0_12px_rgba(245,158,11,0.3)]'
-                      : 'bg-black/40 border-white/[0.06] hover:border-white/[0.2] text-slate-300'
+                      ? 'bg-gold/20 border-gold text-white shadow-[0_0_15px_rgba(245,158,11,0.3)]'
+                      : 'bg-white/[0.02] border-white/[0.06] hover:border-white/[0.2] text-slate-300'
                   }`}
                 >
                   <div className="font-mono text-[11px] text-slate-400">{yr}</div>
@@ -156,7 +156,7 @@ export default function CuratorLedger({
         </section>
 
         {/* Donut Structure Chart */}
-        <section className="p-6 rounded-2xl bg-surface border border-white/[0.08] shadow-xl flex flex-col gap-4">
+        <section className="p-6 sm:p-8 rounded-3xl bg-white/[0.02] backdrop-blur-2xl border border-white/[0.06] shadow-xl flex flex-col gap-5">
           <div className="flex items-center justify-between flex-wrap gap-2">
             <div>
               <h3 className="font-serif text-xl font-bold text-white flex items-center gap-2">
@@ -168,10 +168,10 @@ export default function CuratorLedger({
               </p>
             </div>
 
-            <div className="flex items-center gap-1 p-0.5 rounded-lg bg-black/40 border border-white/[0.06] text-xs font-mono">
+            <div className="flex items-center gap-1 p-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-xs font-mono">
               <button
                 onClick={() => setDonutMode('genres')}
-                className={`px-3 py-1 rounded-md transition-colors ${
+                className={`px-3.5 py-1 rounded-full transition-colors cursor-pointer ${
                   donutMode === 'genres' ? 'bg-white/[0.12] text-white font-bold' : 'text-slate-400 hover:text-white'
                 }`}
               >
@@ -179,7 +179,7 @@ export default function CuratorLedger({
               </button>
               <button
                 onClick={() => setDonutMode('tiers')}
-                className={`px-3 py-1 rounded-md transition-colors ${
+                className={`px-3.5 py-1 rounded-full transition-colors cursor-pointer ${
                   donutMode === 'tiers' ? 'bg-white/[0.12] text-white font-bold' : 'text-slate-400 hover:text-white'
                 }`}
               >
@@ -189,7 +189,7 @@ export default function CuratorLedger({
           </div>
 
           {/* Interactive Legend List */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-80 overflow-y-auto pr-1">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-h-80 overflow-y-auto pr-1">
             {donutData.map((d, idx) => {
               const pct = donutTotal > 0 ? Math.round((d.count / donutTotal) * 100) : 0;
               const color = colors[idx % colors.length];
@@ -197,9 +197,9 @@ export default function CuratorLedger({
               return (
                 <div
                   key={d.label}
-                  className="p-2.5 rounded-lg bg-black/40 border border-white/[0.06] flex items-center justify-between gap-2"
+                  className="p-3 rounded-xl bg-white/[0.02] border border-white/[0.06] flex items-center justify-between gap-2"
                 >
-                  <div className="flex items-center gap-2 truncate">
+                  <div className="flex items-center gap-2.5 truncate">
                     <span
                       className="w-2.5 h-2.5 rounded-full shrink-0"
                       style={{ backgroundColor: color }}
@@ -218,7 +218,7 @@ export default function CuratorLedger({
       </div>
 
       {/* 3. Taste Index Leaderboard (Approved Gold at Top!) */}
-      <section className="p-6 sm:p-8 rounded-2xl bg-surface border border-white/[0.08] shadow-2xl flex flex-col gap-5">
+      <section className="p-6 sm:p-8 md:p-10 rounded-3xl bg-white/[0.02] backdrop-blur-2xl border border-white/[0.06] shadow-2xl flex flex-col gap-6">
         <div className="flex items-center justify-between flex-wrap gap-2">
           <div>
             <h3 className="font-serif text-2xl font-black text-white flex items-center gap-2.5">
@@ -229,7 +229,7 @@ export default function CuratorLedger({
               Где автор наиболее щедр на высокие оценки (репрезентативная выборка ≥ 5 тайтлов)
             </p>
           </div>
-          <span className="text-xs font-mono text-slate-400 bg-white/[0.04] px-3 py-1 rounded-full border border-white/[0.08]">
+          <span className="text-xs font-mono text-slate-400 bg-white/[0.03] px-3.5 py-1 rounded-full border border-white/[0.06]">
             Ранжирование по среднему баллу
           </span>
         </div>
@@ -245,7 +245,7 @@ export default function CuratorLedger({
                 key={item.genre}
                 whileHover={{ y: -4, scale: 1.02 }}
                 onClick={() => onSelectGenre(item.genre)}
-                className="p-3.5 rounded-xl bg-black/40 hover:bg-black/60 border border-white/[0.06] hover:border-white/[0.2] transition-colors cursor-pointer flex flex-col gap-2.5 shadow-md"
+                className="p-3.5 rounded-2xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.06] hover:border-white/[0.2] transition-colors cursor-pointer flex flex-col gap-2.5 shadow-md"
               >
                 <div className="flex items-center justify-between gap-2">
                   <span className="font-mono text-xs font-bold text-slate-100 truncate">
@@ -269,7 +269,7 @@ export default function CuratorLedger({
                     className="h-full rounded-full"
                     style={{
                       background: style.bar,
-                      boxShadow: `0 0 10px ${style.glow}`
+                      boxShadow: `0 0 12px ${style.glow}`
                     }}
                   />
                 </div>
