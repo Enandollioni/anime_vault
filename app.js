@@ -770,37 +770,37 @@
   function getTasteStyle(score) {
     if (score >= 9.0) {
       return {
-        bar: 'linear-gradient(90deg, #9333ea, #c084fc)',
-        glow: 'rgba(168, 85, 247, 0.45)',
-        color: '#c084fc'
+        bar: 'linear-gradient(90deg, #d97706, #fbbf24)',
+        glow: 'rgba(245, 158, 11, 0.45)',
+        color: '#fbbf24'
       };
     }
     if (score >= 8.5) {
       return {
-        bar: 'linear-gradient(90deg, #4f46e5, #818cf8)',
-        glow: 'rgba(99, 102, 241, 0.4)',
-        color: '#818cf8'
+        bar: 'linear-gradient(90deg, #9333ea, #c084fc)',
+        glow: 'rgba(168, 85, 247, 0.4)',
+        color: '#c084fc'
       };
     }
     if (score >= 8.0) {
       return {
-        bar: 'linear-gradient(90deg, #0284c7, #38bdf8)',
-        glow: 'rgba(14, 165, 233, 0.4)',
-        color: '#38bdf8'
+        bar: 'linear-gradient(90deg, #2563eb, #60a5fa)',
+        glow: 'rgba(59, 130, 246, 0.35)',
+        color: '#60a5fa'
       };
     }
     if (score >= 7.5) {
       return {
-        bar: 'linear-gradient(90deg, #059669, #34d399)',
-        glow: 'rgba(16, 185, 129, 0.4)',
-        color: '#34d399'
+        bar: 'linear-gradient(90deg, #0284c7, #38bdf8)',
+        glow: 'rgba(14, 165, 233, 0.35)',
+        color: '#38bdf8'
       };
     }
     if (score >= 7.0) {
       return {
-        bar: 'linear-gradient(90deg, #d97706, #fbbf24)',
-        glow: 'rgba(245, 158, 11, 0.4)',
-        color: '#fbbf24'
+        bar: 'linear-gradient(90deg, #059669, #34d399)',
+        glow: 'rgba(16, 185, 129, 0.35)',
+        color: '#34d399'
       };
     }
     return {
