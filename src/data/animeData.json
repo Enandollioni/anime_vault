@@ -1,4 +1,4 @@
-window.ANIME_VAULT_DATA = [
+[
   {
     "id": 1,
     "title": "Сонни бой",
@@ -9422,4 +9422,4 @@ window.ANIME_VAULT_DATA = [
       "Повседневность"
     ]
   }
-];
+]

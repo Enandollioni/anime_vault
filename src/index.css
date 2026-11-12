@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #07080b;
+    background-image: 
+      radial-gradient(ellipse 90% 40% at 50% 0%, rgba(245, 158, 11, 0.05), transparent 70%),
+      radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.02), transparent 40%);
+  }
+
+  /* Universal Custom Scrollbars (AniWids Editorial Style) */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.16) transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 9999px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    transition: background 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a855f7 !important;
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.65) !important;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}
+
+/* Skeleton Shimmer Zero CLS */
+@keyframes skeletonShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-bg {
+  background: linear-gradient(110deg, #0e1117 8%, #161b24 18%, #0e1117 33%);
+  background-size: 200% 100%;
+  animation: skeletonShimmer 1.8s infinite linear;
+}
+
+/* Review Drop Cap */
+.salon-prose > p:first-of-type::first-letter {
+  float: left;
+  font-family: 'Libre Bodoni', Georgia, serif;
+  font-size: 3.6rem;
+  line-height: 0.85;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-bottom: 2px;
+  color: #f59e0b;
+  font-weight: 700;
+}
