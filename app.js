@@ -110,7 +110,9 @@
     // Hero Monograph
     heroMonograph: document.getElementById('heroMonograph'),
     heroPoster: document.getElementById('heroPoster'),
+    heroScoreBadge: document.getElementById('heroScoreBadge'),
     heroScore: document.getElementById('heroScore'),
+    heroEditionLabel: document.getElementById('heroEditionLabel'),
     heroYearTag: document.getElementById('heroYearTag'),
     heroTitle: document.getElementById('heroTitle'),
     heroOrigTitle: document.getElementById('heroOrigTitle'),
@@ -188,40 +190,145 @@
     return item.poster_url || 'https://shikimori.one/assets/globals/missing_original.jpg';
   }
 
-  // --- 1. Masterpiece Monograph Hero ---
-  const masterpieces = allAnime.filter(a => a.score >= 10.0);
+  // --- 1. Contextual Monograph Hero ---
+  let currentHeroPool = [];
+
+  function getContextualHeroData() {
+    let candidates = allAnime;
+    let categoryLabel = 'CRITERION SELECTION • ШЕДЕВР ПАНТЕОНА';
+    let tierTheme = 'tier-pantheon';
+
+    // Tier filtering
+    if (state.currentTier === 'S+' || state.currentTier === 'pantheon') {
+      candidates = candidates.filter(a => a.score >= 10.0);
+      categoryLabel = 'CRITERION SELECTION • ПАНТЕОН КУРАТОРА (10.XX)';
+      tierTheme = 'tier-pantheon';
+    } else if (state.currentTier === 'S' || state.currentTier === 's') {
+      candidates = candidates.filter(a => a.score >= 9.0 && a.score < 10.0);
+      categoryLabel = 'ТИР S • ВЫДАЮЩИЙСЯ ВЫБОР (9.XX)';
+      tierTheme = 'tier-s';
+    } else if (state.currentTier === 'A' || state.currentTier === 'a') {
+      candidates = candidates.filter(a => a.score >= 8.0 && a.score < 9.0);
+      categoryLabel = 'ТИР A • ЗОЛОТОЙ ФОНД (8.XX)';
+      tierTheme = 'tier-a';
+    } else if (state.currentTier === 'B' || state.currentTier === 'b') {
+      candidates = candidates.filter(a => a.score >= 7.0 && a.score < 8.0);
+      categoryLabel = 'ТИР B • ХОРОШИЕ ПРОИЗВЕДЕНИЯ (7.XX)';
+      tierTheme = 'tier-b';
+    } else if (state.currentTier === 'C' || state.currentTier === 'c') {
+      candidates = candidates.filter(a => a.score >= 5.0 && a.score < 7.0);
+      categoryLabel = 'ТИР C • СРЕДНИЙ УРОВЕНЬ (5.XX - 6.XX)';
+      tierTheme = 'tier-b';
+    } else if (state.currentTier === 'D_F' || state.currentTier === 'df') {
+      candidates = candidates.filter(a => a.score > 0 && a.score < 5.0);
+      categoryLabel = 'АРХИВ • ТИР D/F (1.XX - 4.XX)';
+      tierTheme = 'tier-b';
+    } else if (state.currentTier === 'unrated' || state.currentTier === 'planned') {
+      candidates = candidates.filter(a => a.status === 'planned' || !a.score || a.score === 0);
+      categoryLabel = 'В ПЛАНАХ НА ПРОСМОТР';
+      tierTheme = 'tier-a';
+    } else {
+      // 'all' -> Default showcase to Pantheon 10.xx masterpieces
+      candidates = allAnime.filter(a => a.score >= 10.0);
+      categoryLabel = 'CRITERION SELECTION • ШЕДЕВР ПАНТЕОНА';
+      tierTheme = 'tier-pantheon';
+    }
+
+    // Genre filtering overlay
+    if (state.currentGenre && state.currentGenre !== 'all') {
+      const genreMatches = candidates.filter(a => Array.isArray(a.genres) && a.genres.includes(state.currentGenre));
+      if (genreMatches.length > 0) {
+        candidates = genreMatches;
+      }
+      categoryLabel = `ФЛАГМАН ЖАНРА: ${state.currentGenre.toUpperCase()}`;
+    }
+
+    // Year filtering overlay
+    if (state.selectedYear) {
+      const yearMatches = candidates.filter(a => a.year === state.selectedYear);
+      if (yearMatches.length > 0) {
+        candidates = yearMatches;
+      }
+      categoryLabel += ` • ${state.selectedYear} ГОД`;
+    }
+
+    if (candidates.length === 0) {
+      return { pool: [], label: categoryLabel, theme: tierTheme };
+    }
+
+    // Sort: titles WITH reviews first (sorted by score desc), then titles without reviews
+    const withReviews = candidates.filter(a => a.review && a.review.trim().length > 0);
+    withReviews.sort((a, b) => (b.score || 0) - (a.score || 0));
+
+    const withoutReviews = candidates.filter(a => !a.review || a.review.trim().length === 0);
+    withoutReviews.sort((a, b) => (b.score || 0) - (a.score || 0));
+
+    const pool = withReviews.length > 0 ? withReviews : withoutReviews;
+    return { pool, label: categoryLabel, theme: tierTheme };
+  }
 
   function renderHeroMonograph(index) {
-    if (!el.heroMonograph || masterpieces.length === 0) return;
-    
-    // Hide monograph if search or strict filters are active
-    if (state.currentTier !== 'all' || state.searchQuery || state.onlyReviews || state.selectedYear || state.currentGenre !== 'all') {
+    if (!el.heroMonograph) return;
+
+    // In search mode, collapse hero so matching search hits are directly visible
+    if (state.searchQuery && state.searchQuery.trim().length > 0) {
       el.heroMonograph.style.display = 'none';
       return;
     }
+
+    const { pool, label, theme } = getContextualHeroData();
+    currentHeroPool = pool;
+
+    if (!pool || pool.length === 0) {
+      el.heroMonograph.style.display = 'none';
+      return;
+    }
+
     el.heroMonograph.style.display = 'block';
 
-    const item = masterpieces[index % masterpieces.length];
-    state.heroIndex = index % masterpieces.length;
+    const safeIndex = ((index % pool.length) + pool.length) % pool.length;
+    state.heroIndex = safeIndex;
+    const item = pool[safeIndex];
 
     el.heroPoster.src = getPoster(item);
     el.heroPoster.alt = item.title;
     el.heroScore.textContent = formatScore(item.score);
-    el.heroTitle.textContent = item.title;
-    el.heroOrigTitle.textContent = item.title_orig || '';
-    el.heroYearTag.textContent = item.year ? `${item.year}` : '10.XX';
 
-    if (item.review && item.review.trim().length > 0) {
-      const clean = item.review.replace(/[#*`>_-]/g, '').trim();
-      const quoteText = clean.slice(0, 150) + (clean.length > 150 ? '...' : '');
-      el.heroQuote.textContent = `«${quoteText}»`;
-      el.heroQuote.style.display = 'block';
-    } else {
-      el.heroQuote.textContent = '«Абсолютный шедевр коллекции, определивший личный кинематографический вкус куратора.»';
-      el.heroQuote.style.display = 'block';
+    let itemTheme = theme;
+    if (item.score >= 10.0) itemTheme = 'tier-pantheon';
+    else if (item.score >= 9.0) itemTheme = 'tier-s';
+    else if (item.score >= 8.0) itemTheme = 'tier-a';
+    else itemTheme = 'tier-b';
+
+    if (el.heroScoreBadge) {
+      el.heroScoreBadge.className = `monograph-score-badge ${itemTheme}`;
     }
 
-    el.heroCounter.textContent = `${state.heroIndex + 1} / ${masterpieces.length}`;
+    if (el.heroEditionLabel) {
+      el.heroEditionLabel.textContent = label;
+      el.heroEditionLabel.className = `edition-label ${itemTheme}`;
+    }
+
+    el.heroTitle.textContent = item.title;
+    el.heroOrigTitle.textContent = item.title_orig || '';
+    el.heroYearTag.textContent = item.year ? `${item.year}` : (item.score >= 10.0 ? '10.XX' : `${formatScore(item.score)}`);
+
+    if (el.heroQuote) {
+      el.heroQuote.className = `monograph-quote ${itemTheme}`;
+      if (item.review && item.review.trim().length > 0) {
+        const clean = item.review.replace(/[#*`>_-]/g, '').trim();
+        const quoteText = clean.slice(0, 160) + (clean.length > 160 ? '...' : '');
+        el.heroQuote.textContent = `«${quoteText}»`;
+      } else {
+        el.heroQuote.textContent = `«Знаковое произведение категории (${item.title}), отмеченное оценкой ${formatScore(item.score)} от куратора.»`;
+      }
+    }
+
+    el.heroCounter.textContent = `${safeIndex + 1} / ${pool.length}`;
+
+    if (el.btnHeroNext) {
+      el.btnHeroNext.style.display = pool.length > 1 ? 'inline-flex' : 'none';
+    }
   }
 
   // --- 2. Curation & Quick Genre Chips ---
@@ -660,6 +767,49 @@
     }
   }
 
+  function getTasteStyle(score) {
+    if (score >= 9.0) {
+      return {
+        bar: 'linear-gradient(90deg, #9333ea, #c084fc)',
+        glow: 'rgba(168, 85, 247, 0.45)',
+        color: '#c084fc'
+      };
+    }
+    if (score >= 8.5) {
+      return {
+        bar: 'linear-gradient(90deg, #4f46e5, #818cf8)',
+        glow: 'rgba(99, 102, 241, 0.4)',
+        color: '#818cf8'
+      };
+    }
+    if (score >= 8.0) {
+      return {
+        bar: 'linear-gradient(90deg, #0284c7, #38bdf8)',
+        glow: 'rgba(14, 165, 233, 0.4)',
+        color: '#38bdf8'
+      };
+    }
+    if (score >= 7.5) {
+      return {
+        bar: 'linear-gradient(90deg, #059669, #34d399)',
+        glow: 'rgba(16, 185, 129, 0.4)',
+        color: '#34d399'
+      };
+    }
+    if (score >= 7.0) {
+      return {
+        bar: 'linear-gradient(90deg, #d97706, #fbbf24)',
+        glow: 'rgba(245, 158, 11, 0.4)',
+        color: '#fbbf24'
+      };
+    }
+    return {
+      bar: 'linear-gradient(90deg, #475569, #94a3b8)',
+      glow: 'rgba(148, 163, 184, 0.25)',
+      color: '#94a3b8'
+    };
+  }
+
   function renderTasteLeaderboard() {
     if (!el.tasteLeaderboardGrid) return;
     el.tasteLeaderboardGrid.innerHTML = '';
@@ -688,23 +838,25 @@
       const tile = document.createElement('div');
       tile.className = 'taste-tile';
       const pct = Math.min(100, Math.max(10, Math.round((item.avg / 10.99) * 100)));
+      const tStyle = getTasteStyle(item.avg);
 
       tile.innerHTML = `
         <div class="taste-tile-head">
           <span class="taste-tile-genre">${escapeHtml(item.genre)}</span>
-          <span class="taste-tile-score">${item.avg.toFixed(2)}★</span>
+          <span class="taste-tile-score" style="color: ${tStyle.color}; font-weight: 700;">${item.avg.toFixed(2)}★</span>
         </div>
         <div class="taste-bar-track">
-          <div class="taste-bar-fill" style="width: ${pct}%;"></div>
+          <div class="taste-bar-fill" style="width: ${pct}%; background: ${tStyle.bar}; box-shadow: 0 0 10px ${tStyle.glow};"></div>
         </div>
         <div class="taste-tile-foot">
           <span>${item.count} тайтлов</span>
-          <span>В среднем: ${item.avg.toFixed(2)}</span>
+          <span style="color: ${tStyle.color}; font-weight: 600;">В среднем: ${item.avg.toFixed(2)}</span>
         </div>
       `;
 
       tile.addEventListener('click', () => {
         state.currentGenre = item.genre;
+        state.heroIndex = 0;
         updateGenreChipsActive();
         switchView('catalog');
         render();
@@ -734,15 +886,17 @@
   // --- 8. Event Listeners ---
   if (el.btnHeroNext) {
     el.btnHeroNext.addEventListener('click', () => {
-      state.heroIndex = (state.heroIndex + 1) % masterpieces.length;
-      renderHeroMonograph(state.heroIndex);
+      if (currentHeroPool.length > 0) {
+        state.heroIndex = (state.heroIndex + 1) % currentHeroPool.length;
+        renderHeroMonograph(state.heroIndex);
+      }
     });
   }
 
   if (el.btnHeroReadReview) {
     el.btnHeroReadReview.addEventListener('click', () => {
-      if (masterpieces[state.heroIndex]) {
-        openSalonModal(masterpieces[state.heroIndex]);
+      if (currentHeroPool[state.heroIndex]) {
+        openSalonModal(currentHeroPool[state.heroIndex]);
       }
     });
   }
@@ -771,6 +925,7 @@
       el.tierNav.querySelectorAll('.tier-pill').forEach(p => p.classList.remove('active'));
       pill.classList.add('active');
       state.currentTier = pill.dataset.tier;
+      state.heroIndex = 0;
       render();
     });
   }
