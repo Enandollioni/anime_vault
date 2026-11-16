@@ -7,7 +7,8 @@ export default function CuratorLedger({
   allAnime,
   selectedYear,
   setSelectedYear,
-  onSelectGenre
+  onSelectGenre,
+  onSelectYear
 }) {
   const [donutMode, setDonutMode] = useState('genres'); // 'genres' or 'tiers'
 
@@ -140,12 +141,19 @@ export default function CuratorLedger({
               return (
                 <button
                   key={yr}
-                  onClick={() => setSelectedYear(isSelected ? null : yr)}
+                  onClick={() => {
+                    if (onSelectYear) {
+                      onSelectYear(yr);
+                    } else {
+                      setSelectedYear(isSelected ? null : yr);
+                    }
+                  }}
                   className={`p-3 rounded-xl border text-center transition-all duration-200 cursor-pointer ${
                     isSelected
                       ? 'bg-gold/20 border-gold text-white shadow-[0_0_15px_rgba(245,158,11,0.3)]'
-                      : 'bg-white/[0.02] border-white/[0.06] hover:border-white/[0.2] text-slate-300'
+                      : 'bg-white/[0.02] border-white/[0.06] hover:border-gold/40 text-slate-300'
                   }`}
+                  title={`Посмотреть тайтлы ${yr} года`}
                 >
                   <div className="font-mono text-[11px] text-slate-400">{yr}</div>
                   <div className="font-mono text-base font-bold text-white mt-0.5">{count}</div>

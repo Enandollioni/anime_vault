@@ -9,7 +9,7 @@ export default function PosterCard({ item, onOpenModal }) {
   const isHighTier = item.score >= 9.0;
 
   const ambientGlow = isMasterpiece
-    ? 'rgba(245, 158, 11, 0.4)'
+    ? 'rgba(245, 158, 11, 0.45)'
     : isHighTier
     ? 'rgba(168, 85, 247, 0.35)'
     : item.score >= 8.0
@@ -22,9 +22,9 @@ export default function PosterCard({ item, onOpenModal }) {
       whileHover={{ y: -6 }}
       transition={{ type: 'spring', stiffness: 350, damping: 25 }}
       onClick={() => onOpenModal(item)}
-      className="group relative cursor-pointer select-none"
+      className="group relative cursor-pointer select-none poster-card-deferred"
     >
-      {/* Dynamic Ambient Halo beneath the card on hover */}
+      {/* Ambient Halo Glow */}
       <div
         className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none filter blur-xl -z-10"
         style={{ background: ambientGlow }}
@@ -40,15 +40,19 @@ export default function PosterCard({ item, onOpenModal }) {
           className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
         />
 
-        {/* Top-Right Frosted Glass Score Chip */}
-        <div className="absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded-full bg-black/70 backdrop-blur-md border border-white/20 text-[11px] font-mono font-bold flex items-center gap-1 shadow-md z-10">
-          {isMasterpiece && <Star className="w-2.5 h-2.5 fill-gold text-gold" />}
-          <span className={isMasterpiece ? 'text-gold' : 'text-white'}>
-            {formatScore(item.score)}
-          </span>
-        </div>
+        {/* Top-Right: Pantheon Golden Seal for 10.xx / Frosted Glass Chip */}
+        {isMasterpiece ? (
+          <div className="absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded-full bg-gradient-to-r from-amber-950/90 via-black/85 to-amber-950/90 backdrop-blur-md border border-gold/50 shadow-[0_0_12px_rgba(245,158,11,0.35)] flex items-center gap-1 font-mono text-[11px] font-black text-gold z-10">
+            <Star className="w-2.5 h-2.5 fill-gold text-gold" />
+            <span>{formatScore(item.score)}</span>
+          </div>
+        ) : (
+          <div className="absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded-full bg-black/70 backdrop-blur-md border border-white/20 text-[11px] font-mono font-bold flex items-center gap-1 shadow-md z-10 text-white">
+            <span>{formatScore(item.score)}</span>
+          </div>
+        )}
 
-        {/* Top-Left Minimalist Feather Badge for Essays */}
+        {/* Top-Left: Minimalist Feather Badge for Essays */}
         {hasReview && (
           <div
             title="Есть эссе куратора"
@@ -58,11 +62,11 @@ export default function PosterCard({ item, onOpenModal }) {
           </div>
         )}
 
-        {/* Delicate subtle bottom gradient */}
+        {/* Subtle bottom gradient on hover */}
         <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/60 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
-      {/* Clean Editorial Caption Below Poster (NO clunky overlay text) */}
+      {/* Editorial Caption Below Poster */}
       <div className="pt-2.5 px-1">
         <h3 className="font-sans font-semibold text-xs text-slate-200 group-hover:text-white transition-colors line-clamp-1 leading-snug">
           {item.title}

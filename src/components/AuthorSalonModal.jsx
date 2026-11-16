@@ -1,17 +1,44 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink, Star, Feather } from 'lucide-react';
+import { X, ExternalLink, Star, Feather, ChevronLeft, ChevronRight } from 'lucide-react';
 import { marked } from 'marked';
 import { formatScore, getPoster } from '../utils/tierHelpers';
 
-export default function AuthorSalonModal({ item, onClose }) {
+export default function AuthorSalonModal({
+  item,
+  onClose,
+  onPrevReview,
+  onNextReview,
+  hasPrevReview,
+  hasNextReview
+}) {
+  const modalRef = useRef(null);
+
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === 'Escape') {
+        onClose();
+      } else if (e.key === 'ArrowLeft' && onPrevReview && hasPrevReview) {
+        onPrevReview();
+      } else if (e.key === 'ArrowRight' && onNextReview && hasNextReview) {
+        onNextReview();
+      }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [onClose]);
+  }, [onClose, onPrevReview, onNextReview, hasPrevReview, hasNextReview]);
+
+  // Focus trap inside modal
+  useEffect(() => {
+    if (modalRef.current) {
+      const focusable = modalRef.current.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      if (focusable.length > 0) {
+        focusable[0].focus();
+      }
+    }
+  }, [item?.id]);
 
   if (!item) return null;
 
@@ -27,23 +54,27 @@ export default function AuthorSalonModal({ item, onClose }) {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 overflow-y-auto">
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 overflow-y-auto modal-backdrop-lock">
         {/* Backdrop Overlay with deep blur */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 bg-black/80 backdrop-blur-xl"
+          className="fixed inset-0 bg-black/85 backdrop-blur-xl"
         />
 
         {/* Modal Monograph Dialog */}
         <motion.div
+          ref={modalRef}
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ type: 'spring', stiffness: 350, damping: 30 }}
-          className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl bg-[#0b0d13]/95 backdrop-blur-2xl border border-white/[0.08] shadow-[0_30px_90px_rgba(0,0,0,0.95)] p-6 sm:p-8 md:p-10 z-10"
+          className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl bg-[#0b0d13]/95 backdrop-blur-2xl border border-white/[0.08] shadow-[0_30px_90px_rgba(0,0,0,0.95)] p-6 sm:p-8 md:p-10 z-10 modal-scroll-lock"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-title"
         >
           {/* Subtle ambient light inside modal */}
           <div
@@ -51,14 +82,45 @@ export default function AuthorSalonModal({ item, onClose }) {
             style={{ background: ambientColor }}
           />
 
-          {/* Close Button */}
-          <button
-            onClick={onClose}
-            className="absolute top-6 right-6 w-9 h-9 rounded-full bg-white/[0.06] hover:bg-white/[0.14] border border-white/[0.08] text-slate-400 hover:text-white flex items-center justify-center transition-all duration-200 z-20 cursor-pointer active:scale-95"
-            title="Закрыть (Esc)"
-          >
-            <X className="w-4 h-4" />
-          </button>
+          {/* Top Control Bar: Prev / Next Review Nav + Close Button */}
+          <div className="absolute top-6 right-6 flex items-center gap-2 z-20">
+            {(hasPrevReview || hasNextReview) && (
+              <div className="flex items-center gap-1 bg-white/[0.04] p-1 rounded-full border border-white/[0.08]">
+                <button
+                  onClick={onPrevReview}
+                  disabled={!hasPrevReview}
+                  className={`w-7 h-7 rounded-full flex items-center justify-center transition-colors ${
+                    hasPrevReview
+                      ? 'text-slate-300 hover:text-white hover:bg-white/[0.1] cursor-pointer'
+                      : 'text-slate-600 cursor-not-allowed'
+                  }`}
+                  title="Предыдущее эссе (←)"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={onNextReview}
+                  disabled={!hasNextReview}
+                  className={`w-7 h-7 rounded-full flex items-center justify-center transition-colors ${
+                    hasNextReview
+                      ? 'text-slate-300 hover:text-white hover:bg-white/[0.1] cursor-pointer'
+                      : 'text-slate-600 cursor-not-allowed'
+                  }`}
+                  title="Следующее эссе (→)"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
+            )}
+
+            <button
+              onClick={onClose}
+              className="w-9 h-9 rounded-full bg-white/[0.06] hover:bg-white/[0.14] border border-white/[0.08] text-slate-400 hover:text-white flex items-center justify-center transition-all duration-200 cursor-pointer active:scale-95"
+              title="Закрыть (Esc)"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-[260px_1fr] gap-8 md:gap-10 items-start">
             {/* Left Column: Cover & Links */}
@@ -138,7 +200,7 @@ export default function AuthorSalonModal({ item, onClose }) {
 
               {/* Title & Original */}
               <div>
-                <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight leading-tight">
+                <h2 id="modal-title" className="font-serif text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight leading-tight">
                   {item.title}
                 </h2>
                 {item.title_orig && (
