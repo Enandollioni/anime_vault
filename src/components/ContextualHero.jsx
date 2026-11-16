@@ -36,8 +36,9 @@ export default function ContextualHero({
     ? 'Шедевр мирового кинематографа, определивший личный визуальный вкус куратора.'
     : 'Знаковое произведение архива, определившее личный кинематографический вкус куратора.';
 
-  if (item.review && item.review.trim().length > 0) {
-    const clean = item.review.replace(/[#*`>_-]/g, '').trim();
+  const textSource = item.review || item.synopsis || '';
+  if (textSource.trim().length > 0) {
+    const clean = textSource.replace(/[#*`>_-]/g, '').trim();
     const unquoted = clean.replace(/^["'«]+|["'»]+$/g, '').trim();
     quoteText = unquoted.slice(0, 240) + (unquoted.length > 240 ? '…' : '');
   }

@@ -155,13 +155,13 @@ export default function App() {
       }
     }
 
-    const withReviews = pool.filter((a) => a.review && a.review.trim().length > 0);
-    withReviews.sort((a, b) => (b.score || 0) - (a.score || 0));
+    const withText = pool.filter((a) => (a.review && a.review.trim().length > 0) || (a.synopsis && a.synopsis.trim().length > 0));
+    withText.sort((a, b) => (b.score || 0) - (a.score || 0));
 
-    const withoutReviews = pool.filter((a) => !a.review || a.review.trim().length === 0);
-    withoutReviews.sort((a, b) => (b.score || 0) - (a.score || 0));
+    const withoutText = pool.filter((a) => (!a.review || a.review.trim().length === 0) && (!a.synopsis || a.synopsis.trim().length === 0));
+    withoutText.sort((a, b) => (b.score || 0) - (a.score || 0));
 
-    return withReviews.length > 0 ? withReviews : withoutReviews;
+    return withText.length > 0 ? withText : withoutText;
   }, [activeDataset, currentTier, currentGenre, currentType, selectedYear]);
 
   // 6. Filtered Items (using deferredSearchQuery for 120 FPS performance)
@@ -202,25 +202,23 @@ export default function App() {
     });
   }, [activeDataset, deferredSearchQuery, onlyReviews, currentTier, currentType, currentGenre, selectedYear, activeTierConfig]);
 
-  // 7. Reviewed items in current filtered list for modal navigation
-  const reviewedItems = useMemo(() => {
-    return filteredItems.filter((a) => a.review && a.review.trim().length > 0);
-  }, [filteredItems]);
+  // 7. Modal navigation through filtered list
+  const navigableItems = filteredItems;
 
-  const currentReviewIndex = useMemo(() => {
+  const currentNavIndex = useMemo(() => {
     if (!modalItem) return -1;
-    return reviewedItems.findIndex((a) => a.id === modalItem.id);
-  }, [modalItem, reviewedItems]);
+    return navigableItems.findIndex((a) => a.id === modalItem.id);
+  }, [modalItem, navigableItems]);
 
   const handlePrevReview = () => {
-    if (currentReviewIndex > 0) {
-      setModalItem(reviewedItems[currentReviewIndex - 1]);
+    if (currentNavIndex > 0) {
+      setModalItem(navigableItems[currentNavIndex - 1]);
     }
   };
 
   const handleNextReview = () => {
-    if (currentReviewIndex >= 0 && currentReviewIndex < reviewedItems.length - 1) {
-      setModalItem(reviewedItems[currentReviewIndex + 1]);
+    if (currentNavIndex >= 0 && currentNavIndex < navigableItems.length - 1) {
+      setModalItem(navigableItems[currentNavIndex + 1]);
     }
   };
 
@@ -445,8 +443,8 @@ export default function App() {
           onClose={() => setModalItem(null)}
           onPrevReview={handlePrevReview}
           onNextReview={handleNextReview}
-          hasPrevReview={currentReviewIndex > 0}
-          hasNextReview={currentReviewIndex >= 0 && currentReviewIndex < reviewedItems.length - 1}
+          hasPrevReview={currentNavIndex > 0}
+          hasNextReview={currentNavIndex >= 0 && currentNavIndex < navigableItems.length - 1}
           vaultMode={vaultMode}
         />
       )}

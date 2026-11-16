@@ -42,17 +42,20 @@ export default function AuthorSalonModal({
     ? (isMasterpiece ? '#38bdf8' : isHighTier ? '#818cf8' : '#22d3ee')
     : (isMasterpiece ? '#f59e0b' : isHighTier ? '#a855f7' : item.score >= 8.0 ? '#38bdf8' : '#34d399');
 
-  // Format Review / Overview as clean paragraphs
-  let reviewHtml = null;
-  if (item.review && item.review.trim().length > 0) {
-    const paragraphs = item.review.split('\n\n').filter((p) => p.trim().length > 0);
-    reviewHtml = paragraphs
+  // Format Review and Synopsis as clean paragraphs
+  const formatParagraphs = (txt) => {
+    if (!txt || txt.trim().length === 0) return null;
+    const paragraphs = txt.split('\n\n').filter((p) => p.trim().length > 0);
+    return paragraphs
       .map((p) => {
         const clean = p.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
         return `<p>${clean}</p>`;
       })
       .join('');
-  }
+  };
+
+  const reviewHtml = formatParagraphs(item.review);
+  const synopsisHtml = formatParagraphs(item.synopsis);
 
   return (
     <AnimatePresence>
@@ -302,26 +305,43 @@ export default function AuthorSalonModal({
                 </div>
               )}
 
-              {/* Review / Synopsis Prose */}
-              <div className="mt-2 pt-4 border-t border-white/[0.08]">
-                <div className={`flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider mb-3 ${
-                  isCinema ? 'text-sky-400' : 'text-gold'
-                }`}>
-                  <Feather className="w-3.5 h-3.5 stroke-[2.5]" />
-                  <span>{isCinema ? 'Мысли куратора и синопсис' : 'Мысли и эссе куратора'}</span>
-                </div>
-
-                {reviewHtml ? (
+              {/* Review Prose (Curator Essay) */}
+              {reviewHtml && (
+                <div className="mt-2 pt-4 border-t border-white/[0.08]">
+                  <div className={`flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider mb-3 ${
+                    isCinema ? 'text-sky-400' : 'text-gold'
+                  }`}>
+                    <Feather className="w-3.5 h-3.5 stroke-[2.5]" />
+                    <span>Мысли и эссе куратора</span>
+                  </div>
                   <div
                     className="salon-prose text-slate-200 text-sm sm:text-base leading-relaxed space-y-3 font-sans"
                     dangerouslySetInnerHTML={{ __html: reviewHtml }}
                   />
-                ) : (
+                </div>
+              )}
+
+              {/* Official Synopsis Prose */}
+              {synopsisHtml && (
+                <div className={`mt-2 pt-4 ${reviewHtml ? 'border-t border-white/[0.04]' : 'border-t border-white/[0.08]'}`}>
+                  <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider mb-3 text-slate-400">
+                    <Film className="w-3.5 h-3.5 text-slate-500" />
+                    <span>Синопсис картины</span>
+                  </div>
+                  <div
+                    className="salon-prose text-slate-300 text-sm sm:text-base leading-relaxed space-y-3 font-sans"
+                    dangerouslySetInnerHTML={{ __html: synopsisHtml }}
+                  />
+                </div>
+              )}
+
+              {!reviewHtml && !synopsisHtml && (
+                <div className="mt-2 pt-4 border-t border-white/[0.08]">
                   <p className="font-serif italic text-slate-400 text-sm sm:text-base leading-relaxed">
                     «Тайтл находится в основном реестре коллекции куратора. Полный текст критического эссе находится в стадии публикации.»
                   </p>
-                )}
-              </div>
+                </div>
+              )}
             </div>
           </div>
         </motion.div>
