@@ -1,7 +1,8 @@
 import React, { useState, useMemo, useEffect, useRef, useDeferredValue } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import animeData from './data/animeData.json';
-import { TIER_CONFIG } from './utils/tierHelpers';
+import cinemaData from './data/cinemaData.json';
+import { TIER_CONFIG, CINEMA_TIER_CONFIG } from './utils/tierHelpers';
 
 import Masthead from './components/Masthead';
 import ContextualHero from './components/ContextualHero';
@@ -16,52 +17,77 @@ export default function App() {
   const initialParams = useMemo(() => {
     if (typeof window === 'undefined') return {};
     const url = new URL(window.location.href);
+    const mode = url.searchParams.get('mode') === 'cinema' ? 'cinema' : 'anime';
     const id = url.searchParams.get('id') || window.location.hash.replace('#', '');
     const tier = url.searchParams.get('tier') || 'all';
     const genre = url.searchParams.get('genre') || 'all';
+    const type = url.searchParams.get('type') || 'all';
     const tab = url.searchParams.get('tab') || 'catalog';
     const q = url.searchParams.get('q') || '';
-    return { id, tier, genre, tab, q };
+    return { mode, id, tier, genre, type, tab, q };
   }, []);
 
+  const [vaultMode, setVaultModeState] = useState(initialParams.mode || 'anime');
   const [currentView, setCurrentView] = useState(initialParams.tab || 'catalog');
   const [viewMode, setViewMode] = useState('grid');
   const [searchQuery, setSearchQuery] = useState(initialParams.q || '');
   const [onlyReviews, setOnlyReviews] = useState(false);
   const [currentTier, setCurrentTier] = useState(initialParams.tier || 'all');
   const [currentGenre, setCurrentGenre] = useState(initialParams.genre || 'all');
+  const [currentType, setCurrentType] = useState(initialParams.type || 'all');
   const [selectedYear, setSelectedYear] = useState(null);
   const [heroIndex, setHeroIndex] = useState(0);
+
+  // Active dataset & tier config
+  const activeDataset = vaultMode === 'cinema' ? cinemaData : animeData;
+  const activeTierConfig = vaultMode === 'cinema' ? CINEMA_TIER_CONFIG : TIER_CONFIG;
 
   // Modal Item State
   const [modalItem, setModalItem] = useState(() => {
     if (initialParams.id) {
-      return animeData.find((a) => String(a.id) === String(initialParams.id)) || null;
+      return activeDataset.find((a) => String(a.id) === String(initialParams.id)) || null;
     }
     return null;
   });
 
   const searchInputRef = useRef(null);
 
+  // Synchronize body class for atmospheric backgrounds
+  useEffect(() => {
+    document.body.className = vaultMode === 'cinema' ? 'mode-cinema' : 'mode-anime';
+  }, [vaultMode]);
+
+  // Mode Switcher handler (resets filters cleanly)
+  const handleSetVaultMode = (newMode) => {
+    if (newMode === vaultMode) return;
+    setVaultModeState(newMode);
+    setCurrentTier('all');
+    setCurrentGenre('all');
+    setCurrentType('all');
+    setSelectedYear(null);
+    setSearchQuery('');
+    setHeroIndex(0);
+    setModalItem(null);
+  };
+
   // 2. React 19 Concurrent Search Decoupling
   const deferredSearchQuery = useDeferredValue(searchQuery);
 
   // 3. Stats Calculation (SSOT)
   const stats = useMemo(() => {
-    const total = animeData.length;
-    const pantheonCount = animeData.filter((a) => a.score >= 10.0).length;
-    const rated = animeData.filter((a) => a.score && a.score > 0);
+    const total = activeDataset.length;
+    const pantheonCount = activeDataset.filter((a) => a.score >= 10.0).length;
+    const rated = activeDataset.filter((a) => a.score && a.score > 0);
     const avgScore = rated.length > 0 ? (rated.reduce((s, a) => s + a.score, 0) / rated.length).toFixed(2) : '8.21';
-    const totalHours = 2345;
-    const reviewCount = animeData.filter((a) => a.review && a.review.trim().length > 0).length;
+    const reviewCount = activeDataset.filter((a) => a.review && a.review.trim().length > 0).length;
 
-    return { total, pantheonCount, avgScore, totalHours, reviewCount };
-  }, []);
+    return { total, pantheonCount, avgScore, reviewCount };
+  }, [activeDataset]);
 
   // 4. Genre Frequency List
   const genreList = useMemo(() => {
     const counts = {};
-    animeData.forEach((item) => {
+    activeDataset.forEach((item) => {
       const gList = Array.isArray(item.genres) ? item.genres : [];
       gList.forEach((g) => {
         counts[g] = (counts[g] || 0) + 1;
@@ -70,11 +96,24 @@ export default function App() {
     return Object.entries(counts)
       .sort((a, b) => b[1] - a[1])
       .slice(0, 16);
-  }, []);
+  }, [activeDataset]);
+
+  // 4.1. Type Frequency List (Cinema)
+  const typeList = useMemo(() => {
+    if (vaultMode !== 'cinema') return [];
+    const counts = {};
+    cinemaData.forEach((item) => {
+      const t = item.type || 'Фильм';
+      counts[t] = (counts[t] || 0) + 1;
+    });
+    return Object.entries(counts)
+      .sort((a, b) => b[1] - a[1])
+      .map(([name, count]) => ({ name, count }));
+  }, [vaultMode]);
 
   // 5. Dynamic Contextual Hero Pool
   const heroPool = useMemo(() => {
-    let pool = animeData;
+    let pool = activeDataset;
 
     if (currentTier === 'S+' || currentTier === 'pantheon') {
       pool = pool.filter((a) => a.score >= 10.0);
@@ -91,7 +130,13 @@ export default function App() {
     } else if (currentTier === 'unrated') {
       pool = pool.filter((a) => !a.score || a.score === 0 || a.status === 'planned');
     } else {
+      // Default hero pool: show 10.0 masterpieces
       pool = pool.filter((a) => a.score >= 10.0);
+    }
+
+    if (currentType !== 'all') {
+      const typeMatches = pool.filter((a) => a.type === currentType);
+      if (typeMatches.length > 0) pool = typeMatches;
     }
 
     if (currentGenre !== 'all') {
@@ -117,16 +162,18 @@ export default function App() {
     withoutReviews.sort((a, b) => (b.score || 0) - (a.score || 0));
 
     return withReviews.length > 0 ? withReviews : withoutReviews;
-  }, [currentTier, currentGenre, selectedYear]);
+  }, [activeDataset, currentTier, currentGenre, currentType, selectedYear]);
 
   // 6. Filtered Items (using deferredSearchQuery for 120 FPS performance)
   const filteredItems = useMemo(() => {
-    return animeData.filter((item) => {
+    return activeDataset.filter((item) => {
       if (deferredSearchQuery.trim().length > 0) {
         const q = deferredSearchQuery.toLowerCase().trim();
         const t1 = (item.title || '').toLowerCase();
         const t2 = (item.title_orig || '').toLowerCase();
-        if (!t1.includes(q) && !t2.includes(q)) return false;
+        const dirs = Array.isArray(item.directors) ? item.directors.join(' ').toLowerCase() : '';
+        const acts = Array.isArray(item.actors) ? item.actors.join(' ').toLowerCase() : '';
+        if (!t1.includes(q) && !t2.includes(q) && !dirs.includes(q) && !acts.includes(q)) return false;
       }
 
       if (onlyReviews && (!item.review || item.review.trim().length === 0)) {
@@ -134,8 +181,12 @@ export default function App() {
       }
 
       if (currentTier !== 'all') {
-        const tierCfg = TIER_CONFIG.find((t) => t.key === currentTier);
+        const tierCfg = activeTierConfig.find((t) => t.key === currentTier);
         if (tierCfg && !tierCfg.filter(item)) return false;
+      }
+
+      if (currentType !== 'all' && item.type !== currentType) {
+        return false;
       }
 
       if (currentGenre !== 'all') {
@@ -149,7 +200,7 @@ export default function App() {
 
       return true;
     });
-  }, [deferredSearchQuery, onlyReviews, currentTier, currentGenre, selectedYear]);
+  }, [activeDataset, deferredSearchQuery, onlyReviews, currentTier, currentType, currentGenre, selectedYear, activeTierConfig]);
 
   // 7. Reviewed items in current filtered list for modal navigation
   const reviewedItems = useMemo(() => {
@@ -177,6 +228,9 @@ export default function App() {
   useEffect(() => {
     const url = new URL(window.location.href);
 
+    if (vaultMode !== 'anime') url.searchParams.set('mode', vaultMode);
+    else url.searchParams.delete('mode');
+
     if (modalItem) {
       url.searchParams.set('id', modalItem.id);
     } else {
@@ -185,6 +239,9 @@ export default function App() {
 
     if (currentTier !== 'all') url.searchParams.set('tier', currentTier);
     else url.searchParams.delete('tier');
+
+    if (currentType !== 'all') url.searchParams.set('type', currentType);
+    else url.searchParams.delete('type');
 
     if (currentGenre !== 'all') url.searchParams.set('genre', currentGenre);
     else url.searchParams.delete('genre');
@@ -196,17 +253,21 @@ export default function App() {
     else url.searchParams.delete('q');
 
     window.history.replaceState({}, '', url.toString());
-  }, [modalItem, currentTier, currentGenre, currentView, searchQuery]);
+  }, [vaultMode, modalItem, currentTier, currentType, currentGenre, currentView, searchQuery]);
 
   // Popstate Listener: Native Back button closes modal or restores view
   useEffect(() => {
     const handlePopState = () => {
       const url = new URL(window.location.href);
+      const mode = url.searchParams.get('mode') === 'cinema' ? 'cinema' : 'anime';
+      setVaultModeState(mode);
+
       const id = url.searchParams.get('id');
       if (!id) {
         setModalItem(null);
       } else {
-        const found = animeData.find((a) => String(a.id) === String(id));
+        const dataset = mode === 'cinema' ? cinemaData : animeData;
+        const found = dataset.find((a) => String(a.id) === String(id));
         if (found) setModalItem(found);
       }
     };
@@ -230,13 +291,34 @@ export default function App() {
     return () => window.removeEventListener('keydown', handleGlobalKey);
   }, []);
 
+  const isCinema = vaultMode === 'cinema';
+
   return (
-    <div className="max-w-[1560px] mx-auto px-4 sm:px-6 md:px-8 py-5 pb-20">
-      {/* 1. Razor-thin Prestigious Masthead */}
+    <div className="relative max-w-[1560px] mx-auto px-4 sm:px-6 md:px-8 py-5 pb-20">
+      {/* Dynamic Ambient Top Beam */}
+      <div className="fixed top-0 inset-x-0 h-96 pointer-events-none -z-10 overflow-hidden">
+        <motion.div
+          key={vaultMode}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className={`w-full h-full filter blur-[120px] ${
+            isCinema
+              ? 'bg-gradient-to-b from-sky-500/10 via-indigo-600/5 to-transparent'
+              : 'bg-gradient-to-b from-amber-500/10 via-purple-600/5 to-transparent'
+          }`}
+        />
+      </div>
+
+      {/* 1. Razor-thin Prestigious Masthead with Vault Mode Switcher */}
       <Masthead
         currentView={currentView}
         setCurrentView={setCurrentView}
         stats={stats}
+        vaultMode={vaultMode}
+        setVaultMode={handleSetVaultMode}
+        animeCount={animeData.length}
+        cinemaCount={cinemaData.length}
       />
 
       {/* 2. Main Content View */}
@@ -250,6 +332,7 @@ export default function App() {
             onPrevHero={() => setHeroIndex((prev) => (prev - 1 + heroPool.length) % heroPool.length)}
             onOpenModal={(item) => setModalItem(item)}
             searchQuery={searchQuery}
+            vaultMode={vaultMode}
           />
 
           {/* Unified Spotlight Curation Dock */}
@@ -268,6 +351,11 @@ export default function App() {
             setViewMode={setViewMode}
             onResetHeroIndex={() => setHeroIndex(0)}
             searchInputRef={searchInputRef}
+            vaultMode={vaultMode}
+            tierConfig={activeTierConfig}
+            currentType={currentType}
+            setCurrentType={setCurrentType}
+            typeList={typeList}
           />
 
           {/* Directory Summary Bar */}
@@ -275,16 +363,20 @@ export default function App() {
             <div className="flex items-center gap-2">
               <span className="font-serif text-lg font-bold text-white">
                 {currentTier === 'all'
-                  ? 'Каталог архива'
-                  : TIER_CONFIG.find((t) => t.key === currentTier)?.title || 'Архив'}
+                  ? (isCinema ? 'Каталог фильмов и сериалов' : 'Каталог архива')
+                  : activeTierConfig.find((t) => t.key === currentTier)?.title || 'Архив'}
               </span>
               <span className="text-xs font-mono text-slate-400">
-                ({filteredItems.length} тайтлов)
+                ({filteredItems.length} {isCinema ? 'картин' : 'тайтлов'})
               </span>
             </div>
 
             {selectedYear && (
-              <div className="flex items-center gap-2 text-xs font-mono text-gold bg-gold/10 px-3 py-1 rounded-full border border-gold/30">
+              <div className={`flex items-center gap-2 text-xs font-mono px-3 py-1 rounded-full border ${
+                isCinema
+                  ? 'text-sky-400 bg-sky-500/10 border-sky-500/30'
+                  : 'text-gold bg-gold/10 border-gold/30'
+              }`}>
                 <span>Фильтр года: {selectedYear}</span>
                 <button
                   onClick={() => setSelectedYear(null)}
@@ -309,6 +401,7 @@ export default function App() {
                   key={item.id}
                   item={item}
                   onOpenModal={(it) => setModalItem(it)}
+                  vaultMode={vaultMode}
                 />
               ))}
             </div>
@@ -316,13 +409,14 @@ export default function App() {
             <EditorialIndexList
               items={filteredItems}
               onOpenModal={(it) => setModalItem(it)}
+              vaultMode={vaultMode}
             />
           )}
         </main>
       ) : (
         /* 3. Analytics & Curator's Ledger View */
         <CuratorLedger
-          allAnime={animeData}
+          allAnime={activeDataset}
           selectedYear={selectedYear}
           setSelectedYear={setSelectedYear}
           onSelectGenre={(genre) => {
@@ -335,6 +429,12 @@ export default function App() {
             setCurrentView('catalog');
             setHeroIndex(0);
           }}
+          onSelectDirector={(director) => {
+            setSearchQuery(director);
+            setCurrentView('catalog');
+            setHeroIndex(0);
+          }}
+          vaultMode={vaultMode}
         />
       )}
 
@@ -347,13 +447,14 @@ export default function App() {
           onNextReview={handleNextReview}
           hasPrevReview={currentReviewIndex > 0}
           hasNextReview={currentReviewIndex >= 0 && currentReviewIndex < reviewedItems.length - 1}
+          vaultMode={vaultMode}
         />
       )}
 
       {/* 5. Minimalist Colophon Footer */}
       <footer className="mt-20 pt-8 border-t border-white/[0.08] flex items-center justify-between text-xs font-mono text-slate-500 flex-wrap gap-4">
         <div>
-          THE CRITERION ARCHIVE • Версия 6.0 (A24 Minimalist Monograph)
+          THE DUAL ARCHIVE • Anime Vault (442) & Cinema Vault (292) • Версия 7.0
         </div>
         <div>
           Куратор коллекции: <span className="text-slate-300">Enandollioni</span>

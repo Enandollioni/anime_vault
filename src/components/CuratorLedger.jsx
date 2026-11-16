@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Clock, Calendar, PieChart, Award, Star } from 'lucide-react';
+import { Clock, Calendar, PieChart, Award, Star, Clapperboard, Film, User } from 'lucide-react';
 import { getTasteStyle } from '../utils/tierHelpers';
 
 export default function CuratorLedger({
@@ -8,9 +8,12 @@ export default function CuratorLedger({
   selectedYear,
   setSelectedYear,
   onSelectGenre,
-  onSelectYear
+  onSelectYear,
+  onSelectDirector,
+  vaultMode = 'anime'
 }) {
-  const [donutMode, setDonutMode] = useState('genres'); // 'genres' or 'tiers'
+  const isCinema = vaultMode === 'cinema';
+  const [donutMode, setDonutMode] = useState(isCinema ? 'types' : 'genres');
 
   // Chronology Year counts
   const yearCounts = {};
@@ -33,13 +36,51 @@ export default function CuratorLedger({
   });
 
   const rankedGenres = [];
+  const minThreshold = isCinema ? 3 : 5;
   Object.entries(genreScores).forEach(([genre, scores]) => {
-    if (scores.length >= 5) {
+    if (scores.length >= minThreshold) {
       const avg = scores.reduce((s, v) => s + v, 0) / scores.length;
       rankedGenres.push({ genre, count: scores.length, avg });
     }
   });
   rankedGenres.sort((a, b) => b.avg - a.avg);
+
+  // Top Directors (Cinema mode)
+  const directorStats = {};
+  allAnime.forEach((item) => {
+    if (Array.isArray(item.directors)) {
+      item.directors.forEach((d) => {
+        if (!d || d.length < 2) return;
+        if (!directorStats[d]) directorStats[d] = { count: 0, scores: [] };
+        directorStats[d].count += 1;
+        if (item.score > 0) directorStats[d].scores.push(item.score);
+      });
+    }
+  });
+
+  const topDirectors = Object.entries(directorStats)
+    .filter(([_, d]) => d.count >= 2)
+    .map(([name, d]) => ({
+      name,
+      count: d.count,
+      avg: d.scores.length > 0 ? (d.scores.reduce((s, v) => s + v, 0) / d.scores.length).toFixed(2) : '—'
+    }))
+    .sort((a, b) => b.count - a.count || parseFloat(b.avg) - parseFloat(a.avg))
+    .slice(0, 10);
+
+  // Watch Time Calculations
+  let totalHours = 2345;
+  let totalDays = '97.7';
+  let totalItemsCount = 5829;
+  let avgDuration = '~24.1 мин';
+
+  if (isCinema) {
+    const totalMinutes = allAnime.reduce((acc, a) => acc + (a.runtime || a.duration || 108), 0);
+    totalHours = Math.round(totalMinutes / 60);
+    totalDays = (totalHours / 24).toFixed(1);
+    totalItemsCount = allAnime.length;
+    avgDuration = `~${Math.round(totalMinutes / allAnime.length)} мин`;
+  }
 
   // Donut data calculation
   let donutData = [];
@@ -55,12 +96,21 @@ export default function CuratorLedger({
       .sort((a, b) => b[1] - a[1])
       .slice(0, 10)
       .map(([label, count]) => ({ label, count }));
+  } else if (donutMode === 'types') {
+    const typeCounts = {};
+    allAnime.forEach((a) => {
+      const t = a.type || 'Фильм';
+      typeCounts[t] = (typeCounts[t] || 0) + 1;
+    });
+    donutData = Object.entries(typeCounts)
+      .sort((a, b) => b[1] - a[1])
+      .map(([label, count]) => ({ label, count }));
   } else {
     donutData = [
-      { label: 'Пантеон 10.xx', count: allAnime.filter(a => a.score >= 10.0).length },
-      { label: 'Выдающиеся 9.x', count: allAnime.filter(a => a.score >= 9.0 && a.score < 10.0).length },
-      { label: 'Золотой фонд 8.x', count: allAnime.filter(a => a.score >= 8.0 && a.score < 9.0).length },
-      { label: 'Хорошие 7.x', count: allAnime.filter(a => a.score >= 7.0 && a.score < 8.0).length },
+      { label: isCinema ? 'Шедевры 10' : 'Пантеон 10.xx', count: allAnime.filter(a => a.score >= 10.0).length },
+      { label: isCinema ? 'Выдающиеся 9' : 'Выдающиеся 9.x', count: allAnime.filter(a => a.score >= 9.0 && a.score < 10.0).length },
+      { label: isCinema ? 'Золотой фонд 8' : 'Золотой фонд 8.x', count: allAnime.filter(a => a.score >= 8.0 && a.score < 9.0).length },
+      { label: isCinema ? 'Хорошие 7' : 'Хорошие 7.x', count: allAnime.filter(a => a.score >= 7.0 && a.score < 8.0).length },
       { label: 'Средние 5-6', count: allAnime.filter(a => a.score >= 5.0 && a.score < 7.0).length },
       { label: 'Архив 1-4', count: allAnime.filter(a => a.score > 0 && a.score < 5.0).length },
     ];
@@ -69,8 +119,8 @@ export default function CuratorLedger({
   const donutTotal = donutData.reduce((acc, d) => acc + d.count, 0);
 
   const colors = [
-    '#f59e0b', '#a855f7', '#38bdf8', '#34d399', '#f43f5e',
-    '#fb923c', '#818cf8', '#ec4899', '#14b8a6', '#64748b'
+    '#38bdf8', '#818cf8', '#f59e0b', '#34d399', '#f43f5e',
+    '#fb923c', '#a855f7', '#ec4899', '#14b8a6', '#64748b'
   ];
 
   return (
@@ -78,37 +128,96 @@ export default function CuratorLedger({
       {/* 1. Watch Time Hero Glass Banner */}
       <section className="relative p-6 sm:p-8 md:p-10 rounded-3xl bg-white/[0.02] backdrop-blur-2xl border border-white/[0.06] shadow-[0_20px_50px_rgba(0,0,0,0.6)] flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden">
         <div className="flex items-center gap-6">
-          <div className="w-16 h-16 rounded-2xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold shadow-[0_0_30px_rgba(245,158,11,0.2)] shrink-0">
+          <div className={`w-16 h-16 rounded-2xl border flex items-center justify-center shrink-0 shadow-lg ${
+            isCinema
+              ? 'bg-sky-500/10 border-sky-500/30 text-sky-400 shadow-[0_0_30px_rgba(56,189,248,0.2)]'
+              : 'bg-gold/10 border-gold/30 text-gold shadow-[0_0_30px_rgba(245,158,11,0.2)]'
+          }`}>
             <Clock className="w-8 h-8" />
           </div>
           <div>
-            <span className="text-[11px] font-mono font-bold tracking-widest text-gold uppercase">
+            <span className={`text-[11px] font-mono font-bold tracking-widest uppercase ${
+              isCinema ? 'text-sky-400' : 'text-gold'
+            }`}>
               Чистый хронометраж жизни
             </span>
             <div className="flex items-baseline gap-2 mt-1">
-              <span className="font-mono text-4xl sm:text-5xl font-black text-white">2 345</span>
+              <span className="font-mono text-4xl sm:text-5xl font-black text-white">
+                {totalHours.toLocaleString('ru-RU')}
+              </span>
               <span className="font-mono text-lg text-slate-400">часов</span>
-              <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-semibold bg-sky-500/10 text-sky-400 border border-sky-500/30 ml-2">
-                ≈ 97.7 суток нон-стоп
+              <span className={`px-2.5 py-0.5 rounded-full text-xs font-mono font-semibold border ml-2 ${
+                isCinema
+                  ? 'bg-sky-500/10 text-sky-400 border-sky-500/30'
+                  : 'bg-amber-500/10 text-amber-400 border-amber-500/30'
+              }`}>
+                ≈ {totalDays} суток нон-стоп
               </span>
             </div>
             <p className="text-xs text-slate-400 mt-1.5">
-              Без учета перемотки опенингов, эндингов и повторных просмотров любимых шедевров
+              {isCinema
+                ? 'Суммарное время всех просмотренных художественных фильмов, мультфильмов и сериалов'
+                : 'Без учета перемотки опенингов, эндингов и повторных просмотров любимых шедевров'}
             </p>
           </div>
         </div>
 
         <div className="flex items-center gap-8 border-t md:border-t-0 md:border-l border-white/[0.08] pt-4 md:pt-0 md:pl-10">
           <div>
-            <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Суммарно эпизодов</div>
-            <div className="font-mono text-2xl font-bold text-white mt-0.5">5 829</div>
+            <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider">
+              {isCinema ? 'Всего картин' : 'Суммарно эпизодов'}
+            </div>
+            <div className="font-mono text-2xl font-bold text-white mt-0.5">
+              {totalItemsCount.toLocaleString('ru-RU')}
+            </div>
           </div>
           <div>
             <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Средний хронометраж</div>
-            <div className="font-mono text-2xl font-bold text-gold mt-0.5">~24.1 мин</div>
+            <div className={`font-mono text-2xl font-bold mt-0.5 ${isCinema ? 'text-sky-400' : 'text-gold'}`}>
+              {avgDuration}
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Cinema Mode: Directors Leaderboard */}
+      {isCinema && topDirectors.length > 0 && (
+        <section className="p-6 sm:p-8 rounded-3xl bg-white/[0.02] backdrop-blur-2xl border border-white/[0.06] shadow-xl flex flex-col gap-5">
+          <div className="flex items-center justify-between">
+            <div>
+              <h3 className="font-serif text-xl font-bold text-white flex items-center gap-2">
+                <Clapperboard className="w-5 h-5 text-sky-400" />
+                Галерея любимых режиссёров
+              </h3>
+              <p className="text-xs text-slate-400 mt-0.5">
+                Авторы с наибольшим числом картин в коллекции и их средний балл
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+            {topDirectors.map((d) => (
+              <motion.button
+                key={d.name}
+                whileHover={{ y: -3 }}
+                onClick={() => onSelectDirector && onSelectDirector(d.name)}
+                className="p-3.5 rounded-2xl bg-white/[0.02] hover:bg-sky-500/10 border border-white/[0.06] hover:border-sky-500/30 text-left transition-all duration-200 cursor-pointer flex flex-col justify-between gap-2 shadow-sm"
+              >
+                <div className="font-serif font-bold text-sm text-slate-100 line-clamp-1">
+                  {d.name}
+                </div>
+                <div className="flex items-center justify-between text-xs font-mono pt-1 border-t border-white/[0.04]">
+                  <span className="text-slate-400">{d.count} раб.</span>
+                  <span className="text-sky-400 font-bold flex items-center gap-1">
+                    <Star className="w-3 h-3 fill-sky-400" />
+                    {d.avg}
+                  </span>
+                </div>
+              </motion.button>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* 2. Chronology & Donut Structure */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -117,17 +226,17 @@ export default function CuratorLedger({
           <div className="flex items-center justify-between">
             <div>
               <h3 className="font-serif text-xl font-bold text-white flex items-center gap-2">
-                <Calendar className="w-5 h-5 text-gold" />
+                <Calendar className={`w-5 h-5 ${isCinema ? 'text-sky-400' : 'text-gold'}`} />
                 Летопись эпох
               </h3>
               <p className="text-xs text-slate-400 mt-0.5">
-                Хронология просмотренных произведений по годам премьеры
+                Хронология просмотренных произведений по годам премьеры ({years[years.length - 1]} — {years[0]})
               </p>
             </div>
             {selectedYear && (
               <button
                 onClick={() => setSelectedYear(null)}
-                className="text-xs font-mono text-gold hover:underline cursor-pointer"
+                className={`text-xs font-mono hover:underline cursor-pointer ${isCinema ? 'text-sky-400' : 'text-gold'}`}
               >
                 Сбросить ({selectedYear})
               </button>
@@ -150,8 +259,8 @@ export default function CuratorLedger({
                   }}
                   className={`p-3 rounded-xl border text-center transition-all duration-200 cursor-pointer ${
                     isSelected
-                      ? 'bg-gold/20 border-gold text-white shadow-[0_0_15px_rgba(245,158,11,0.3)]'
-                      : 'bg-white/[0.02] border-white/[0.06] hover:border-gold/40 text-slate-300'
+                      ? (isCinema ? 'bg-sky-500/20 border-sky-400 text-white shadow-[0_0_15px_rgba(56,189,248,0.3)]' : 'bg-gold/20 border-gold text-white shadow-[0_0_15px_rgba(245,158,11,0.3)]')
+                      : 'bg-white/[0.02] border-white/[0.06] hover:border-white/[0.2] text-slate-300'
                   }`}
                   title={`Посмотреть тайтлы ${yr} года`}
                 >
@@ -177,6 +286,16 @@ export default function CuratorLedger({
             </div>
 
             <div className="flex items-center gap-1 p-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-xs font-mono">
+              {isCinema && (
+                <button
+                  onClick={() => setDonutMode('types')}
+                  className={`px-3.5 py-1 rounded-full transition-colors cursor-pointer ${
+                    donutMode === 'types' ? 'bg-white/[0.12] text-white font-bold' : 'text-slate-400 hover:text-white'
+                  }`}
+                >
+                  Типы
+                </button>
+              )}
               <button
                 onClick={() => setDonutMode('genres')}
                 className={`px-3.5 py-1 rounded-full transition-colors cursor-pointer ${
@@ -230,11 +349,11 @@ export default function CuratorLedger({
         <div className="flex items-center justify-between flex-wrap gap-2">
           <div>
             <h3 className="font-serif text-2xl font-black text-white flex items-center gap-2.5">
-              <Award className="w-6 h-6 text-gold" />
+              <Award className={`w-6 h-6 ${isCinema ? 'text-sky-400' : 'text-gold'}`} />
               Вкусовой индекс куратора
             </h3>
             <p className="text-xs text-slate-400 mt-1">
-              Где автор наиболее щедр на высокие оценки (репрезентативная выборка ≥ 5 тайтлов)
+              Где автор наиболее щедр на высокие оценки (репрезентативная выборка ≥ {minThreshold} тайтлов)
             </p>
           </div>
           <span className="text-xs font-mono text-slate-400 bg-white/[0.03] px-3.5 py-1 rounded-full border border-white/[0.06]">
@@ -245,7 +364,8 @@ export default function CuratorLedger({
         {/* Responsive Grid of Taste Tiles */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3.5">
           {rankedGenres.map((item) => {
-            const pct = Math.min(100, Math.max(10, Math.round((item.avg / 10.99) * 100)));
+            const maxScale = isCinema ? 10.0 : 10.99;
+            const pct = Math.min(100, Math.max(10, Math.round((item.avg / maxScale) * 100)));
             const style = getTasteStyle(item.avg);
 
             return (
@@ -283,7 +403,7 @@ export default function CuratorLedger({
                 </div>
 
                 <div className="flex items-center justify-between text-[11px] font-mono text-slate-400 pt-0.5">
-                  <span>{item.count} тайтлов</span>
+                  <span>{item.count} {isCinema ? 'фильмов' : 'тайтлов'}</span>
                   <span style={{ color: style.color }} className="font-semibold">
                     В среднем: {item.avg.toFixed(2)}
                   </span>

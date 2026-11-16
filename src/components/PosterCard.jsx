@@ -3,18 +3,27 @@ import { motion } from 'framer-motion';
 import { Feather, Star } from 'lucide-react';
 import { formatScore, getPoster } from '../utils/tierHelpers';
 
-export default function PosterCard({ item, onOpenModal }) {
+export default function PosterCard({ item, onOpenModal, vaultMode = 'anime' }) {
   const hasReview = Boolean(item.review && item.review.trim().length > 0);
   const isMasterpiece = item.score >= 10.0;
   const isHighTier = item.score >= 9.0;
+  const isCinema = vaultMode === 'cinema';
 
-  const ambientGlow = isMasterpiece
-    ? 'rgba(245, 158, 11, 0.45)'
-    : isHighTier
-    ? 'rgba(168, 85, 247, 0.35)'
-    : item.score >= 8.0
-    ? 'rgba(56, 189, 248, 0.3)'
-    : 'rgba(52, 211, 153, 0.25)';
+  const ambientGlow = isCinema
+    ? (isMasterpiece
+        ? 'rgba(56, 189, 248, 0.45)'
+        : isHighTier
+        ? 'rgba(129, 140, 248, 0.35)'
+        : item.score >= 8.0
+        ? 'rgba(14, 165, 233, 0.3)'
+        : 'rgba(52, 211, 153, 0.25)')
+    : (isMasterpiece
+        ? 'rgba(245, 158, 11, 0.45)'
+        : isHighTier
+        ? 'rgba(168, 85, 247, 0.35)'
+        : item.score >= 8.0
+        ? 'rgba(56, 189, 248, 0.3)'
+        : 'rgba(52, 211, 153, 0.25)');
 
   return (
     <motion.article
@@ -31,19 +40,31 @@ export default function PosterCard({ item, onOpenModal }) {
       />
 
       {/* Floating Poster Artwork Canvas */}
-      <div className="relative w-full aspect-[2/3] rounded-2xl overflow-hidden bg-[#090b10] border border-white/[0.08] group-hover:border-white/[0.25] transition-all duration-300 shadow-[0_8px_24px_rgba(0,0,0,0.6)] group-hover:shadow-[0_20px_45px_rgba(0,0,0,0.85)]">
+      <div className={`relative w-full aspect-[2/3] rounded-2xl overflow-hidden bg-[#090b10] border transition-all duration-300 shadow-[0_8px_24px_rgba(0,0,0,0.6)] group-hover:shadow-[0_20px_45px_rgba(0,0,0,0.85)] ${
+        isCinema
+          ? 'border-white/[0.08] group-hover:border-sky-400/50'
+          : 'border-white/[0.08] group-hover:border-white/[0.25]'
+      }`}>
         <img
           src={getPoster(item)}
           alt={item.title}
           loading="lazy"
           referrerPolicy="no-referrer"
+          onError={(e) => {
+            e.currentTarget.onerror = null;
+            e.currentTarget.src = 'https://shikimori.one/assets/globals/missing_original.jpg';
+          }}
           className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
         />
 
-        {/* Top-Right: Pantheon Golden Seal for 10.xx / Frosted Glass Chip */}
+        {/* Top-Right: Pantheon Golden/Sapphire Seal for 10.xx / Frosted Glass Chip */}
         {isMasterpiece ? (
-          <div className="absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded-full bg-gradient-to-r from-amber-950/90 via-black/85 to-amber-950/90 backdrop-blur-md border border-gold/50 shadow-[0_0_12px_rgba(245,158,11,0.35)] flex items-center gap-1 font-mono text-[11px] font-black text-gold z-10">
-            <Star className="w-2.5 h-2.5 fill-gold text-gold" />
+          <div className={`absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded-full backdrop-blur-md border shadow-lg flex items-center gap-1 font-mono text-[11px] font-black z-10 ${
+            isCinema
+              ? 'bg-gradient-to-r from-sky-950/90 via-black/85 to-sky-950/90 border-sky-400/50 text-sky-400 shadow-[0_0_12px_rgba(56,189,248,0.35)]'
+              : 'bg-gradient-to-r from-amber-950/90 via-black/85 to-amber-950/90 border-gold/50 text-gold shadow-[0_0_12px_rgba(245,158,11,0.35)]'
+          }`}>
+            <Star className={`w-2.5 h-2.5 fill-current ${isCinema ? 'text-sky-400' : 'text-gold'}`} />
             <span>{formatScore(item.score)}</span>
           </div>
         ) : (
@@ -52,11 +73,13 @@ export default function PosterCard({ item, onOpenModal }) {
           </div>
         )}
 
-        {/* Top-Left: Minimalist Feather Badge for Essays */}
+        {/* Top-Left: Minimalist Feather Badge for Essays / Synopses */}
         {hasReview && (
           <div
-            title="Есть эссе куратора"
-            className="absolute top-2.5 left-2.5 w-6 h-6 rounded-full bg-black/70 backdrop-blur-md border border-gold/40 text-gold flex items-center justify-center shadow-md z-10"
+            title="Есть эссе или синопсис куратора"
+            className={`absolute top-2.5 left-2.5 w-6 h-6 rounded-full bg-black/70 backdrop-blur-md border flex items-center justify-center shadow-md z-10 ${
+              isCinema ? 'border-sky-400/40 text-sky-400' : 'border-gold/40 text-gold'
+            }`}
           >
             <Feather className="w-3 h-3 stroke-[2.5]" />
           </div>
@@ -73,16 +96,21 @@ export default function PosterCard({ item, onOpenModal }) {
         </h3>
         <div className="flex items-center gap-1.5 text-[11px] font-mono text-slate-500 mt-0.5">
           <span>{item.year || '—'}</span>
-          {item.episodes && (
+          {item.runtime ? (
+            <>
+              <span>•</span>
+              <span>{item.runtime} мин.</span>
+            </>
+          ) : item.episodes ? (
             <>
               <span>•</span>
               <span>{item.episodes} эп.</span>
             </>
-          )}
+          ) : null}
           {item.tier && (
             <>
               <span>•</span>
-              <span className={isMasterpiece ? 'text-gold' : 'text-slate-400'}>
+              <span className={isMasterpiece ? (isCinema ? 'text-sky-400' : 'text-gold') : 'text-slate-400'}>
                 Тир {item.tier}
               </span>
             </>

@@ -6,11 +6,25 @@
   body {
     background-color: #07080b;
     color: #f1f5f9;
-    background-image: 
-      radial-gradient(ellipse 90% 60% at 50% -15%, rgba(245, 158, 11, 0.05), transparent 70%),
-      radial-gradient(circle at 10% 20%, rgba(168, 85, 247, 0.03), transparent 45%),
-      radial-gradient(circle at 90% 40%, rgba(56, 189, 248, 0.025), transparent 45%);
     min-height: 100vh;
+    transition: background-color 0.6s ease, background-image 0.6s ease;
+  }
+
+  body.mode-anime {
+    background-color: #07080b;
+    background-image: 
+      radial-gradient(ellipse 90% 60% at 50% -15%, rgba(245, 158, 11, 0.06), transparent 70%),
+      radial-gradient(circle at 10% 20%, rgba(168, 85, 247, 0.04), transparent 45%),
+      radial-gradient(circle at 90% 40%, rgba(56, 189, 248, 0.03), transparent 45%);
+  }
+
+  body.mode-cinema {
+    background-color: #05070a;
+    background-image: 
+      radial-gradient(ellipse 90% 60% at 50% -15%, rgba(56, 189, 248, 0.09), transparent 70%),
+      radial-gradient(circle at 12% 25%, rgba(99, 102, 241, 0.06), transparent 50%),
+      radial-gradient(circle at 88% 35%, rgba(14, 165, 233, 0.05), transparent 50%),
+      radial-gradient(ellipse 70% 40% at 50% 90%, rgba(245, 158, 11, 0.02), transparent 60%);
   }
 
   /* Universal Custom Scrollbars (AniWids / Sleek Cinema) */
@@ -35,9 +49,14 @@
     transition: background 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  ::-webkit-scrollbar-thumb:hover {
+  body.mode-anime ::-webkit-scrollbar-thumb:hover {
     background: #a855f7 !important;
     box-shadow: 0 0 14px rgba(168, 85, 247, 0.7) !important;
+  }
+
+  body.mode-cinema ::-webkit-scrollbar-thumb:hover {
+    background: #38bdf8 !important;
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.7) !important;
   }
 
   ::-webkit-scrollbar-corner {

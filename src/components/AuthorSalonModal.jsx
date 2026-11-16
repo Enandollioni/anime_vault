@@ -1,61 +1,63 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink, Star, Feather, ChevronLeft, ChevronRight } from 'lucide-react';
-import { marked } from 'marked';
+import { X, ExternalLink, Star, ChevronLeft, ChevronRight, Feather, Clock, Film, Globe } from 'lucide-react';
 import { formatScore, getPoster } from '../utils/tierHelpers';
 
 export default function AuthorSalonModal({
   item,
   onClose,
-  onPrevReview,
   onNextReview,
+  onPrevReview,
   hasPrevReview,
-  hasNextReview
+  hasNextReview,
+  vaultMode = 'anime'
 }) {
   const modalRef = useRef(null);
+  const isCinema = vaultMode === 'cinema';
 
+  // Keyboard navigation & Focus trap (Esc, ArrowLeft, ArrowRight)
   useEffect(() => {
+    if (!item) return;
+
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') {
         onClose();
-      } else if (e.key === 'ArrowLeft' && onPrevReview && hasPrevReview) {
-        onPrevReview();
       } else if (e.key === 'ArrowRight' && onNextReview && hasNextReview) {
         onNextReview();
+      } else if (e.key === 'ArrowLeft' && onPrevReview && hasPrevReview) {
+        onPrevReview();
       }
     };
+
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [onClose, onPrevReview, onNextReview, hasPrevReview, hasNextReview]);
-
-  // Focus trap inside modal
-  useEffect(() => {
-    if (modalRef.current) {
-      const focusable = modalRef.current.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      );
-      if (focusable.length > 0) {
-        focusable[0].focus();
-      }
-    }
-  }, [item?.id]);
+  }, [item, onClose, onNextReview, onPrevReview, hasNextReview, hasPrevReview]);
 
   if (!item) return null;
 
   const isMasterpiece = item.score >= 10.0;
   const isHighTier = item.score >= 9.0;
-  const reviewHtml = item.review ? marked.parse(item.review) : null;
 
-  const ambientColor = isMasterpiece
-    ? '#f59e0b'
-    : isHighTier
-    ? '#a855f7'
-    : '#38bdf8';
+  const ambientColor = isCinema
+    ? (isMasterpiece ? '#38bdf8' : isHighTier ? '#818cf8' : '#22d3ee')
+    : (isMasterpiece ? '#f59e0b' : isHighTier ? '#a855f7' : item.score >= 8.0 ? '#38bdf8' : '#34d399');
+
+  // Format Review / Overview as clean paragraphs
+  let reviewHtml = null;
+  if (item.review && item.review.trim().length > 0) {
+    const paragraphs = item.review.split('\n\n').filter((p) => p.trim().length > 0);
+    reviewHtml = paragraphs
+      .map((p) => {
+        const clean = p.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        return `<p>${clean}</p>`;
+      })
+      .join('');
+  }
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 overflow-y-auto modal-backdrop-lock">
-        {/* Backdrop Overlay with deep blur */}
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 md:p-6 modal-backdrop-lock">
+        {/* Deep Dimmed Backdrop Blur */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -94,7 +96,7 @@ export default function AuthorSalonModal({
                       ? 'text-slate-300 hover:text-white hover:bg-white/[0.1] cursor-pointer'
                       : 'text-slate-600 cursor-not-allowed'
                   }`}
-                  title="Предыдущее эссе (←)"
+                  title="Предыдущее произведение (←)"
                 >
                   <ChevronLeft className="w-4 h-4" />
                 </button>
@@ -106,7 +108,7 @@ export default function AuthorSalonModal({
                       ? 'text-slate-300 hover:text-white hover:bg-white/[0.1] cursor-pointer'
                       : 'text-slate-600 cursor-not-allowed'
                   }`}
-                  title="Следующее эссе (→)"
+                  title="Следующее произведение (→)"
                 >
                   <ChevronRight className="w-4 h-4" />
                 </button>
@@ -132,16 +134,22 @@ export default function AuthorSalonModal({
                   style={{ background: ambientColor }}
                 />
 
-                <div className="relative aspect-[2/3] rounded-2xl overflow-hidden shadow-2xl border border-white/[0.1] bg-[#050608]">
+                <div className={`relative aspect-[2/3] rounded-2xl overflow-hidden shadow-2xl border bg-[#050608] ${
+                  isCinema ? 'border-sky-400/20' : 'border-white/[0.1]'
+                }`}>
                   <img
                     src={getPoster(item)}
                     alt={item.title}
                     referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = 'https://shikimori.one/assets/globals/missing_original.jpg';
+                    }}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-xs font-mono font-bold flex items-center gap-1.5 shadow-lg">
-                    {isMasterpiece && <Star className="w-3.5 h-3.5 fill-gold text-gold" />}
-                    <span className={isMasterpiece ? 'text-gold' : 'text-white'}>
+                    {isMasterpiece && <Star className={`w-3.5 h-3.5 fill-current ${isCinema ? 'text-sky-400' : 'text-gold'}`} />}
+                    <span className={isMasterpiece ? (isCinema ? 'text-sky-400' : 'text-gold') : 'text-white'}>
                       {formatScore(item.score)}
                     </span>
                   </div>
@@ -150,6 +158,30 @@ export default function AuthorSalonModal({
 
               {/* Action Links */}
               <div className="flex flex-col gap-2.5">
+                {item.url_kinopoisk && (
+                  <a
+                    href={item.url_kinopoisk}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between px-4 py-2.5 rounded-xl bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/20 hover:border-orange-500/40 text-xs font-mono text-orange-300 transition-all duration-200"
+                  >
+                    <span>Искать на Кинопоиске</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                )}
+
+                {item.url_kinorium && (
+                  <a
+                    href={item.url_kinorium}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between px-4 py-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.06] hover:border-white/[0.15] text-xs font-mono text-slate-300 hover:text-white transition-all duration-200"
+                  >
+                    <span>Открыть на Кинориуме</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                )}
+
                 {item.url_shikimori && (
                   <a
                     href={item.url_shikimori}
@@ -158,9 +190,10 @@ export default function AuthorSalonModal({
                     className="flex items-center justify-between px-4 py-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.06] hover:border-white/[0.15] text-xs font-mono text-slate-300 hover:text-white transition-all duration-200"
                   >
                     <span>Открыть на Shikimori</span>
-                    <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
+                    <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 )}
+
                 {item.url_animego && (
                   <a
                     href={item.url_animego}
@@ -169,31 +202,44 @@ export default function AuthorSalonModal({
                     className="flex items-center justify-between px-4 py-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.06] hover:border-white/[0.15] text-xs font-mono text-slate-300 hover:text-white transition-all duration-200"
                   >
                     <span>Смотреть на AnimeGo</span>
-                    <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
+                    <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 )}
               </div>
             </div>
 
-            {/* Right Column: Editorial Prose & Typography */}
-            <div className="flex flex-col gap-4">
-              {/* Clean Metadata Line (interpuncts, NO badge spam!) */}
+            {/* Right Column: Narrative Details */}
+            <div className="flex flex-col gap-5">
+              {/* Clean Metadata Line (interpuncts) */}
               <div className="flex items-center gap-2 text-xs font-mono tracking-wider flex-wrap">
-                <span className={`font-bold uppercase ${isMasterpiece ? 'text-gold' : 'text-purple-400'}`}>
-                  {isMasterpiece ? 'ШЕДЕВР ПАНТЕОНА' : `ТИР ${item.tier || 'A'}`}
+                <span className={`font-bold uppercase ${isCinema ? 'text-sky-400' : (isMasterpiece ? 'text-gold' : 'text-purple-400')}`}>
+                  {isCinema
+                    ? (isMasterpiece ? 'ШЕДЕВР КИНЕМАТОГРАФА' : `ТИР ${item.tier || 'A'}`)
+                    : (isMasterpiece ? 'ШЕДЕВР ПАНТЕОНА' : `ТИР ${item.tier || 'A'}`)}
                 </span>
                 <span className="text-slate-600">•</span>
-                <span className="text-slate-400">ПРОСМОТРЕНО</span>
+                <span className="text-slate-400">{item.status === 'completed' ? 'ПРОСМОТРЕНО' : 'В ПЛАНАХ'}</span>
                 {item.year && (
                   <>
                     <span className="text-slate-600">•</span>
                     <span className="text-slate-400">{item.year} Г.</span>
                   </>
                 )}
-                {item.episodes && (
+                {item.runtime ? (
+                  <>
+                    <span className="text-slate-600">•</span>
+                    <span className="text-slate-400">{item.runtime} МИН.</span>
+                  </>
+                ) : item.episodes ? (
                   <>
                     <span className="text-slate-600">•</span>
                     <span className="text-slate-400">{item.episodes} ЭП.</span>
+                  </>
+                ) : null}
+                {item.age_limit && (
+                  <>
+                    <span className="text-slate-600">•</span>
+                    <span className="text-rose-400 font-bold">{item.age_limit}</span>
                   </>
                 )}
               </div>
@@ -210,6 +256,38 @@ export default function AuthorSalonModal({
                 )}
               </div>
 
+              {/* Directors, Actors & Countries (for cinema) */}
+              {isCinema && (
+                <div className="flex flex-col gap-2 p-3.5 rounded-2xl bg-white/[0.02] border border-white/[0.06] text-xs font-mono">
+                  {Array.isArray(item.directors) && item.directors.length > 0 && (
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-slate-500 uppercase tracking-wider shrink-0">Режиссёр:</span>
+                      <span className="text-slate-200 font-semibold">{item.directors.join(', ')}</span>
+                    </div>
+                  )}
+                  {Array.isArray(item.actors) && item.actors.length > 0 && (
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-slate-500 uppercase tracking-wider shrink-0">В ролях:</span>
+                      <span className="text-slate-300">{item.actors.slice(0, 6).join(', ')}</span>
+                    </div>
+                  )}
+                  <div className="flex items-center gap-4 text-slate-400 pt-1 border-t border-white/[0.04]">
+                    {Array.isArray(item.countries) && item.countries.length > 0 && (
+                      <span className="flex items-center gap-1.5">
+                        <Globe className="w-3.5 h-3.5 text-slate-500" />
+                        {item.countries.join(', ')}
+                      </span>
+                    )}
+                    {item.imdb_rating && (
+                      <span>IMDb: <strong className="text-white">{item.imdb_rating}</strong></span>
+                    )}
+                    {item.knrm_rating && (
+                      <span>Кинориум: <strong className="text-white">{item.knrm_rating}</strong></span>
+                    )}
+                  </div>
+                </div>
+              )}
+
               {/* Genres Line */}
               {Array.isArray(item.genres) && item.genres.length > 0 && (
                 <div className="flex items-center gap-1.5 flex-wrap pt-1">
@@ -224,11 +302,13 @@ export default function AuthorSalonModal({
                 </div>
               )}
 
-              {/* Review Prose (Clean Book Typography, NO drop cap!) */}
+              {/* Review / Synopsis Prose */}
               <div className="mt-2 pt-4 border-t border-white/[0.08]">
-                <div className="flex items-center gap-2 text-xs font-mono font-bold text-gold uppercase tracking-wider mb-3">
+                <div className={`flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider mb-3 ${
+                  isCinema ? 'text-sky-400' : 'text-gold'
+                }`}>
                   <Feather className="w-3.5 h-3.5 stroke-[2.5]" />
-                  <span>Мысли и эссе куратора</span>
+                  <span>{isCinema ? 'Мысли куратора и синопсис' : 'Мысли и эссе куратора'}</span>
                 </div>
 
                 {reviewHtml ? (

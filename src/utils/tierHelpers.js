@@ -1,4 +1,4 @@
-// Tier Definitions and Aesthetic Mappings for Anime Vault v5.0
+// Tier Definitions and Aesthetic Mappings for Anime Vault & Cinema Vault v7.0
 
 export const TIER_CONFIG = [
   {
@@ -62,6 +62,72 @@ export const TIER_CONFIG = [
     range: 'Запланированное',
     badgeClass: 'text-orange-400 border-orange-500/30',
     theme: 'orange',
+    filter: a => !a.score || a.score === 0 || a.status === 'planned'
+  }
+];
+
+export const CINEMA_TIER_CONFIG = [
+  {
+    key: 'S+',
+    label: 'Шедевры 10',
+    title: 'Шедевры мирового кино • 10/10',
+    range: '10.0',
+    badgeClass: 'text-amber-400 border-amber-500/50 shadow-[0_0_12px_rgba(251,191,36,0.3)]',
+    theme: 'gold',
+    filter: a => a.score >= 10.0
+  },
+  {
+    key: 'S',
+    label: 'Выдающиеся 9',
+    title: 'Выдающиеся картины • 9/10',
+    range: '9.0',
+    badgeClass: 'text-purple-400 border-purple-500/40 shadow-[0_0_12px_rgba(168,85,247,0.25)]',
+    theme: 'purple',
+    filter: a => a.score >= 9.0 && a.score < 10.0
+  },
+  {
+    key: 'A',
+    label: 'Золотой фонд 8',
+    title: 'Золотой фонд коллекции • 8/10',
+    range: '8.0',
+    badgeClass: 'text-sky-400 border-sky-500/40 shadow-[0_0_12px_rgba(56,189,248,0.2)]',
+    theme: 'blue',
+    filter: a => a.score >= 8.0 && a.score < 9.0
+  },
+  {
+    key: 'B',
+    label: 'Хорошие 7',
+    title: 'Хорошие фильмы • 7/10',
+    range: '7.0',
+    badgeClass: 'text-emerald-400 border-emerald-500/40 shadow-[0_0_12px_rgba(52,211,153,0.2)]',
+    theme: 'emerald',
+    filter: a => a.score >= 7.0 && a.score < 8.0
+  },
+  {
+    key: 'C',
+    label: 'Средние 5-6',
+    title: 'Средний эшелон • 5-6/10',
+    range: '5.0 — 6.9',
+    badgeClass: 'text-slate-400 border-slate-500/30',
+    theme: 'slate',
+    filter: a => a.score >= 5.0 && a.score < 7.0
+  },
+  {
+    key: 'D_F',
+    label: 'Архив 1-4',
+    title: 'Архив и разочарования • 1-4/10',
+    range: '1.0 — 4.9',
+    badgeClass: 'text-rose-400 border-rose-500/30',
+    theme: 'rose',
+    filter: a => a.score > 0 && a.score < 5.0
+  },
+  {
+    key: 'unrated',
+    label: 'В планах',
+    title: 'В планах на просмотр',
+    range: 'Запланированное',
+    badgeClass: 'text-cyan-400 border-cyan-500/30',
+    theme: 'cyan',
     filter: a => !a.score || a.score === 0 || a.status === 'planned'
   }
 ];
