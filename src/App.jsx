@@ -38,9 +38,21 @@ export default function App() {
   const [selectedYear, setSelectedYear] = useState(null);
   const [heroIndex, setHeroIndex] = useState(0);
 
+  const [animeList, setAnimeList] = useState(animeData);
+  const [cinemaList, setCinemaList] = useState(cinemaData);
+
   // Active dataset & tier config
-  const activeDataset = vaultMode === 'cinema' ? cinemaData : animeData;
+  const activeDataset = vaultMode === 'cinema' ? cinemaList : animeList;
   const activeTierConfig = vaultMode === 'cinema' ? CINEMA_TIER_CONFIG : TIER_CONFIG;
+
+  const handleUpdateItem = (updatedItem) => {
+    if (vaultMode === 'cinema') {
+      setCinemaList((prev) => prev.map((it) => (Number(it.id) === Number(updatedItem.id) ? { ...it, ...updatedItem } : it)));
+    } else {
+      setAnimeList((prev) => prev.map((it) => (Number(it.id) === Number(updatedItem.id) ? { ...it, ...updatedItem } : it)));
+    }
+    setModalItem(updatedItem);
+  };
 
   // Modal Item State
   const [modalItem, setModalItem] = useState(() => {
@@ -446,6 +458,7 @@ export default function App() {
           hasPrevReview={currentNavIndex > 0}
           hasNextReview={currentNavIndex >= 0 && currentNavIndex < navigableItems.length - 1}
           vaultMode={vaultMode}
+          onUpdateItem={handleUpdateItem}
         />
       )}
 

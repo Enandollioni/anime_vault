@@ -1,5 +1,5 @@
-import React from 'react';
-import { ExternalLink, Film, BarChart3, Star, Clapperboard, Sparkles } from 'lucide-react';
+import React, { useState } from 'react';
+import { ExternalLink, Film, BarChart3, Star, Clapperboard, Sparkles, UploadCloud, CheckCircle2, Loader2, AlertCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Masthead({
@@ -12,6 +12,34 @@ export default function Masthead({
   cinemaCount = 292
 }) {
   const isCinema = vaultMode === 'cinema';
+  const isLocal = typeof window !== 'undefined' && (
+    window.location.hostname === 'localhost' ||
+    window.location.hostname === '127.0.0.1' ||
+    window.location.hostname.includes('192.168.')
+  );
+
+  const [isDeploying, setIsDeploying] = useState(false);
+  const [deployResult, setDeployResult] = useState(null); // { type: 'success' | 'error', message: string }
+
+  const handleDeploy = async () => {
+    if (isDeploying) return;
+    setIsDeploying(true);
+    setDeployResult(null);
+    try {
+      const res = await fetch('/api/curator/deploy', { method: 'POST' });
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || 'Ошибка при деплое');
+      }
+      setDeployResult({ type: 'success', message: data.message });
+      setTimeout(() => setDeployResult(null), 6000);
+    } catch (err) {
+      setDeployResult({ type: 'error', message: err.message });
+      setTimeout(() => setDeployResult(null), 8000);
+    } finally {
+      setIsDeploying(false);
+    }
+  };
 
   return (
     <header className="py-4 border-b border-white/[0.06] flex flex-col gap-4">
@@ -162,11 +190,50 @@ export default function Masthead({
           </button>
         </nav>
 
-        {/* Micro-hint for shortcuts */}
-        <div className="hidden sm:flex items-center gap-3 text-[11px] font-mono text-slate-500">
-          <span>Нажмите <kbd className="px-1.5 py-0.5 rounded bg-white/[0.06] border border-white/[0.1] text-slate-300">/</kbd> для поиска</span>
-          <span>•</span>
-          <span><kbd className="px-1.5 py-0.5 rounded bg-white/[0.06] border border-white/[0.1] text-slate-300">Esc</kbd> закрыть</span>
+        {/* Right action group: Local Curator Deploy or Micro-hint for shortcuts */}
+        <div className="flex items-center gap-3">
+          {isLocal ? (
+            <div className="flex items-center gap-2.5">
+              <span className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] font-mono font-bold uppercase tracking-wider">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                Локальный режим
+              </span>
+              <button
+                onClick={handleDeploy}
+                disabled={isDeploying}
+                className="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-purple-500/20 via-indigo-500/20 to-purple-500/20 hover:from-purple-500/30 hover:to-indigo-500/30 border border-purple-500/40 hover:border-purple-400 text-purple-200 hover:text-white text-xs font-mono font-semibold flex items-center gap-2 transition-all shadow-[0_0_20px_rgba(168,85,247,0.2)] cursor-pointer active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
+                title="Опубликовать сохранённые оценки и эссе на GitHub Pages"
+              >
+                {isDeploying ? (
+                  <>
+                    <Loader2 className="w-3.5 h-3.5 animate-spin text-purple-300" />
+                    <span>Деплой на GitHub...</span>
+                  </>
+                ) : deployResult?.type === 'success' ? (
+                  <>
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                    <span className="text-emerald-300">Задеплоено на GitHub!</span>
+                  </>
+                ) : deployResult?.type === 'error' ? (
+                  <>
+                    <AlertCircle className="w-3.5 h-3.5 text-rose-400" />
+                    <span className="text-rose-300">Ошибка деплоя</span>
+                  </>
+                ) : (
+                  <>
+                    <UploadCloud className="w-3.5 h-3.5 text-purple-400" />
+                    <span>Опубликовать на GitHub</span>
+                  </>
+                )}
+              </button>
+            </div>
+          ) : (
+            <div className="hidden sm:flex items-center gap-3 text-[11px] font-mono text-slate-500">
+              <span>Нажмите <kbd className="px-1.5 py-0.5 rounded bg-white/[0.06] border border-white/[0.1] text-slate-300">/</kbd> для поиска</span>
+              <span>•</span>
+              <span><kbd className="px-1.5 py-0.5 rounded bg-white/[0.06] border border-white/[0.1] text-slate-300">Esc</kbd> закрыть</span>
+            </div>
+          )}
         </div>
       </div>
     </header>
